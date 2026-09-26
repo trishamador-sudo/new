@@ -2,14 +2,18 @@
    SITE SETTINGS: edit these values, everything updates.
    ========================================================== */
 const SITE = {
-  phone: '000 000 0000',          // shown on the site
-  phoneLink: '0000000000',        // digits for tap-to-call, e.g. +27821234567
-  email: 'hello@example.com',
-  serviceArea: 'Your service area',
+  phone: '+27 84 408 0088',       // shown on the site
+  phoneLink: '+27844080088',      // used for tap-to-call
+  email: 'Ricardomdr@yahoo.com',
+  serviceArea: 'Welkom, Free State',
   hours: 'Mon–Sat, 7:30–17:30',
-  // Where estimate requests go. Paste a form endpoint (e.g. https://formspree.io/f/xxxx).
-  // Left empty, the form opens the visitor's email app with the request filled in.
+  // Estimate requests are sent here. Create a free form at https://formspree.io
+  // (sign up with trishamador@gmail.com), then paste its endpoint, e.g. 'https://formspree.io/f/abcdwxyz'.
   formEndpoint: '',
+  // Used only while formEndpoint is empty: the form opens the visitor's email app addressed here.
+  leadEmail: 'trishamador@gmail.com',
+  // Set by the preview build. Shows the thank-you screen without sending anything.
+  preview: false,
 };
 
 (() => {
@@ -60,7 +64,7 @@ const SITE = {
   $$('a[href="#estimate"]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault();
     $('#estimate').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-    history.replaceState(null, '', '#estimate');
+    try { history.replaceState(null, '', '#estimate'); } catch (_) {}
     const first = $('.step.is-active input, .step.is-active button', form);
     setTimeout(() => {
       first && first.focus({ preventScroll: true });
@@ -142,7 +146,9 @@ const SITE = {
     btn.classList.add('is-loading'); btn.disabled = true;
 
     try {
-      if (SITE.formEndpoint) {
+      if (SITE.preview) {
+        await new Promise(r => setTimeout(r, 600));
+      } else if (SITE.formEndpoint) {
         const res = await fetch(SITE.formEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -151,7 +157,7 @@ const SITE = {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
       } else {
         const body = `Project: ${data.project}\nName: ${data.name}\nPhone: ${data.phone}\n\n${data.details}`;
-        window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(`Free estimate request: ${data.project}`)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:${SITE.leadEmail}?subject=${encodeURIComponent(`Free estimate request: ${data.project}`)}&body=${encodeURIComponent(body)}`;
       }
       $('[data-done-name]', form).textContent = data.name.split(' ')[0];
       show('done');
@@ -176,21 +182,4 @@ const SITE = {
     video.addEventListener('pause', () => { fig.classList.remove('is-playing'); btn.innerHTML = playIcon; btn.setAttribute('aria-label', 'Play video'); });
   });
 
-  /* ---------- Reveal on scroll ---------- */
-  if (!reduceMotion && 'IntersectionObserver' in window) {
-    const els = $$('.section-head, .svc, .ba__copy, .pair__item, .g, .about__media, .about__copy, .steps li, .review, .cta-band__inner');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('is-in');
-        io.unobserve(e.target);
-      });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(el => {
-      const siblings = [...el.parentElement.children];
-      el.style.transitionDelay = `${Math.min(siblings.indexOf(el), 5) * 50}ms`;
-      el.classList.add('reveal');
-      io.observe(el);
-    });
-  }
 })();
