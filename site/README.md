@@ -21,6 +21,8 @@ Open `main.js`. At the very top is `SITE`:
 3. Copy its endpoint, which looks like `https://formspree.io/f/abcdwxyz`.
 4. Paste it into `formEndpoint` in `main.js`. Each request (project type, name, phone, details) then arrives in your inbox.
 
+The form is connected to `https://formspree.io/f/xvkgblbq`.
+
 ## Still to add
 
 - **Reviews:** replace the three dashed placeholder cards in the `REVIEWS` section of `index.html`.

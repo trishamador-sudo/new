@@ -9,7 +9,7 @@ const SITE = {
   hours: 'Mon–Sat, 7:30–17:30',
   // Estimate requests are sent here. Create a free form at https://formspree.io
   // (sign up with trishamador@gmail.com), then paste its endpoint, e.g. 'https://formspree.io/f/abcdwxyz'.
-  formEndpoint: '',
+  formEndpoint: 'https://formspree.io/f/xvkgblbq',
   // Used only while formEndpoint is empty: the form opens the visitor's email app addressed here.
   leadEmail: 'trishamador@gmail.com',
   // Set by the preview build. Shows the thank-you screen without sending anything.
