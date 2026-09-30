@@ -4,6 +4,8 @@
 const SITE = {
   phone: '073 927 0849',          // shown on the site
   phoneLink: '+27739270849',      // used for tap-to-call
+  whatsapp: '27739270849',        // international format, no + or spaces
+  instagram: 'plumber.steve',
   email: 'plumbersteves@gmail.com',
   serviceArea: 'Pretoria & surrounding areas',
   hours: '8:00–17:00',
@@ -24,6 +26,8 @@ const SITE = {
   // Apply settings
   $$('[data-cfg]').forEach(el => { el.textContent = SITE[el.dataset.cfg]; });
   $$('[data-cfg-href="tel"]').forEach(a => { a.href = `tel:${SITE.phoneLink}`; });
+  $$('[data-cfg-href="wa"]').forEach(a => { a.href = `https://wa.me/${SITE.whatsapp}`; });
+  $$('[data-cfg-href="ig"]').forEach(a => { a.href = `https://www.instagram.com/${SITE.instagram}/`; });
   $$('[data-cfg-href="mailto"]').forEach(a => { a.href = `mailto:${SITE.email}`; });
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 

@@ -90,6 +90,8 @@ button { cursor: pointer; }
 .topbar__inner { display: flex; gap: 24px; align-items: center; min-height: 40px; }
 .topbar__item { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
 .topbar__item .ic { width: 16px; height: 16px; color: var(--cyan-500); }
+.topbar__wa { margin-left: auto; color: #fff; font-weight: 600; }
+.topbar__wa + .topbar__phone { margin-left: 0; }
 .topbar__phone { margin-left: auto; color: #fff; font-weight: 600; }
 @media (max-width: 640px) { .topbar__hide-sm { display: none; } }
 
@@ -161,7 +163,8 @@ button { cursor: pointer; }
 .arch { position: absolute; overflow: hidden; border-radius: 999px 999px var(--radius-lg) var(--radius-lg); border: 4px solid #fff; box-shadow: var(--shadow), 0 0 0 2px var(--cyan-500); background: var(--surface); }
 .arch img { width: 100%; height: 100%; object-fit: cover; }
 .arch--main { right: 0; top: 0; width: 64%; aspect-ratio: 3 / 4.6; }
-.arch--small { left: 0; bottom: 0; width: 44%; aspect-ratio: 3 / 4.2; border-radius: 999px; }
+.arch--small { left: 0; bottom: 0; width: 50%; aspect-ratio: 3 / 4; }
+.arch--small img { object-position: 50% 30%; }
 .book-badge {
   position: absolute; left: 30%; top: 8%; display: grid; place-items: center; width: 108px; height: 108px;
   background: var(--cyan-500); color: var(--on-primary); text-decoration: none; text-align: center;
@@ -324,7 +327,7 @@ textarea.input { resize: vertical; min-height: 88px; }
 
 .mobile-bar { display: none; }
 @media (max-width: 767px) {
-  .mobile-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: 1fr 1.5fr; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgb(255 255 255 / .97); border-top: 1px solid var(--border); box-shadow: 0 -8px 24px -12px rgb(0 0 0 / .2); transform: translateY(110%); transition: transform 300ms var(--ease-out); }
+  .mobile-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgb(255 255 255 / .97); border-top: 1px solid var(--border); box-shadow: 0 -8px 24px -12px rgb(0 0 0 / .2); transform: translateY(110%); transition: transform 300ms var(--ease-out); }
   body.show-bar .mobile-bar { transform: none; }
   .footer { padding-bottom: 76px; }
 }
@@ -340,3 +343,11 @@ textarea.input { resize: vertical; min-height: 88px; }
 @media (max-width: 959px) {
   .book-badge { left: 2%; top: 2%; width: 88px; height: 88px; font-size: .95rem; }
 }
+
+.btn--wa { background: #1faa55; color: #fff; }
+.btn--wa:hover { background: #178a45; }
+.mobile-bar .btn { padding-inline: 10px; font-size: .9375rem; gap: 6px; }
+.social { display: inline-grid; place-items: center; width: 44px; height: 44px; margin-top: 16px; border-radius: 50%; border: 1px solid #3a454d; color: #fff; }
+.social:hover { border-color: var(--cyan-500); }
+.about__media img { object-position: 50% 60%; }
+@media (max-width: 640px) { .topbar__wa + .topbar__phone { margin-left: auto; } }
