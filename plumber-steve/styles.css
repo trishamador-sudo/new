@@ -351,3 +351,20 @@ textarea.input { resize: vertical; min-height: 88px; }
 .social:hover { border-color: var(--cyan-500); }
 .about__media img { object-position: 50% 60%; }
 @media (max-width: 640px) { .topbar__wa + .topbar__phone { margin-left: auto; } }
+
+/* ---------- Slogan + Instagram ---------- */
+.topbar__slogan { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.0625rem; letter-spacing: .01em; color: var(--cyan-500); white-space: nowrap; }
+@media (max-width: 899px) { .topbar__area { display: none; } }
+.ig-grad { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); }
+.icon-btn--ig { color: #fff; border: 0; background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); }
+.icon-btn--ig:hover { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); filter: brightness(1.08); }
+.ig-link { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; padding: 10px 18px 10px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); text-decoration: none; transition: border-color var(--dur), transform 200ms var(--ease-out); }
+.ig-link:hover { border-color: #dd2a7b; transform: translateY(-2px); }
+.ig-link__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: #fff; background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); flex: none; }
+.ig-link strong { display: block; line-height: 1.2; }
+.ig-link span span { font-size: .875rem; color: var(--text-muted); }
+.ig-link__arrow { color: var(--text-muted); }
+.btn--ig { color: #fff; background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af); min-height: 48px; }
+.btn--ig:hover { filter: brightness(1.08); }
+.carousel__nav { align-items: center; flex-wrap: wrap; }
+@media (max-width: 479px) { .header__call { display: none; } }
