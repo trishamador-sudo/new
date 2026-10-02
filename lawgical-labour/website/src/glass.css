@@ -1,0 +1,64 @@
+/* Lawgical Labour: glass panels, buttons, chips, cards.
+   Navy-tinted glass so white text stays readable over the bright video. */
+
+.glass {
+  position: relative;
+  overflow: hidden;
+  background: rgba(7, 30, 41, 0.58);
+  border: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+  border-radius: var(--radius);
+  backdrop-filter: blur(22px) saturate(1.18);
+  -webkit-backdrop-filter: blur(22px) saturate(1.18);
+  box-shadow: 0 24px 80px rgba(4, 18, 26, 0.32);
+}
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%, rgba(var(--accent-rgb), 0.06));
+  pointer-events: none;
+}
+.glass > * { position: relative; z-index: 2; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 12px 24px; border-radius: 999px; border: 1px solid transparent;
+  font-family: var(--font); font-weight: 700; font-size: .98rem; line-height: 1.1; text-decoration: none; text-align: center;
+  cursor: pointer; touch-action: manipulation;
+  transition: transform .2s var(--ease), background-color .2s, border-color .2s, box-shadow .3s;
+}
+.btn:active { transform: scale(.97); }
+.btn .ic { transition: transform .25s var(--ease); }
+.btn:hover .ic:last-child:not(:first-child) { transform: translateX(3px); }
+.btn--lg { min-height: 58px; padding: 15px 28px; font-size: 1.04rem; }
+.btn--block { width: 100%; }
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #ffffff 30%));
+  color: var(--on-accent);
+  box-shadow: 0 10px 34px -10px rgba(var(--accent-rgb), .75);
+}
+.btn--primary:hover { box-shadow: 0 14px 40px -8px rgba(var(--accent-rgb), .95); }
+.btn--glass {
+  background: rgba(7, 30, 41, .45); color: var(--white); border-color: rgba(255, 255, 255, .28);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.btn--glass:hover { border-color: var(--accent); background: rgba(7, 30, 41, .65); }
+.btn.is-loading { pointer-events: none; opacity: .8; }
+
+.icon-btn {
+  display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+  color: var(--white); background: rgba(7, 30, 41, .45); border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); cursor: pointer; text-decoration: none;
+  transition: border-color .2s;
+}
+.icon-btn:hover { border-color: var(--accent); }
+
+/* Chips */
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li {
+  display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; font-size: .9rem; font-weight: 600;
+  background: rgba(7, 30, 41, .5); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.chips .ic { width: 16px; height: 16px; color: var(--accent); }

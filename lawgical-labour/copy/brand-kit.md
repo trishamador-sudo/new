@@ -2,10 +2,10 @@
 
 Working brand kit for the Lawgical Labour website and campaign, built from the client's brand sheet (`assets/references/brand-sheet.pdf`), questionnaire answers and source content (`copy/content.md`).
 
-> **Confirmed by client:** surname **Minnaar**; slogan **"Labour matters, made LAWgical."**; WhatsApp on **084 927 0101**.
+> **Confirmed by client:** surname **Minnaar**; slogan **"Labour matters, made LAWgical."**; WhatsApp on **084 927 0101**; hours **Mon–Thu 08:00–16:00, Fri 08:00–15:00**.
 >
 > **Still to confirm (TBC):**
-> 1. Office address (or "West Rand, by appointment"), office hours, and any LinkedIn / Facebook pages.
+> 1. Office address (or "West Rand, by appointment") and any LinkedIn / Facebook pages.
 > 2. Whether the website will live at **lawgical.co.za** (the domain already used for email).
 > 3. A Formspree link for the consultation form.
 > 4. CCMA representation wording (see section 13).
@@ -250,7 +250,7 @@ Short card titles: *Employers only · Personal service · Detail-driven · Plain
 | Book a consultation | Short form: name, company, number of employees, matter type, phone, preferred contact method |
 | Request a callback | Name + number only |
 | Office / map | **TBC** |
-| Hours | **TBC** |
+| Hours | Mon–Thu 08:00–16:00 · Fri 08:00–15:00 |
 | Social | LinkedIn / Facebook **TBC** |
 | Always on | Floating WhatsApp button; mobile sticky bar *Call · WhatsApp · Book* |
 
@@ -344,6 +344,6 @@ Single scroll page with a call to action in every section.
 | `assets/videos` | `lawgical-labour-scroll-background.mp4` (2K, 12 s, generated with Higgsfield MiniMax H3) and `higgsfield-video.md` (job details and review) |
 | `assets/references` | **Reference only, not for the website:** brand sheet PDF, company profile, services flyer, about-Louise flyer, email signature, blog posts 1–4, and `higgsfield-references.md` (the three GPT Image 2 reference images: hero, material, workspace) |
 | `copy` | `brand-kit.md` (this file), `content.md` (client's own wording, transcribed) |
-| `website` | Empty, for the site build |
+| `website` | Vite site (see `website/README.md`); build with `npm run build -- --base=./` |
 
 *Status: brand kit v3. Client confirmed surname, slogan and WhatsApp; reference images and the scroll background video are generated. Next: confirm the remaining TBC items → build the website.*
