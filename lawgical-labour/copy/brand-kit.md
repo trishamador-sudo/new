@@ -341,9 +341,9 @@ Single scroll page with a call to action in every section.
 | Folder | Contents |
 |---|---|
 | `assets/images` | **For the website:** `logo-lawgical-labour.jpg`, `louise-headshot.png` |
-| `assets/videos` | Empty, for the Higgsfield hero video |
-| `assets/references` | **Reference only, not for the website:** brand sheet PDF, company profile, services flyer, about-Louise flyer, email signature, blog posts 1–4 |
+| `assets/videos` | `lawgical-labour-scroll-background.mp4` (2K, 12 s, generated with Higgsfield MiniMax H3) and `higgsfield-video.md` (job details and review) |
+| `assets/references` | **Reference only, not for the website:** brand sheet PDF, company profile, services flyer, about-Louise flyer, email signature, blog posts 1–4, and `higgsfield-references.md` (the three GPT Image 2 reference images: hero, material, workspace) |
 | `copy` | `brand-kit.md` (this file), `content.md` (client's own wording, transcribed) |
 | `website` | Empty, for the site build |
 
-*Status: brand kit v2, updated with the client's materials. Next: confirm TBC items → generate the hero video → build the website.*
+*Status: brand kit v3. Client confirmed surname, slogan and WhatsApp; reference images and the scroll background video are generated. Next: confirm the remaining TBC items → build the website.*
