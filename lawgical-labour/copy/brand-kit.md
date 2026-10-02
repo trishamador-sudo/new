@@ -2,13 +2,13 @@
 
 Working brand kit for the Lawgical Labour website and campaign, built from the client's brand sheet (`assets/references/brand-sheet.pdf`), questionnaire answers and source content (`copy/content.md`).
 
-> **Still to confirm with the client (TBC):**
-> 1. Louise's surname for the site: **Minnaar** (email signature, newest) or **Botha** (older flyers). This kit uses **Minnaar**.
-> 2. Final slogan (options in section 2).
-> 3. Is **084 927 0101** also the WhatsApp number?
-> 4. Office address (or "West Rand, by appointment"), office hours, and any LinkedIn / Facebook pages.
-> 5. Whether the website will live at **lawgical.co.za** (the domain already used for email).
-> 6. A Formspree link for the consultation form.
+> **Confirmed by client:** surname **Minnaar**; slogan **"Labour matters, made LAWgical."**; WhatsApp on **084 927 0101**.
+>
+> **Still to confirm (TBC):**
+> 1. Office address (or "West Rand, by appointment"), office hours, and any LinkedIn / Facebook pages.
+> 2. Whether the website will live at **lawgical.co.za** (the domain already used for email).
+> 3. A Formspree link for the consultation form.
+> 4. CCMA representation wording (see section 13).
 
 ---
 
@@ -35,7 +35,7 @@ The client has no slogan yet. Recommended options, building on her own voice:
 
 **Suggested pairing:** headline slogan *"Labour matters, made LAWgical."* with the supporting line *"Labour law consultancy exclusively for employers."*
 
-**Status: TBC** (client to choose).
+**Status: confirmed.** Slogan: **Labour matters, made LAWgical.**
 
 ---
 
@@ -176,7 +176,7 @@ From Google Fonts, chosen to match the logo's serif.
 
 **About (client wording):** "Lawgical Labour is a private labour consulting company that provides labour law and labour relations services, training, advice and support. We pride ourselves in being professional, highly skilled, experienced and in offering personal interaction, with attention to detail at affordable prices."
 
-**Founder:** **Louise Minnaar** (TBC: Minnaar or Botha), Director and Labour Law Consultant. LLB, North-West University. Labour law has been her passion from the start; after gaining experience in various industries she founded her own consultancy to make labour matters "as LAWgical as possible" for clients.
+**Founder:** **Louise Minnaar**, Director and Labour Law Consultant. LLB, North-West University. Labour law has been her passion from the start; after gaining experience in various industries she founded her own consultancy to make labour matters "as LAWgical as possible" for clients.
 
 **Services (full list, from the company profile)**
 
@@ -245,7 +245,7 @@ Short card titles: *Employers only · Personal service · Detail-driven · Plain
 | Channel | Detail |
 |---|---|
 | Call | **084 927 0101** (tap to call) |
-| WhatsApp | **TBC**: assumed 084 927 0101 (wa.me/27849270101) with a pre-filled message |
+| WhatsApp | **084 927 0101** (wa.me/27849270101) with a pre-filled message |
 | Email | **louise@lawgical.co.za** |
 | Book a consultation | Short form: name, company, number of employees, matter type, phone, preferred contact method |
 | Request a callback | Name + number only |
