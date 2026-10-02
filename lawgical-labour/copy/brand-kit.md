@@ -2,7 +2,7 @@
 
 Working brand kit for the Lawgical Labour website and campaign, built from the client's brand sheet (`assets/references/brand-sheet.pdf`), questionnaire answers and source content (`copy/content.md`).
 
-> **Confirmed by client:** surname **Minnaar**; slogan **"Labour matters, made LAWgical."**; WhatsApp on **084 927 0101**; hours **Mon–Thu 08:00–16:00, Fri 08:00–15:00**.
+> **Confirmed by client:** Louise is a Labour Law Consultant **and an Admitted Attorney**; surname **Minnaar**; slogan **"Labour matters, made LAWgical."**; WhatsApp on **084 927 0101**; hours **Mon–Thu 08:00–16:00, Fri 08:00–15:00**.
 >
 > **Still to confirm (TBC):**
 > 1. Office address (or "West Rand, by appointment") and any LinkedIn / Facebook pages.
@@ -176,7 +176,7 @@ From Google Fonts. **Updated at the client's request:** one simple, clear sans-s
 
 **About (client wording):** "Lawgical Labour is a private labour consulting company that provides labour law and labour relations services, training, advice and support. We pride ourselves in being professional, highly skilled, experienced and in offering personal interaction, with attention to detail at affordable prices."
 
-**Founder:** **Louise Minnaar**, Director and Labour Law Consultant. LLB, North-West University. Labour law has been her passion from the start; after gaining experience in various industries she founded her own consultancy to make labour matters "as LAWgical as possible" for clients.
+**Founder:** **Louise Minnaar**, Director, Labour Law Consultant and **Admitted Attorney**. LLB, North-West University. Labour law has been her passion from the start; after gaining experience in various industries she founded her own consultancy to make labour matters "as LAWgical as possible" for clients.
 
 **Services (full list, from the company profile)**
 
@@ -201,7 +201,7 @@ From Google Fonts. **Updated at the client's request:** one simple, clear sans-s
 ## 10. Key benefits
 
 1. **Employers only.** We never act for employees, so there's no conflict of interest.
-2. **Qualified, experienced consultant.** LLB-qualified, with experience across various industries.
+2. **Qualified, experienced consultant.** Admitted attorney and LLB graduate, with experience across various industries.
 3. **Personal interaction.** You deal directly with Louise, not a call centre.
 4. **Attention to detail.** Notices, procedures and documents done properly, so they hold up.
 5. **Plain-language advice.** Labour law explained "LAWgically", so you can make informed decisions.
