@@ -1,31 +1,39 @@
 # Lawgical Labour: Brand Kit
 
-Working brand kit for the Lawgical Labour website and campaign. It uses the client's real brand (name, logo, colours) and fills the open items with recommendations.
+Working brand kit for the Lawgical Labour website and campaign, built from the client's brand sheet (`assets/references/brand-sheet.pdf`), questionnaire answers and source content (`copy/content.md`).
 
-> **Still to confirm with the client** (marked **TBC** below): final slogan, the exact services list (the "services" image has not been received yet), contact details, whether the firm is admitted attorneys or labour law consultants, founder/team photos, and any credibility facts (years, cases, client logos, testimonials).
+> **Still to confirm with the client (TBC):**
+> 1. Louise's surname for the site: **Minnaar** (email signature, newest) or **Botha** (older flyers). This kit uses **Minnaar**.
+> 2. Final slogan (options in section 2).
+> 3. Is **084 927 0101** also the WhatsApp number?
+> 4. Office address (or "West Rand, by appointment"), office hours, and any LinkedIn / Facebook pages.
+> 5. Whether the website will live at **lawgical.co.za** (the domain already used for email).
+> 6. A Formspree link for the consultation form.
 
 ---
 
 ## 1. Brand name
 
-**LAWGICAL LABOUR**
+**LAWGICAL LABOUR** · registered as **Lawgical Labour (Pty) Ltd**
 
-- Written in capitals in the logo; "Lawgical Labour" in running text.
-- Short form / monogram: **LL**.
-- The name is a play on *law* + *logical*: labour law handled with clear, logical strategy.
+- Capitals in the logo; "Lawgical Labour" in running text.
+- Monogram: **LL**.
+- The name plays on *law* + *logical*. Louise's own phrase: making labour matters **"as LAWgical as possible"** so clients can make informed decisions. Use the capitalised "LAW" wordplay sparingly, as a signature touch.
 
 ---
 
 ## 2. Brand slogan
 
-No slogan exists yet. Recommended options, in order of preference:
+**Existing tagline in client materials:** "Your trusted labour law experts" (also "Employment Law Experts").
 
-1. **Firmly on the employer's side.** *(recommended)*
-2. Labour law, on your side of the table.
-3. Employers only. Always.
-4. Protecting the business behind the payroll.
+The client has no slogan yet. Recommended options, building on her own voice:
 
-**Why option 1:** it states the single biggest differentiator (employer-only) in five words, sounds confident without making claims about results, and works as a hero headline, an email signature and a vehicle decal.
+1. **Labour matters, made LAWgical.** *(recommended)* Uses her signature wordplay; memorable and clearly about clarity.
+2. **Firmly on the employer's side.** States the employer-only difference directly.
+3. **Employers only. Always.**
+4. **Protecting the business behind the payroll.**
+
+**Suggested pairing:** headline slogan *"Labour matters, made LAWgical."* with the supporting line *"Labour law consultancy exclusively for employers."*
 
 **Status: TBC** (client to choose).
 
@@ -33,296 +41,309 @@ No slogan exists yet. Recommended options, in order of preference:
 
 ## 3. Brand positioning
 
-**What it is:** a labour law practice that acts **exclusively for employers**. It never represents employees, so there is no conflict of interest, and every strategy is built around protecting the business.
+**What it is:** a private **labour law consultancy** that provides labour law and labour relations services, training, advice and support **exclusively to employers**. It never acts for employees, so there is never a conflict of interest.
 
-**Market position:** premium, specialist and employer-aligned. It is not a general practice that "also does labour", and not a cheap HR template service. Position it as the business owner's labour law partner for the moments that matter: dismissals, disciplinary hearings, CCMA referrals, strikes, restructuring and getting contracts and policies right before problems start.
+> Use "labour law consultancy" or "labour law consultants" on the website, not "law firm" or "attorneys" (the business describes itself as a consultancy).
+
+**Market position:** premium in expertise and attention, fair in price. The client's own words: *"professional, highly skilled, experienced… personal interaction, with attention to detail at affordable prices."* Position it as a business owner's personal labour relations partner: a qualified expert (LLB, North-West University) who picks up the phone, explains things plainly and handles the process properly.
 
 **Positioning statement**
 
-> For South African business owners with 20 or more employees who cannot afford to get labour matters wrong, Lawgical Labour is the labour law partner that works only for employers. Unlike generalist firms and consultants who act for both sides, we build every strategy around protecting your business, your time and your bottom line.
+> For South African business owners with 20 or more employees, Lawgical Labour is the labour law consultancy that works only for employers. Unlike generalist providers who act for both sides, Louise and her team give you personal, detail-focused support, from contracts and policies to disciplinary hearings, retrenchments and the CCMA, so you can make informed decisions and protect your business.
 
-**Geography:** the West Rand (Krugersdorp, Roodepoort, Randfontein, Mogale City and surrounds), with Gauteng-wide reach where practical. **TBC:** exact areas served and whether consultations are also offered online.
+**Geography:** the West Rand, South Africa (exact areas and whether virtual consultations are offered: **TBC**).
 
 ---
 
 ## 4. Target audience
 
-**Primary: owners and managing directors of South African businesses with 20+ employees, in the West Rand.**
+**Primary: owners and managing directors of South African businesses with 20+ employees, on the West Rand.**
 
 | Segment | Who they are | What keeps them up at night |
 |---|---|---|
-| Owner-managed SMEs (20–200 staff) | Founder or MD who handles HR personally or with a small admin team | A CCMA referral they don't understand; a dismissal that might be "unfair"; time lost to disputes |
-| Operations-heavy businesses | Manufacturing, mining suppliers, logistics, construction, retail, agriculture on the West Rand | Absenteeism, misconduct, safety incidents, shop-steward pressure, strike threats |
-| Growing companies | Businesses crossing 20, 50 or 100 employees | Contracts, policies and procedures that no longer fit; compliance gaps |
-| HR managers and financial directors | Internal decision-makers who need an outside expert | Being blamed when a process goes wrong; needing a clear, defensible procedure |
+| Owner-managed SMEs (20–200 staff) | Founder or MD handling HR personally or with a small admin team | A CCMA referral; a dismissal that might be "unfair"; time lost to disputes |
+| Operations-heavy businesses | Manufacturing, mining suppliers, logistics, construction, retail, agriculture | Absenteeism, misconduct, safety incidents, union pressure, strike threats |
+| Growing companies | Businesses crossing 20, 50 or 100 employees | Contracts and policies that no longer fit; compliance gaps (minimum wage, leave, PAIA) |
+| HR / IR managers and officers | Internal staff who need an expert behind them | Running a defensible process; mentoring and support (a listed service) |
 
-**Mindset:** busy, practical, results-focused. They want straight answers, a fast response and someone firmly in their corner. They are not lawyers and don't want legal jargon.
+**Mindset:** busy and practical. They want straight answers, quick responses and someone firmly in their corner, explained in plain terms.
 
-**Triggers that bring them to the site:** a CCMA referral just arrived; a disciplinary hearing is coming up; an employee needs to be dismissed; a strike or go-slow; retrenchments; a new policy or contract is needed.
+**Triggers that bring them to the site:** a CCMA or bargaining council referral; an upcoming disciplinary hearing; a dismissal or incapacity case; retrenchments; union negotiations or a strike; a new contract or policy; a law change (minimum wage, leave rules, Dismissal Code, PAIA reporting).
 
 ---
 
 ## 5. Brand personality
 
-**Premium and fierce.** Expanded:
+**Premium and fierce, with a personal touch.**
 
 | Trait | What it means | What it is not |
 |---|---|---|
-| **Fierce** | Protective, decisive, takes the employer's side without apology | Aggressive, rude, threatening employees |
-| **Premium** | Polished, exclusive, expert, calm under pressure | Flashy, cold or out of reach |
-| **Logical** | Clear thinking, step-by-step strategy, plain-language advice | Academic, jargon-heavy |
-| **Loyal** | Employers only, always; no conflicts of interest | Neutral or "both sides" |
-| **Direct** | Short sentences, clear next steps, honest about risk | Vague, hedging, salesy |
+| **Fierce** | Protective and decisive; firmly on the employer's side | Aggressive, or hostile towards employees |
+| **Premium** | Polished, expert, detail-focused | Cold, flashy or unaffordable |
+| **LAWgical** | Clear thinking, plain-language explanations, informed decisions | Jargon, academic language |
+| **Personal** | You deal with Louise directly; real interaction | Faceless call centre |
+| **Trustworthy** | Professional, confidential, honest about risk | Overpromising |
+
+**Voice:** professional, trustworthy and approachable. Short, punchy lines with a key takeaway and a clear next step, as in her posts. A little playful wordplay ("LAWgical") is welcome; never silly.
 
 **Voice examples**
 
-- "A CCMA referral is not the end of the world. Doing nothing about it might be."
+- "Got a CCMA referral? Don't wait. Deadlines are short."
 - "We act for employers. Only employers."
-- "Get it right before it reaches the CCMA."
+- "Labour matters, made LAWgical."
 
-**Tone rules:** confident, never boastful. No guarantees of outcomes. No comparisons with other firms ("the best", "number one") — keep claims factual (see the compliance note in section 13).
+**Tone rules:** confident, never boastful. No guaranteed outcomes. Avoid unprovable superlatives ("the best", "number one").
 
 ---
 
 ## 6. Colour palette
 
-Core colours come from the client's brand sheet. Extended tones are derived from them for the website.
+Core colours come from the client's brand sheet. (The content notes mention a navy of about `#1F4A5A`; the brand sheet's `#0C3547` is used as the official value.)
 
-### Core (from the brand sheet)
+### Core
 
 | Role | Name | Hex | Use |
 |---|---|---|---|
-| Primary | **Lawgical Navy** | `#0C3547` | Main dark background, headings on light, logo lettering |
-| Accent | **Quill Turquoise** | `#48DFEA` | The one strong accent: buttons, highlights, key lines, the feather |
-| Base | **White** | `#FFFFFF` | Light sections, text on navy |
+| Primary | **Lawgical Navy** | `#0C3547` | Headings, navy sections, logo lettering, footer |
+| Accent | **Quill Turquoise** | `#48DFEA` | The one strong accent: buttons, highlights, feather motif |
+| Base | **White** | `#FFFFFF` | Main background |
 
 ### Extended (for the website)
 
 | Role | Name | Hex | Use |
 |---|---|---|---|
-| Deepest background | Midnight Navy | `#071E29` | Hero, footer, video overlays |
-| Raised surface on dark | Harbour Navy | `#123F54` | Cards and panels on navy |
-| Line on dark | Steel Line | `#2A5568` | Borders, dividers on navy |
-| Accent text on white | Deep Teal | `#0B7C86` | Links and accent text on white (turquoise is too light to read on white) |
+| Deepest navy | Midnight Navy | `#071E29` | Footer, video overlays, text on turquoise buttons |
+| Raised surface on navy | Harbour Navy | `#123F54` | Cards on navy sections |
+| Line on navy | Steel Line | `#2A5568` | Dividers on navy |
+| Accent text on white | Deep Teal | `#0B7C86` | Links and accent words on white |
 | Light section | Mist | `#F2F7F8` | Alternate light sections |
-| Body text on light | Slate | `#3E5561` | Paragraphs on white |
-| Alert (use rarely) | Signal Red | `#D64545` | Urgent "CCMA deadline" notices only |
+| Soft turquoise wash | Feather Mist | `#E6FAFC` | Highlight panels, form backgrounds |
+| Body text | Slate | `#3E5561` | Paragraphs on white |
+| Alert (rarely) | Signal Red | `#D64545` | Fraud warning in the footer; urgent deadlines only |
 
 ### Contrast rules (checked)
 
-- Turquoise `#48DFEA` on Navy `#0C3547`: **8:1**. Use freely for buttons and highlights.
-- White on Navy: **13:1**.
-- Turquoise on white: **1.6:1**. **Never use turquoise for text on white**; use Deep Teal `#0B7C86` (**5:1**) instead.
+- Turquoise on Navy: **8:1**. White on Navy: **13:1**.
+- Turquoise on white: **1.6:1**, so **never use turquoise for text on white**. Use Deep Teal `#0B7C86` (**5:1**).
 - Buttons: turquoise background with Midnight Navy text.
 
-**Balance:** about 60% navy, 30% white/mist, 10% turquoise. The accent should feel like a flash of the feather, not a wash.
+**Balance (light and modern, per client notes):** about 60% white/mist, 30% navy, 10% turquoise.
 
 ---
 
 ## 7. Typography direction
 
-All from Google Fonts.
+From Google Fonts, chosen to match the logo's serif.
 
 | Role | Font | Weights | Why |
 |---|---|---|---|
-| Display / headlines | **Bodoni Moda** | 600–800, plus italic | High-contrast serif that echoes the sharp "LL" in the logo. Premium, editorial, with a cutting edge that suits "fierce". |
-| Body / UI | **Manrope** | 400–700 | Clean, modern sans-serif. Very readable on screens and keeps the serif from feeling old-fashioned. |
+| Display / headlines | **Bodoni Moda** | 600–800, plus italic | High-contrast serif that echoes the sharp "LL" monogram; premium with an edge |
+| Body / UI | **Manrope** | 400–700 | Clean, modern, very readable; keeps the serif from feeling old-fashioned |
 | Labels / small caps | **Manrope** | 600–700, uppercase, letter-spacing 0.12em | Eyebrows, section labels, button text |
 
-**Usage notes**
-
-- Headlines big and tight (line-height ~1.0–1.1); one italic word for emphasis, e.g. "Firmly on the *employer's* side."
-- Body 17–18px, line-height 1.6, max ~65 characters per line.
-- Large serif numerals for steps and figures (01 / 02 / 03 only where there is a real sequence, such as the process).
+- Headlines large and tight (line-height ~1.05); one italic word for emphasis, e.g. "Labour matters, made *LAWgical*."
+- Body 17–18px, line-height 1.6, ~65 characters per line.
 - Fallbacks: `"Bodoni Moda", Georgia, serif` and `"Manrope", system-ui, sans-serif`.
 
 ---
 
 ## 8. Logo direction
 
-**Existing logo (client supplied):**
+**Existing logo** (`assets/images/logo-lawgical-labour.jpg`, 1280×1145, white background):
 
-- A large serif **"LL" monogram** in Lawgical Navy.
-- **LAWGICAL LABOUR** set in serif capitals, arcing around the top-right of the monogram.
-- A **turquoise feather (quill)** curving up the left side, symbolising the written word, precision and the law.
-- A trail of **four-point turquoise sparkles** along the bottom, completing the circle.
+- Large serif **"LL" monogram** in Lawgical Navy.
+- **LAWGICAL LABOUR** in serif capitals, arcing around the top right.
+- A **turquoise feather (quill)** curving up the left side: the written word, precision, the law.
+- **Four-point turquoise sparkles** along the bottom completing the circle.
 
-**Usage rules for the website**
+**Versions to prepare for the website**
 
 | Version | Where |
 |---|---|
-| Full colour on white | Light sections, documents, email signature |
-| Reversed (white lettering, turquoise feather) on navy | Dark header, hero, footer. **To prepare:** recolour the navy lettering to white. |
-| Monogram only ("LL" + feather) | Favicon, social avatars, small sizes |
-| Horizontal lockup (monogram + name on one line) | Website header, where the circular logo would be too small to read. **To prepare.** |
+| Full colour, transparent background | Light sections, header |
+| Reversed (white lettering, turquoise feather) | Navy sections, footer |
+| Monogram + feather only | Favicon, social avatars |
+| Horizontal lockup (monogram + "LAWGICAL LABOUR" on one line) | Website header, where the circular logo would be too small |
 
-- Keep clear space around the logo of at least the height of one "L".
-- Do not stretch, recolour the feather, or place the full-colour logo on busy photos.
-- **Needed from client:** the logo as a high-resolution PNG with transparent background, or ideally SVG. The PDF version is usable for now.
+- Clear space of at least one "L" height around the logo. Don't stretch it or recolour the feather.
+- **Nice to have from client:** an SVG or high-resolution transparent PNG of the logo. The JPG works for now.
 
 ---
 
 ## 9. Service description
 
-*(In the template this section is "Product description". Lawgical Labour sells professional services, not a product.)*
+*(The template's "product description". Lawgical Labour sells professional services.)*
 
-**What clients get:** expert, employer-only labour law support, from preventing problems to defending the business when one arrives.
+**About (client wording):** "Lawgical Labour is a private labour consulting company that provides labour law and labour relations services, training, advice and support. We pride ourselves in being professional, highly skilled, experienced and in offering personal interaction, with attention to detail at affordable prices."
 
-**Draft service list — TBC against the client's services image:**
+**Founder:** **Louise Minnaar** (TBC: Minnaar or Botha), Director and Labour Law Consultant. LLB, North-West University. Labour law has been her passion from the start; after gaining experience in various industries she founded her own consultancy to make labour matters "as LAWgical as possible" for clients.
 
-| Service | What it covers |
-|---|---|
-| **CCMA & bargaining council representation** | Conciliation and arbitration for unfair dismissal, unfair labour practice and other referrals |
-| **Disciplinary hearings** | Advising on charges, chairing or initiating hearings, making sure procedure is fair and defensible |
-| **Dismissals & incapacity** | Misconduct, poor performance, ill health and operational requirements (retrenchments) |
-| **Retrenchments & restructuring** | Section 189 consultation processes, selection criteria, severance |
-| **Employment contracts** | Drafting and reviewing contracts, restraints of trade, fixed-term and probation terms |
-| **Workplace policies & procedures** | Disciplinary codes, leave, attendance, social media, substance abuse and other policies |
-| **Strikes & union matters** | Strike and protest action, recognition agreements, dealing with shop stewards |
-| **Labour Court matters** | Reviews, urgent applications and litigation where needed |
-| **Compliance & training** | BCEA and LRA compliance checks; training managers to run fair processes |
-| **Retainer / on-call advice** | Monthly retainer for fast answers before small issues become disputes |
+**Services (full list, from the company profile)**
 
-**How the service works (draft process):** 1. Call, WhatsApp or book a consultation → 2. We assess the matter and the risk → 3. Clear strategy and fee estimate → 4. We act for you, from paperwork to hearing → 5. Ongoing protection on retainer.
+| # | Service | Website card title |
+|---|---|---|
+| 1 | Industrial Relations risk assessments and audits | **IR risk audits** |
+| 2 | Chairing of disciplinary hearings and incapacity processes, and drafting of notices | **Disciplinary & incapacity hearings** |
+| 3 | Employee performance management | **Performance management** |
+| 4 | Facilitating relationships and negotiations with trade unions, and strike handling | **Union negotiations & strikes** |
+| 5 | Retrenchment, restructuring and rightsizing, with the relevant documentation | **Retrenchments & restructuring** |
+| 6 | Representation of employers at the CCMA and Bargaining Council | **CCMA & Bargaining Council** |
+| 7 | Day-to-day advice on all aspects of Industrial Relations, labour litigation and legal advice | **Day-to-day IR advice** |
+| 8 | IR and HR policy development, and employment contracts | **Contracts & HR policies** |
+| 9 | Mentoring of HR/IR executives, managers, officers and trainees | **HR/IR mentoring** |
+
+**Headline six (from the services flyer):** Chairing of disciplinary hearings · CCMA & Bargaining Council representation · Drafting of employment contracts · Drafting and vetting of IR/HR policies · Retrenchments & restructuring · Union negotiations & strike handling.
+
+**How it works (for the process section):** 1. Call, WhatsApp or book a consultation → 2. We assess the matter and the risk → 3. Clear advice, options and a fee estimate → 4. We handle the process with you, from notices to hearing → 5. Ongoing day-to-day support.
 
 ---
 
 ## 10. Key benefits
 
-For feature cards and section copy. **TBC against the services image.**
+1. **Employers only.** We never act for employees, so there's no conflict of interest.
+2. **Qualified, experienced consultant.** LLB-qualified, with experience across various industries.
+3. **Personal interaction.** You deal directly with Louise, not a call centre.
+4. **Attention to detail.** Notices, procedures and documents done properly, so they hold up.
+5. **Plain-language advice.** Labour law explained "LAWgically", so you can make informed decisions.
+6. **End-to-end support.** From contracts and policies to hearings, retrenchments, unions and the CCMA.
+7. **Affordable expertise.** Professional service at fair prices.
+8. **Stay up to date.** Practical updates on law changes (minimum wage, leave, PAIA, Dismissal Code).
 
-1. **Employers only.** We never act for employees, so there is never a conflict of interest.
-2. **One focus: labour law.** Specialist knowledge of the LRA, BCEA, CCMA and Labour Court.
-3. **Fast response when it's urgent.** CCMA deadlines are short; we move quickly.
-4. **Plain-language advice.** Clear options and risks, without the jargon.
-5. **Process that holds up.** Fair, documented procedures that stand up at the CCMA.
-6. **Prevention, not just defence.** Contracts, policies and training that stop disputes before they start.
-7. **Local to the West Rand.** We know local businesses and industries.
-8. **Predictable costs.** Clear fee estimates and retainer options (**TBC**).
-
-Short card titles: *Employers only · Fast response · Plain-language advice · Defensible process · Prevention first · West Rand based*
+Short card titles: *Employers only · Personal service · Detail-driven · Plain language · Full IR support · Fair fees*
 
 ---
 
 ## 11. Visual mood
 
-**Overall atmosphere:** a private boardroom after hours. Quiet, serious, powerful. The feeling of having a sharp mind in your corner.
+**Client direction: "polished legal firm, light and modern rather than dark and heavy."** Combined with "premium and fierce", the result is a bright, confident professional look with sharp navy contrast.
 
 | Element | Direction |
 |---|---|
-| **Lighting** | Low-key and cinematic. Deep navy shadows, a single cool key light, soft light through blinds. Turquoise used as a rim light or glow, never a flood. |
-| **Materials & textures** | Dark walnut or black-stained wood, brushed steel, heavy cream paper, leather-bound files, a fountain pen, fine paper grain. A subtle linen or paper texture on light sections. |
-| **Background** | Midnight Navy gradients; very subtle noise to avoid flat banding. Light sections in white and Mist with generous space. |
-| **Graphic devices** | Thin turquoise rules, sharp angled corners (not soft round blobs), oversized serif numerals, a faint feather-stroke curve echoing the logo, small four-point sparkles used sparingly as markers. |
-| **Photography** | If team photos are provided: business attire, confident but approachable, shot against navy or dark wood with soft side light. **No** courtroom clichés: no gavels (South African courts don't use them), no scales of justice, no stock handshakes. |
-| **Motion** | Slow and deliberate. Hero video moves in slow macro; sections fade and rise gently; buttons respond quickly. Everything respects reduced-motion settings. |
-| **Camera style** | Macro, shallow depth of field, slow dolly or slider moves, locked-off frames. Never handheld or shaky. |
-| **Mood words** | Discreet · decisive · sharp · protective · composed · premium |
+| **Overall** | Bright, airy, modern office. Lots of white space, crisp navy type, flashes of turquoise. Confident, not intimidating. |
+| **Lighting** | Soft natural daylight from large windows; clean, gentle shadows. Turquoise appears as an accent, never a colour cast. |
+| **Materials & textures** | White and light-grey surfaces, light oak or white marble, navy leather folders, crisp cream paper, brushed steel. Very subtle paper grain on light sections. |
+| **Backgrounds** | White and Mist sections, with navy bands for contrast (services, final call to action, footer). Feather Mist panels behind forms. |
+| **Graphic devices** | Thin turquoise rules, a faint feather-stroke curve echoing the logo, small four-point sparkles as markers, sharp corners on key panels, oversized serif numerals for the process steps. |
+| **Photography** | Louise's headshot (light grey background, black blazer) is the hero portrait: approachable expertise. **Avoid** the stock legal clichés in older flyers: no gavels (South African courts don't use them), no Lady Justice statues, no scales, no law-book walls. |
+| **Motion** | Calm and precise: gentle fades and rises, a slow hero video, quick button responses. Respects reduced-motion settings. |
+| **Camera style (video)** | Slow macro slider moves, shallow depth of field, locked-off frames. Never handheld. |
+| **Mood words** | Polished · clear · decisive · approachable · protective · modern |
 
 ---
 
 ## 12. Website goal
 
-**Primary goal:** convert West Rand employers into enquiries, using **as many contact options as possible**, always within one tap.
+**Primary goal:** turn West Rand employers into enquiries, with **as many contact options as possible**, always one tap away. (Template goal "drive pre-orders" becomes "drive consultations and contact".)
 
 **The page must:**
 
-1. Make clear within 5 seconds: *labour law, employers only, West Rand*.
-2. Speak to urgent pain (a CCMA referral, a dismissal, a strike) and to prevention (contracts, policies).
-3. Build trust fast: employer-only stance, expertise, process, credentials and testimonials (**TBC**).
+1. Make clear within 5 seconds: *labour law consultancy, employers only, West Rand*.
+2. Speak to urgent needs (CCMA referral, hearing, dismissal, strike) and to prevention (contracts, policies, audits).
+3. Build trust: employer-only stance, Louise's qualifications and personal service, clear process, practical law updates, testimonials (when available).
 4. Offer every contact route, everywhere:
-   - **Call** (tap to call)
-   - **WhatsApp** (pre-filled message)
-   - **Email**
-   - **Book a consultation** (short form: name, company, employees, matter type, phone)
-   - **Request a callback**
-   - **Office address with map link** and office hours
-   - **LinkedIn / Facebook** (if available)
-   - A floating WhatsApp button and a sticky mobile bar: *Call · WhatsApp · Book*
 
-**Success measures:** calls, WhatsApp chats, form submissions and email clicks.
+| Channel | Detail |
+|---|---|
+| Call | **084 927 0101** (tap to call) |
+| WhatsApp | **TBC**: assumed 084 927 0101 (wa.me/27849270101) with a pre-filled message |
+| Email | **louise@lawgical.co.za** |
+| Book a consultation | Short form: name, company, number of employees, matter type, phone, preferred contact method |
+| Request a callback | Name + number only |
+| Office / map | **TBC** |
+| Hours | **TBC** |
+| Social | LinkedIn / Facebook **TBC** |
+| Always on | Floating WhatsApp button; mobile sticky bar *Call · WhatsApp · Book* |
 
-**Contact details needed from client (TBC):** phone, WhatsApp number, email, office address, hours, social links, and a Formspree link for the form.
+**Success measures:** calls, WhatsApp chats, form submissions, email clicks.
 
 ---
 
 ## 13. Suggested landing page sections
 
-Scroll-driven, single page, with a call to action in every section.
+Single scroll page with a call to action in every section.
 
 | # | Section | Content | Main action |
 |---|---|---|---|
-| 0 | **Top bar** (sticky on desktop) | "Employers only · West Rand" · phone · WhatsApp · email | Call |
+| 0 | **Top bar** | "Labour law consultancy exclusively for employers" · 084 927 0101 · WhatsApp · email | Call |
 | 1 | **Header** | Logo lockup, short nav, "Book a consultation" button | Book |
-| 2 | **Hero** (dark, background video) | Slogan as headline; one line: "Labour law for South African employers with 20+ staff. We never act for employees."; buttons: *Book a consultation*, *Call now*, *WhatsApp us*; a compact callback form | Book / Call / WhatsApp |
-| 3 | **Trust strip** | Employers only · Specialist labour law · West Rand based · CCMA & Labour Court (credentials **TBC**) | — |
-| 4 | **"Got a CCMA referral?" urgent band** | Short, direct: deadlines are tight; send it to us today | WhatsApp the referral |
-| 5 | **Pain points** | "Sound familiar?" — misconduct, absenteeism, a dismissal gone wrong, union pressure, outdated contracts | Book |
-| 6 | **Services** | Cards for each service (section 9) | Ask about this service |
-| 7 | **Why employers only** | The positioning story; no conflicts of interest; fierce loyalty | Book |
-| 8 | **How it works** | 4–5 numbered steps from first call to ongoing protection | Call |
-| 9 | **Who we work with** | Industries and company sizes on the West Rand | — |
-| 10 | **About / the team** | Founder story and photo (**TBC**), credentials, admission or membership details | Book |
-| 11 | **Testimonials** | Space for real client reviews (**TBC**; no invented reviews) | — |
-| 12 | **FAQ** | Fees, response time, CCMA deadlines, retainers, areas served, "Do you act for employees?" (No.) | WhatsApp a question |
-| 13 | **Final CTA: "Every way to reach us"** | Large tiles: Call · WhatsApp · Email · Book · Visit (map) · LinkedIn | All |
-| 14 | **Footer** | Logo, contact details, hours, areas, legal disclaimer, privacy (POPIA) notice | — |
-| — | **Always on** | Floating WhatsApp button; mobile sticky bar *Call · WhatsApp · Book* | — |
+| 2 | **Hero** (light, with background video or Louise's portrait) | Headline slogan; sub-line "Labour law consultancy exclusively for employers"; buttons *Book a consultation*, *Call*, *WhatsApp*; compact callback form | Book / Call / WhatsApp |
+| 3 | **Trust strip** | Employers only · LLB qualified · Personal service · West Rand | — |
+| 4 | **"Got a CCMA referral?" band** | Short and urgent: deadlines are tight, send it today | WhatsApp the referral |
+| 5 | **Services** (navy section) | Headline six as cards, with "All services" expanding to the full nine | Ask about this service |
+| 6 | **Why employers only** | The employer-only story; no conflicts of interest | Book |
+| 7 | **Meet Louise** | Headshot, story ("as LAWgical as possible"), LLB from North-West University, direct contact | Call Louise |
+| 8 | **How it works** | 5 numbered steps (section 9) | Call |
+| 9 | **Labour law updates** | Four cards from her posts: National Minimum Wage R30,23/hour from 1 March 2026; annual leave forfeiture after 18 months; Draft Dismissal Code (no major changes, fair procedure still required); PAIA annual report to the Information Regulator (**reframe as an annual reminder**, as the 30 June 2026 deadline has passed) | Ask us about it |
+| 10 | **Testimonials** | Placeholders for real client reviews (no invented reviews) | — |
+| 11 | **FAQ** | "Do you act for employees?" (No.) · CCMA deadlines · fees · retainers · areas served · virtual consultations | WhatsApp a question |
+| 12 | **"Every way to reach us"** (navy) | Large tiles: Call · WhatsApp · Email · Book · Callback · Visit/Map · Social | All |
+| 13 | **Footer** | Logo, contact details, services, "exclusively provides services to employers", **banking-details fraud warning** (from her email disclaimer), POPIA privacy note, "general information, not legal advice" disclaimer | — |
 
-**Compliance notes**
+**Compliance and accuracy notes**
 
-- **If the firm is admitted attorneys:** advertising must follow the Legal Practice Council Code of Conduct. Keep claims factual; avoid superlatives ("best", "leading", "number one"), comparisons with other firms and guaranteed outcomes. **TBC:** confirm status so wording ("law firm" vs "labour law consultants") is correct.
-- Add a short disclaimer: website content is general information, not legal advice.
-- The form collects personal information, so add a POPIA privacy note.
+- Describe the business as a **labour law consultancy**, not a law firm or attorneys.
+- Keep the email-disclaimer warning in the footer: *"Lawgical Labour (Pty) Ltd will never send an email advising of a change of banking details. Any such email is an attempt to defraud; please contact our office immediately."*
+- Add a POPIA note next to the form.
+- Law updates must show their date, and time-bound items must be kept current.
+- CCMA representation: the services list includes representation at the CCMA and Bargaining Council. The client should confirm the wording is accurate for their capacity (CCMA rules limit who may represent parties at arbitration).
 
 ---
 
 ## 14. Higgsfield video brief
 
-**Purpose:** a looping, cinematic background video for the hero section, behind the headline and buttons. It must set the "premium and fierce" mood without competing with the text.
+**Purpose:** a looping background video for the hero, behind the headline and buttons. It must feel premium and decisive while staying **light and modern**, per the client's direction.
 
-**Concept: "The Brief, After Hours."** Macro shots of an employer's private desk at night, where a labour matter is being handled with precision. A turquoise feather quill (the brand symbol) rests on a document, catching a cool rim light.
+**Concept: "Clarity at the Desk."** Macro shots of a bright, modern consultant's desk in morning light. A turquoise feather quill (the brand symbol) rests on an employment contract, catching the light.
 
 ### Scene
 
-- **Setting:** a dark, premium executive office at night. Deep navy walls and shadows (`#071E29`–`#0C3547`), a dark walnut desk with a subtle grain.
-- **Hero object:** a **turquoise feather quill** (`#48DFEA`) lying diagonally across a closed, heavy cream document folder. Its fine barbs are visible in macro.
-- **Supporting details:** a black fountain pen with a brushed-steel clip; a leather-bound file; the edge of a brushed-steel desk lamp; a crystal glass of water catching light. Paper and leather textures in sharp focus.
-- **Light:** a single cool key light from the left through venetian blinds, casting soft parallel light bars across the desk. Turquoise rim light on the quill and steel edges. Everything else falls into navy shadow.
-- **Particles:** fine dust motes drifting slowly through the light bars, some catching a faint turquoise glow. Subtle, never sparkly or cartoonish. A few may briefly form a soft four-point glint, echoing the logo sparkles.
+- **Setting:** a bright, minimal modern office. White and light-grey tones; a light oak or white marble desk; large window light from the left.
+- **Hero object:** a **turquoise feather quill** (`#48DFEA`) lying diagonally across a closed **navy leather folder** (`#0C3547`) and a few sheets of crisp cream paper.
+- **Supporting details:** a black fountain pen with a brushed-steel clip; a small stack of neatly squared documents; a glass of water catching light; a soft-focus window and greenery in the far background.
+- **Light:** soft morning daylight through sheer blinds, casting faint parallel light bars across the desk. Gentle, clean shadows. The feather's fine barbs glow slightly in the backlight.
+- **Particles:** a few dust motes floating slowly in the light; some catch a faint turquoise glint. Subtle, never sparkly.
 
 ### Camera and motion
 
-- **Movement:** one continuous, very slow macro slider move (left to right, about 10 cm), starting on the feather barbs, gliding along the quill to reveal the document and pen, ending in a slightly wider, composed frame.
-- **Depth of field:** very shallow; focus pulls gently from feather tip to quill shaft.
+- **Movement:** one continuous, very slow macro slider move (left to right, about 10 cm), starting on the feather barbs, gliding along the quill to reveal the folder and pen, ending in a slightly wider, composed frame.
+- **Depth of field:** very shallow; focus glides from feather tip to quill shaft.
 - **Speed:** slow and deliberate. No cuts, no shake, no zoom bursts.
-- **Loop:** last frame should match the first closely, so it loops seamlessly (or provide a crossfade point).
+- **Loop:** last frame closely matches the first for a seamless loop (or provide a crossfade point).
 
 ### Technical spec
 
 | Item | Spec |
 |---|---|
 | Length | 8–12 seconds, seamless loop |
-| Aspect ratios | 16:9 (desktop) **and** 9:16 (mobile) |
-| Resolution | 1080p minimum; compressed web export under ~4 MB |
-| Frame rate | 24 fps, cinematic motion blur |
+| Aspect ratios | 16:9 (desktop) and 9:16 (mobile) |
+| Resolution | 1080p minimum; web export under ~4 MB |
+| Frame rate | 24 fps, natural motion blur |
 | Audio | None (muted autoplay) |
-| Colour grade | Teal-navy shadows, neutral highlights, turquoise as the only saturated colour |
-| Composition | Keep the **left 55%** of the 16:9 frame darker and calmer for the headline; action weighted to the right. In 9:16, keep the top half calmer. |
+| Colour grade | Clean, bright whites; navy and turquoise as the only strong colours; no warm orange cast |
+| Composition | Keep the **left 55%** of the 16:9 frame bright and calm (soft white space) for the headline; detail weighted to the right. In 9:16, keep the top half calm. |
 
 ### Must avoid
 
-- No readable text on documents (blurred or out of focus only); no logos; no real brand names; no faces or people.
-- No courtroom clichés: no gavel, scales of justice or law-book walls.
-- No warm orange or gold tones fighting the navy/turquoise palette.
-- No fast motion, flashes or heavy lens flares.
+- No readable text on documents (blurred only); no logos; no real brand names; no faces or people.
+- No legal clichés: no gavel, scales of justice, Lady Justice statue or law-book walls.
+- No dark, heavy or moody grading; no fast motion, flashes or lens flares.
 
 ### Prompt draft (for later use with Higgsfield)
 
-> Cinematic macro shot, dark premium executive office at night. A turquoise feather quill (#48DFEA) rests diagonally on a closed cream document folder on a dark walnut desk, beside a black fountain pen with a brushed steel clip and a leather-bound file. Single cool key light through venetian blinds casts soft parallel light bars across the desk; turquoise rim light on the feather barbs and steel edges; deep navy shadows (#0C3547). Fine dust motes drift slowly through the light, a few glinting faintly turquoise. Very slow left-to-right macro slider move, shallow depth of field, focus gliding from the feather tip along the quill to the pen. Premium, discreet, decisive, powerful mood. No text, no logos, no people, no gavel. 24 fps, smooth seamless loop, 16:9.
+> Cinematic macro shot in a bright, minimal modern office in soft morning daylight. A turquoise feather quill (#48DFEA) rests diagonally on a closed navy leather folder (#0C3547) and crisp cream papers on a light oak desk, beside a black fountain pen with a brushed steel clip. Soft daylight through sheer blinds casts faint parallel light bars; clean gentle shadows; the feather's fine barbs glow in the backlight. A few dust motes drift slowly through the light, one or two glinting faintly turquoise. Very slow left-to-right macro slider move, shallow depth of field, focus gliding from the feather tip along the quill to the pen. Polished, clear, confident, premium mood. Bright white space on the left of frame. No text, no logos, no people, no gavel. 24 fps, smooth seamless loop, 16:9.
 
 **Poster frame:** export a still from the opening frame as the fallback image (shown before the video loads and when reduced motion is on).
 
 ---
 
-*Status: brand kit draft v1. Next steps: client confirms TBC items → collect logo files, photos, services list and contact details → generate media → build the website.*
+## Workspace
+
+| Folder | Contents |
+|---|---|
+| `assets/images` | **For the website:** `logo-lawgical-labour.jpg`, `louise-headshot.png` |
+| `assets/videos` | Empty, for the Higgsfield hero video |
+| `assets/references` | **Reference only, not for the website:** brand sheet PDF, company profile, services flyer, about-Louise flyer, email signature, blog posts 1–4 |
+| `copy` | `brand-kit.md` (this file), `content.md` (client's own wording, transcribed) |
+| `website` | Empty, for the site build |
+
+*Status: brand kit v2, updated with the client's materials. Next: confirm TBC items → generate the hero video → build the website.*
