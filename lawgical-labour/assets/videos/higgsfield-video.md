@@ -17,3 +17,22 @@
 **Status:** completed, 2560×1440 (2K), 12 s. Video: https://d8j0ntlcm91z4.cloudfront.net/user_3K731ryOANdPdB85bRB9V6oRrqr/hf_20261002_183233_fb911c40-d3b7-42c2-b113-a89c3337c43a.mp4
 
  Download from Higgsfield and save here under the target filename (the session's network policy blocks the download host `d8j0ntlcm91z4.cloudfront.net`).
+
+## Review (2026-10-02)
+
+Saved as `lawgical-labour-scroll-background.mp4` (uploaded by client): 2560×1440, 24 fps, 12.25 s, H.264, 12 MB. Includes an AAC audio track with sound; strip it for the web version.
+
+| Time | What happens |
+|---|---|
+| 0–3.5 s | Hero still life: feather standing upright against the navy folder, pen beside it, bright window behind. Very slow drift. |
+| ~3.5–4 s | **Cross-dissolve** (not a camera move) into the macro shot. |
+| 4–7.5 s | Macro: feather barbs, pen barrel and brushed-steel cap, navy leather grain and stitching. Very slow drift. |
+| ~7.5–8 s | **Cross-dissolve** into the workspace. |
+| 8–12 s | Slow pull-back and rise to the workspace: oak desk, folder, cream pad, laptop, water glass, navy chair, plant, shelving, window. |
+
+**Checks**
+- No hard cuts (largest frame-to-frame scene score 0.07). The two phase changes are soft dissolves of about half a second.
+- No people, hands, readable text or logos seen in the sampled frames.
+- Palette on brief: white, oak, navy, turquoise; no orange cast.
+- Left side: calm in phases 1 and 3; the macro phase fills the frame (needs a text scrim if copy sits over it).
+- **Consistency issue:** the quill changes design. In phase 1 it is a plain feather standing upright; in phase 3 it lies flat with a metal nib holder. The pen also changes from a short cap-style pen to a longer one.
