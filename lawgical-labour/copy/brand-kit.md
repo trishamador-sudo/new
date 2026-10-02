@@ -133,17 +133,17 @@ Core colours come from the client's brand sheet. (The content notes mention a na
 
 ## 7. Typography direction
 
-From Google Fonts, chosen to match the logo's serif.
+From Google Fonts. **Updated at the client's request:** one simple, clear sans-serif for everything (the serif look stays in the logo itself).
 
 | Role | Font | Weights | Why |
 |---|---|---|---|
-| Display / headlines | **Bodoni Moda** | 600–800, plus italic | High-contrast serif that echoes the sharp "LL" monogram; premium with an edge |
-| Body / UI | **Manrope** | 400–700 | Clean, modern, very readable; keeps the serif from feeling old-fashioned |
-| Labels / small caps | **Manrope** | 600–700, uppercase, letter-spacing 0.12em | Eyebrows, section labels, button text |
+| Headlines | **Manrope** | 700–800, tight letter-spacing | Clean, modern, very legible at large sizes |
+| Body / UI | **Manrope** | 400–600 | Same family keeps the page calm and consistent |
+| Labels / small caps | **Manrope** | 700, uppercase, letter-spacing 0.14em | Eyebrows, section labels, button text |
 
-- Headlines large and tight (line-height ~1.05); one italic word for emphasis, e.g. "Labour matters, made *LAWgical*."
+- Headlines large and tight (line-height ~1.05); accent words in Quill Turquoise, e.g. "Labour matters, made **LAWgical.**"
 - Body 17–18px, line-height 1.6, ~65 characters per line.
-- Fallbacks: `"Bodoni Moda", Georgia, serif` and `"Manrope", system-ui, sans-serif`.
+- Fallback: `"Manrope", system-ui, sans-serif`.
 
 ---
 

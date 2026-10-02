@@ -126,40 +126,6 @@ function setupImpact() {
   });
 }
 
-/* ---------- Audience: one card at a time (pinned) ---------- */
-let galleryST = null;
-function setupGallery() {
-  if (!fullMotion) return;
-  const slides = $$(".workflow-card");
-  const N = slides.length;
-  const count = $("[data-count]");
-  const render = (p) => {
-    const pos = p * (N - 1);
-    count.textContent = String(Math.round(pos) + 1).padStart(2, "0");
-    slides.forEach((el, i) => {
-      const d = pos - i;
-      const ad = Math.abs(d);
-      const o = Math.max(0, 1 - ad / 0.6);
-      el.style.opacity = o;
-      el.style.transform = `translate(${-d * 130}px, -50%) scale(${1 - Math.min(ad, 1) * 0.06})`;
-      el.style.filter = `blur(${Math.min(ad * 10, 14)}px)`;
-      el.style.zIndex = String(100 - Math.round(ad * 10));
-      el.style.pointerEvents = o > 0.6 ? "auto" : "none";
-      el.setAttribute("aria-hidden", o > 0.6 ? "false" : "true");
-    });
-  };
-  render(0);
-  galleryST = ScrollTrigger.create({
-    trigger: "#workflow",
-    start: "top top",
-    end: () => "+=" + Math.max(1, N - 1) * innerHeight * 0.72,
-    pin: ".workflow__pin",
-    scrub: 1,
-    invalidateOnRefresh: true,
-    onUpdate: (self) => render(self.progress),
-  });
-}
-
 /* ---------- Background video: scrubbed by scroll ---------- */
 const bgVideo = $("#bgv");
 let lastVideoT = -1;
@@ -170,7 +136,7 @@ function scrubVideo() {
   const k = 0.18;
   let eff = lenis.scroll;
   let removed = 0;
-  for (const st of [impactST, galleryST]) {
+  for (const st of [impactST]) {
     if (!st) continue;
     const len = st.end - st.start;
     if (lenis.scroll >= st.end) { eff -= len * (1 - k); removed += len * (1 - k); }
@@ -274,7 +240,6 @@ function setupForm() {
 
 /* ---------- Init ---------- */
 setupImpact();
-setupGallery();
 setupVideo();
 setupReveals();
 setupForm();

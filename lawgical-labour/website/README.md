@@ -56,17 +56,17 @@ This re-encodes it to all-keyframe H.264 (needed for smooth scrubbing), removes 
 | `.bg-tint` (z 1) | Navy gradient for text readability |
 | `#page` (z 10) | Sections, on navy glass panels |
 
-- **Video scrub:** `scrubVideo()` in `src/main.js`. The video slows during the two pinned sections so its three phases (still life → close-up → workspace) line up with the page story.
-- **Pinned sections:** the promise statement (word-by-word reveal) and "Who we work with" (one card at a time).
+- **Video scrub:** `scrubVideo()` in `src/main.js`. The video slows during the pinned section so its three phases (still life → close-up → workspace) line up with the page story.
+- **Pinned section:** the promise statement (word-by-word reveal).
 - **Phones and reduced motion:** the video is replaced by a still poster, pins are switched off and the cards stack.
 
 ## Sections
 
-Hero → Our promise → Services (disputes) → Services (prevention) → Every detail → Meet Louise → Who we work with → How it works & at a glance → Blog (labour law updates) → Book a consultation & every way to reach us → Footer (with banking-details fraud warning and POPIA note).
+Hero → Our promise → Services (disputes) → Services (prevention) → Every detail → Meet Louise → How it works & at a glance → Blog (labour law updates) → Book a consultation & every way to reach us → Footer (with banking-details fraud warning and POPIA note).
 
 ## Files
 
-- `index.html`: all section markup and the Google Fonts link (Bodoni Moda, Manrope)
+- `index.html`: all section markup and the Google Fonts link (Manrope)
 - `src/main.js`: settings, Lenis, ScrollTrigger, video scrub, pins, reveals, form
 - `src/style.css`: brand tokens, layout, sections, video layers
 - `src/glass.css`: glass panels, buttons, chips
