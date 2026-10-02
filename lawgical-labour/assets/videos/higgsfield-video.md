@@ -14,4 +14,6 @@
 
 **Lighting:** soft morning daylight with a turquoise glow on the feather, per the brand kit ("light and modern", no warm orange). The template's "low-key amber rim light" was not used because it conflicts with the brand.
 
-**Status:** rendering when logged. Download from Higgsfield and save here under the target filename (the session's network policy blocks the download host `d8j0ntlcm91z4.cloudfront.net`).
+**Status:** completed, 2560×1440 (2K), 12 s. Video: https://d8j0ntlcm91z4.cloudfront.net/user_3K731ryOANdPdB85bRB9V6oRrqr/hf_20261002_183233_fb911c40-d3b7-42c2-b113-a89c3337c43a.mp4
+
+ Download from Higgsfield and save here under the target filename (the session's network policy blocks the download host `d8j0ntlcm91z4.cloudfront.net`).
