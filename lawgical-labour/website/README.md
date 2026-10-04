@@ -34,7 +34,7 @@ npx serve dist
 
 Open `src/main.js`. At the top is `SITE`: phone, WhatsApp number and pre-filled messages, email, area, and `formEndpoint`.
 
-**Consultation form:** create a form at [formspree.io](https://formspree.io), paste its endpoint into `formEndpoint`, and requests arrive by email. Until then, the form opens the visitor's email app addressed to `louise@lawgical.co.za`.
+**Consultation form:** create a form at [formspree.io](https://formspree.io) that delivers to **louise@lawgical.co.za**, paste its endpoint into `formEndpoint`, and requests arrive by email. Until then, the form opens the visitor's email app addressed to `louise@lawgical.co.za`.
 
 Working hours (Mon–Thu 08:00–16:00, Fri 08:00–15:00) are written in `index.html` (At a glance, Every way to reach us, footer).
 
@@ -71,3 +71,16 @@ Hero → Our promise → Services (disputes) → Services (prevention) → Every
 - `src/style.css`: brand tokens, layout, sections, video layers
 - `src/glass.css`: glass panels, buttons, chips
 - `public/bg.mp4`: all-keyframe background video; `public/img/`: logo, headshot, poster, favicon
+
+## Kamohelo's photo and bio
+In `index.html`, find the `<!-- KAMOHELO -->` comment in the "Our team" section.
+1. Add the photo as `public/img/kamohelo.webp` (portrait, about 900 px wide).
+2. Swap the "K" placeholder for the `<img>` tag shown in the comment.
+3. Replace "Kamohelo's profile is coming soon." with his bio, and add his surname to the heading.
+4. Also update the `#kamohelo` Person in the JSON-LD schema in the `<head>`.
+
+## SEO files
+- `public/robots.txt` and `public/sitemap.xml` are copied next to `index.html` on build.
+- The JSON-LD schema (LegalService, two people, WebSite, FAQPage) is in the `<head>` of `index.html`.
+- All of them assume the domain **https://www.lawgical.co.za/**. Update it in those three places if it changes.
+- If you change the FAQ text, update the FAQPage answers in the schema too.

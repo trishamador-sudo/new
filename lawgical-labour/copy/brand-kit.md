@@ -4,6 +4,16 @@ Working brand kit for the Lawgical Labour website and campaign, built from the c
 
 > **Confirmed by client:** Louise is a Labour Law Consultant **and an Admitted Attorney**; surname **Minnaar**; slogan **"Labour matters, made LAWgical."**; WhatsApp on **084 927 0101**; hours **Mon–Thu 08:00–16:00, Fri 08:00–15:00**.
 >
+> **Update (October 2026), confirmed by client:**
+> - **Team:** Louise Minnaar (Director, Labour Law Consultant, Admitted Attorney) and **Kamohelo** (Labour Law Consultant; photo and bio TBC). Copy says "Speak to us", not "Speak to Louise".
+> - **Area:** all of South Africa. Consultations, hearings and meetings can take place virtually, and the team travels to represent clients at the CCMA, Bargaining Councils, court, etc.
+> - **Business size:** employers with **any** number of employees. There is no longer a 20+ employee threshold.
+> - **Engagement:** ad hoc or retainer.
+> - **Extra contacts:** 068 359 1966 · 071 871 1748 · specialist@lawgical.co.za. Formspree should deliver to louise@lawgical.co.za.
+> - **Hero eyebrow:** "Labour Law Consultancy in South Africa and Employment Law in South Africa · Exclusively for employers".
+> - The FAQ section is live, with 7 client-supplied questions.
+> - Where this note conflicts with older text below (West Rand, 20+ employees), **this note wins**.
+>
 > **Still to confirm (TBC):**
 > 1. Office address (or "West Rand, by appointment") and any LinkedIn / Facebook pages.
 > 2. Whether the website will live at **lawgical.co.za** (the domain already used for email).
@@ -49,15 +59,15 @@ The client has no slogan yet. Recommended options, building on her own voice:
 
 **Positioning statement**
 
-> For South African business owners with 20 or more employees, Lawgical Labour is the labour law consultancy that works only for employers. Unlike generalist providers who act for both sides, Louise and her team give you personal, detail-focused support, from contracts and policies to disciplinary hearings, retrenchments and the CCMA, so you can make informed decisions and protect your business.
+> For South African employers of any size, Lawgical Labour is the labour law consultancy that works only for employers. Unlike generalist providers who act for both sides, Louise and her team give you personal, detail-focused support, from contracts and policies to disciplinary hearings, retrenchments and the CCMA, so you can make informed decisions and protect your business.
 
-**Geography:** the West Rand, South Africa (exact areas and whether virtual consultations are offered: **TBC**).
+**Geography:** all of South Africa. Virtual consultations, hearings and meetings; in-person representation at the CCMA, Bargaining Councils and court.
 
 ---
 
 ## 4. Target audience
 
-**Primary: owners and managing directors of South African businesses with 20+ employees, on the West Rand.**
+**Primary: owners and managing directors of South African businesses of any size, nationwide.**
 
 | Segment | Who they are | What keeps them up at night |
 |---|---|---|

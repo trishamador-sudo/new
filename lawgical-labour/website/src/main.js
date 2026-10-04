@@ -13,11 +13,11 @@ const SITE = {
   phone: "084 927 0101",
   phoneLink: "+27849270101",
   whatsapp: "27849270101",
-  whatsappText: "Hi Louise, I'd like to enquire about a labour matter.",
-  whatsappCcmaText: "Hi Louise, I've received a CCMA referral and need assistance.",
+  whatsappText: "Hi Lawgical Labour, I'd like to enquire about a labour matter.",
+  whatsappCcmaText: "Hi Lawgical Labour, I've received a CCMA referral and need assistance.",
   email: "louise@lawgical.co.za",
-  area: "West Rand, Gauteng",
-  // Paste your Formspree endpoint here (e.g. "https://formspree.io/f/abcdwxyz").
+  area: "All of South Africa",
+  // Formspree: create a form that delivers to louise@lawgical.co.za, then paste its endpoint here (e.g. "https://formspree.io/f/abcdwxyz").
   // While empty, the form opens the visitor's email app addressed to `email`.
   formEndpoint: "",
   // Set at build time for the hosted preview: shows the thank-you message without sending.
@@ -229,7 +229,7 @@ function setupForm() {
         location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(`Consultation request: ${data.matter}`)}&body=${encodeURIComponent(body)}`;
       }
       form.reset();
-      status.textContent = `Thank you, ${data.name.split(" ")[0]}. Louise will contact you shortly.`;
+      status.textContent = `Thank you, ${data.name.split(" ")[0]}. We will contact you shortly.`;
     } catch {
       status.textContent = `Sorry, your request didn't send. Please call or WhatsApp ${SITE.phone}.`;
     } finally {

@@ -179,6 +179,38 @@ section { position: relative; padding: 18vh var(--gutter); }
 .louise__copy > p:not(.eyebrow):not(.louise__role) { color: var(--muted); }
 .louise__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
+/* Team */
+.team { display: grid; gap: 20px; max-width: 1240px; }
+@media (min-width: 860px) {
+  .team { grid-template-columns: 1fr 1fr; }
+  .team .louise__card { grid-template-columns: 1fr; gap: 26px; align-items: start; align-content: start; }
+  .team .louise__photo { aspect-ratio: 5 / 4; }
+  .team .louise__photo img { object-position: 50% 18%; }
+}
+.team .feature__title { font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.1rem); margin-bottom: 8px; }
+.louise__photo--empty { display: grid; place-items: center; border: 1px dashed rgba(255,255,255,.22); }
+.louise__photo--empty span { font-family: var(--font-head); font-size: clamp(3rem, 2rem + 4vw, 5.5rem); font-weight: 800; color: rgba(var(--accent-rgb), .55); }
+.bio-pending { font-style: italic; }
+.team__ctas { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; max-width: 1240px; margin-top: 28px; }
+.team__ctas > p { color: var(--muted); margin: 0; }
+.team__ctas .louise__ctas { margin-top: 0; }
+
+/* Ad hoc or retainer */
+.plans__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); max-width: 1240px; }
+
+/* FAQ */
+.faq__list { display: grid; gap: 12px; max-width: 900px; }
+.faq__item { padding: 0; }
+.faq__item summary { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 22px 26px; cursor: pointer; list-style: none; font-weight: 700; font-size: 1.08rem; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary .ic { flex: none; width: 20px; height: 20px; color: var(--accent); transition: transform .3s var(--ease); }
+.faq__item[open] summary .ic { transform: rotate(45deg); }
+.faq__a { padding: 0 26px 24px; color: var(--muted); }
+.faq__a p + p, .faq__a ul + p { margin-top: 10px; }
+.faq__a ul { margin: 10px 0 0; padding-left: 1.2em; display: grid; gap: 4px; }
+
+.muted-sm { color: var(--muted); font-size: .88rem; font-weight: 500; }
+
 /* Specs (process + at a glance) */
 .specs__grid { display: grid; gap: 20px; max-width: 1240px; }
 @media (min-width: 960px) { .specs__grid { grid-template-columns: 1.2fr 1fr; } }
@@ -254,11 +286,15 @@ section { position: relative; padding: 18vh var(--gutter); }
 .reach { margin-top: 16vh; max-width: 1240px; }
 .reach .section-head__h { margin-bottom: 28px; }
 .reach__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+@media (min-width: 900px) { .reach__grid { grid-template-columns: repeat(3, 1fr); } }
 .reach__tile { display: flex; flex-direction: column; gap: 6px; padding: 24px; text-decoration: none; min-height: 150px; transition: transform .3s var(--ease), border-color .3s; }
 a.reach__tile:hover { transform: translateY(-4px); border-color: rgba(var(--accent-rgb), .5); }
 .reach__tile .ic { width: 26px; height: 26px; color: var(--accent); margin-bottom: auto; }
 .reach__tile span { color: var(--muted); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-top: 18px; }
 .reach__tile strong { font-size: 1.05rem; overflow-wrap: anywhere; }
+.reach__tile strong a { text-decoration: none; }
+.reach__tile strong a:hover { color: var(--accent); }
+.reach__tile small { color: var(--muted); font-size: .85rem; }
 
 /* ---------- Footer (dissolve to Midnight Navy) ---------- */
 .footer { position: relative; z-index: 10; margin-top: 30vh; padding: 12vh var(--gutter) 6vh; background: var(--bg); }
