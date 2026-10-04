@@ -1,7 +1,14 @@
 # Minnaar Attorneys: brand kit
 
 > Source: the client's brand questionnaire (October 2026), the logo, the hero image, and Louise's email signature.
-> **TBC:** street address; whether 084 927 0101 is also the WhatsApp number; social links; domain (assumed www.minnaar-law.co.za).
+> **Confirmed:**
+> - 084 927 0101 is also the WhatsApp number.
+> - The office hours are the same as Lawgical.
+> - The new photo of Louise is approved.
+> - Location wording: "Krugersdorp, Gauteng, by appointment; online consultations for clients all over South Africa".
+> - The website has Blog and FAQ sections.
+>
+> **TBC:** street address and map (to be added later); social links; domain (assumed www.minnaar-law.co.za).
 
 ## 1. Name and slogan
 - **Name:** Minnaar Attorneys. The logo reads "MINNAAR" with a black "ATTORNEYS" bar.
