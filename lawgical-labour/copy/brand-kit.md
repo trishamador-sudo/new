@@ -18,7 +18,7 @@ Working brand kit for the Lawgical Labour website and campaign, built from the c
 > **Still to confirm (TBC):**
 > 1. Office address (or "West Rand, by appointment") and any LinkedIn / Facebook pages.
 > 2. Whether the website will live at **lawgical.co.za** (the domain already used for email).
-> 3. A Formspree link for the consultation form.
+> 3. ~~A Formspree link for the consultation form.~~ Done: https://formspree.io/f/mzezlnod (delivers to louise@lawgical.co.za).
 > 4. CCMA representation wording (see section 13).
 
 ---

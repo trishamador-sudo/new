@@ -34,7 +34,7 @@ npx serve dist
 
 Open `src/main.js`. At the top is `SITE`: phone, WhatsApp number and pre-filled messages, the public email (specialist@), area, `formEndpoint` and `formEmail` (louise@, where consultation requests go).
 
-**Consultation form:** create a form at [formspree.io](https://formspree.io) that delivers to **louise@lawgical.co.za**, paste its endpoint into `formEndpoint`, and requests arrive by email. Until then, the form opens the visitor's email app addressed to `louise@lawgical.co.za`.
+**Consultation form:** create a form at [formspree.io](https://formspree.io) that delivers to **louise@lawgical.co.za**, its endpoint is in `formEndpoint` (https://formspree.io/f/mzezlnod), so requests arrive by email. Until then, the form opens the visitor's email app addressed to `louise@lawgical.co.za`.
 
 Working hours (Mon–Thu 08:00–16:00, Fri 08:00–15:00) are written in `index.html` (At a glance, Every way to reach us, footer).
 

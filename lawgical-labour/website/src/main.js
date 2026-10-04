@@ -19,7 +19,7 @@ const SITE = {
   area: "All of South Africa",
   // Formspree: create a form that delivers to louise@lawgical.co.za, then paste its endpoint here (e.g. "https://formspree.io/f/abcdwxyz").
   // While empty, the form opens the visitor's email app addressed to `formEmail`.
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/mzezlnod",
   // Consultation requests go here (not the public `email` shown on the page).
   formEmail: "louise@lawgical.co.za",
   // Set at build time for the hosted preview: shows the thank-you message without sending.
