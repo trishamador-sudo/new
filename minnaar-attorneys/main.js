@@ -5,13 +5,13 @@ const SITE = {
   phone: '084 927 0101',          // shown on the site
   phoneLink: '+27849270101',      // used for tap-to-call
   whatsapp: '27849270101',        // international format, no +
-  whatsappText: "Hi Louise, I'd like to enquire about a legal matter.",
+  whatsappText: "Hi Minnaar Attorneys, I'd like to enquire about a legal matter.",
   email: 'louise@minnaar-law.co.za',
-  area: 'West Rand, Gauteng',
-  // Consultation requests are sent here. Create a free form at https://formspree.io,
-  // then paste its endpoint, e.g. 'https://formspree.io/f/abcdwxyz'.
-  // While empty, the form opens the visitor's email app addressed to `email`.
-  formEndpoint: '',
+  area: 'Krugersdorp, West Rand',
+  // Consultation requests are sent through Formspree (delivers to louise@lawgical.co.za).
+  formEndpoint: 'https://formspree.io/f/xoevogrd',
+  // Used only if formEndpoint is emptied: the form opens the visitor's email app addressed here.
+  formEmail: 'louise@lawgical.co.za',
   // Set by the preview build. Shows the thank-you message without sending anything.
   preview: false,
 };
@@ -124,7 +124,7 @@ const SITE = {
         if (!res.ok) throw new Error(res.status);
       } else {
         const body = Object.entries(data).filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`).join('\n');
-        location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(`Consultation request: ${data.matter}`)}&body=${encodeURIComponent(body)}`;
+        location.href = `mailto:${SITE.formEmail}?subject=${encodeURIComponent(`Consultation request: ${data.matter}`)}&body=${encodeURIComponent(body)}`;
       }
       form.reset();
       status.textContent = `Thank you, ${data.name.trim().split(' ')[0]}. Louise will contact you shortly.`;
