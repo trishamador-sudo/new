@@ -6,7 +6,8 @@
 > - The office hours are the same as Lawgical.
 > - The new photo of Louise is approved.
 > - Location wording: "Krugersdorp, Gauteng, by appointment; online consultations for clients all over South Africa".
-> - The website has Blog and FAQ sections.
+> - The website has Blog and FAQ ("Working with us") sections; the "How it works" steps and the employment-law FAQs were removed at the client's request.
+> - The menu says "Attorneys" (not "Louise"), the call button says "Speak to us", and the footer carries a POPIA notice.
 >
 > **TBC:** street address and map (to be added later); social links; domain (assumed www.minnaar-law.co.za).
 

@@ -127,7 +127,7 @@ const SITE = {
         location.href = `mailto:${SITE.formEmail}?subject=${encodeURIComponent(`Consultation request: ${data.matter}`)}&body=${encodeURIComponent(body)}`;
       }
       form.reset();
-      status.textContent = `Thank you, ${data.name.trim().split(' ')[0]}. Louise will contact you shortly.`;
+      status.textContent = `Thank you, ${data.name.trim().split(' ')[0]}. We will contact you shortly.`;
     } catch {
       status.textContent = `Sorry, your request didn't send. Please call or WhatsApp ${SITE.phone}.`;
     } finally {
