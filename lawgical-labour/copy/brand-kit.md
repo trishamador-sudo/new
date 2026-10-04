@@ -9,7 +9,8 @@ Working brand kit for the Lawgical Labour website and campaign, built from the c
 > - **Area:** all of South Africa. Consultations, hearings and meetings can take place virtually, and the team travels to represent clients at the CCMA, Bargaining Councils, court, etc.
 > - **Business size:** employers with **any** number of employees. There is no longer a 20+ employee threshold.
 > - **Engagement:** ad hoc or retainer.
-> - **Extra contacts:** 068 359 1966 · 071 871 1748 · specialist@lawgical.co.za. Formspree should deliver to louise@lawgical.co.za.
+> - **Main call and WhatsApp number: 068 359 1966. Main email: specialist@lawgical.co.za.** Also listed: 084 927 0101 · 071 871 1748 · louise@lawgical.co.za. Formspree should deliver to louise@lawgical.co.za.
+> - The website has no "Our promise", "Every notice / Every detail" or booking-benefits sections; the client removed them.
 > - **Hero eyebrow:** "Labour Law Consultancy in South Africa and Employment Law in South Africa · Exclusively for employers".
 > - The FAQ section is live, with 7 client-supplied questions.
 > - Where this note conflicts with older text below (West Rand, 20+ employees), **this note wins**.

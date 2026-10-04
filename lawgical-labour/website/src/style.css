@@ -57,7 +57,7 @@ em { font-style: normal; }
 .ic { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Display type (brand kit: Manrope, heavier weights) */
-.nav__logo, .hero__title, .impact__head, .section-head h2, .section-head__h, .showcase__line,
+.nav__logo, .hero__title, .section-head h2, .section-head__h, 
 .feature__title, .spec__value, .buy__title, .footer__big, .svc__n, .post h3 {
   font-family: var(--font-head);
 }
@@ -139,11 +139,6 @@ section { position: relative; padding: 18vh var(--gutter); }
 @keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
 
 /* Impact (pinned word reveal) */
-.impact { padding: 0 var(--gutter); }
-.impact__pin { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; max-width: 1100px; }
-.impact__head { font-size: clamp(1.9rem, 1rem + 3.4vw, 4rem); font-weight: 700; line-height: 1.15; letter-spacing: -.025em; }
-.impact__head .word { display: inline-block; will-change: opacity, transform, filter; }
-.impact__head .word.is-key { color: var(--accent); }
 
 /* Features */
 .feature__grid { display: grid; gap: 28px; align-items: center; max-width: 1240px; }
@@ -160,11 +155,6 @@ section { position: relative; padding: 18vh var(--gutter); }
 .svc p { color: var(--muted); font-size: .98rem; }
 
 /* Showcase (detail) */
-.showcase { padding-block: 22vh 18vh; }
-.showcase__line { font-size: clamp(2.6rem, 1rem + 6.4vw, 7rem); font-weight: 800; letter-spacing: -.04em; line-height: 1; margin: 0; text-shadow: 0 4px 40px rgba(7, 30, 41, .45); will-change: transform; }
-.showcase__line--indent { padding-left: clamp(1rem, 12vw, 12rem); }
-.showcase__line em { color: var(--accent); }
-.showcase__points { display: grid; gap: 14px; margin-top: 12vh; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); max-width: 1240px; }
 .point { padding: 26px; }
 .point h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
 .point h3::before { content: ""; display: block; width: 28px; height: 2px; background: var(--accent); margin-bottom: 16px; }
@@ -244,8 +234,7 @@ section { position: relative; padding: 18vh var(--gutter); }
 .post details p { margin-top: 10px; color: var(--muted); font-size: .95rem; }
 
 /* Book / buy */
-.buy__grid { display: grid; gap: 20px; max-width: 1240px; align-items: start; }
-@media (min-width: 960px) { .buy__grid { grid-template-columns: .9fr 1.1fr; } }
+.buy__grid { display: grid; gap: 20px; max-width: 760px; align-items: start; }
 .buy__card { padding: clamp(28px, 3vw, 44px); border-color: rgba(var(--accent-rgb), .35); }
 .buy__title { font-size: clamp(2.3rem, 1.3rem + 3.2vw, 4.2rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 16px; }
 .buy__title em { color: var(--accent); }
@@ -343,14 +332,9 @@ a.reach__tile:hover { transform: translateY(-4px); border-color: rgba(var(--acce
   .bg-video { display: none; }
   .bg-poster { display: block; }
   section { padding-block: 12vh; }
-  .impact { padding: 12vh var(--gutter); }
-  .impact__pin { min-height: 0; }
-  .showcase__line--indent { padding-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .bg-video { display: none; }
   .bg-poster { display: block; }
   .hero__scroll span { animation: none; }
-  .impact__pin { min-height: 0; }
-  .impact { padding: 14vh var(--gutter); }
 }

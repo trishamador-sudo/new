@@ -10,12 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
    SITE SETTINGS: contact details used across the page.
    ========================================================== */
 const SITE = {
-  phone: "084 927 0101",
-  phoneLink: "+27849270101",
-  whatsapp: "27849270101",
+  phone: "068 359 1966",
+  phoneLink: "+27683591966",
+  whatsapp: "27683591966",
   whatsappText: "Hi Lawgical Labour, I'd like to enquire about a labour matter.",
   whatsappCcmaText: "Hi Lawgical Labour, I've received a CCMA referral and need assistance.",
-  email: "louise@lawgical.co.za",
+  email: "specialist@lawgical.co.za",
   area: "All of South Africa",
   // Formspree: create a form that delivers to louise@lawgical.co.za, then paste its endpoint here (e.g. "https://formspree.io/f/abcdwxyz").
   // While empty, the form opens the visitor's email app addressed to `email`.
@@ -93,57 +93,12 @@ lenis.on("scroll", ({ scroll, limit }) => {
   nav.classList.toggle("is-scrolled", scroll > 40);
 });
 
-/* ---------- Impact: pinned word-by-word reveal ---------- */
-let impactST = null;
-function setupImpact() {
-  const head = $("[data-words]");
-  const keys = new Set(["employers.", "Only", "protect"]);
-  head.innerHTML = head.textContent
-    .trim()
-    .split(/\s+/)
-    .map((w) => `<span class="word${keys.has(w) ? " is-key" : ""}">${w}</span>`)
-    .join(" ");
-  if (!fullMotion) return;
-
-  const words = $$(".word", head);
-  const render = (p) =>
-    words.forEach((word, i) => {
-      const start = (i / words.length) * 0.72;
-      const o = gsap.utils.clamp(0, 1, (p - start) / 0.12);
-      word.style.opacity = 0.12 + o * 0.88;
-      word.style.filter = `blur(${(1 - o) * 8}px)`;
-      word.style.transform = `translateY(${(1 - o) * 18}px)`;
-    });
-  render(0);
-  impactST = ScrollTrigger.create({
-    trigger: "#impact",
-    start: "top top",
-    end: () => "+=" + innerHeight * 1.6,
-    pin: ".impact__pin",
-    scrub: 1,
-    invalidateOnRefresh: true,
-    onUpdate: (self) => render(self.progress),
-  });
-}
-
 /* ---------- Background video: scrubbed by scroll ---------- */
 const bgVideo = $("#bgv");
 let lastVideoT = -1;
 function scrubVideo() {
   if (!bgVideo.duration) return;
-  // Slow the video while pinned sections play, so the three video phases
-  // line up with the page story (recipe 8 in the skill).
-  const k = 0.18;
-  let eff = lenis.scroll;
-  let removed = 0;
-  for (const st of [impactST]) {
-    if (!st) continue;
-    const len = st.end - st.start;
-    if (lenis.scroll >= st.end) { eff -= len * (1 - k); removed += len * (1 - k); }
-    else if (lenis.scroll > st.start) { eff -= (lenis.scroll - st.start) * (1 - k); removed += len * (1 - k); }
-    else removed += len * (1 - k);
-  }
-  const p = gsap.utils.clamp(0, 1, eff / Math.max(1, lenis.limit - removed));
+  const p = gsap.utils.clamp(0, 1, lenis.scroll / Math.max(1, lenis.limit));
   const t = p * (bgVideo.duration - 0.05);
   if (Math.abs(t - lastVideoT) > 0.008) {
     bgVideo.currentTime = t;
@@ -171,15 +126,6 @@ function setupReveals() {
   });
   // Hero entrance
   gsap.from(".hero .reveal", { y: 30, opacity: 0, duration: 1.2, ease: "power3.out", stagger: 0.12, delay: 0.15 });
-  // Gentle parallax on the detail lines
-  if (fullMotion) {
-    $$("[data-parallax]").forEach((el) => {
-      gsap.fromTo(el, { xPercent: Number(el.dataset.parallax) / 4 }, {
-        xPercent: -Number(el.dataset.parallax) / 4, ease: "none",
-        scrollTrigger: { trigger: ".showcase", start: "top bottom", end: "bottom top", scrub: 1 },
-      });
-    });
-  }
 }
 
 /* ---------- Consultation form ---------- */
@@ -239,7 +185,6 @@ function setupForm() {
 }
 
 /* ---------- Init ---------- */
-setupImpact();
 setupVideo();
 setupReveals();
 setupForm();
