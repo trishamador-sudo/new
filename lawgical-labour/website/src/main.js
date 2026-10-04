@@ -18,8 +18,10 @@ const SITE = {
   email: "specialist@lawgical.co.za",
   area: "All of South Africa",
   // Formspree: create a form that delivers to louise@lawgical.co.za, then paste its endpoint here (e.g. "https://formspree.io/f/abcdwxyz").
-  // While empty, the form opens the visitor's email app addressed to `email`.
+  // While empty, the form opens the visitor's email app addressed to `formEmail`.
   formEndpoint: "",
+  // Consultation requests go here (not the public `email` shown on the page).
+  formEmail: "louise@lawgical.co.za",
   // Set at build time for the hosted preview: shows the thank-you message without sending.
   preview: import.meta.env.VITE_PREVIEW === "1",
 };
@@ -172,7 +174,7 @@ function setupForm() {
         if (!res.ok) throw new Error(res.status);
       } else {
         const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join("\n");
-        location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(`Consultation request: ${data.matter}`)}&body=${encodeURIComponent(body)}`;
+        location.href = `mailto:${SITE.formEmail}?subject=${encodeURIComponent(`Consultation request: ${data.matter}`)}&body=${encodeURIComponent(body)}`;
       }
       form.reset();
       status.textContent = `Thank you, ${data.name.split(" ")[0]}. We will contact you shortly.`;

@@ -32,7 +32,7 @@ npx serve dist
 
 ## Edit contact details
 
-Open `src/main.js`. At the top is `SITE`: phone, WhatsApp number and pre-filled messages, email, area, and `formEndpoint`.
+Open `src/main.js`. At the top is `SITE`: phone, WhatsApp number and pre-filled messages, the public email (specialist@), area, `formEndpoint` and `formEmail` (louise@, where consultation requests go).
 
 **Consultation form:** create a form at [formspree.io](https://formspree.io) that delivers to **louise@lawgical.co.za**, paste its endpoint into `formEndpoint`, and requests arrive by email. Until then, the form opens the visitor's email app addressed to `louise@lawgical.co.za`.
 
