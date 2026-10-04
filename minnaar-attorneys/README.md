@@ -27,3 +27,9 @@ The layout switches to a grid automatically.
 - Office hours and the West Rand area are carried over from Lawgical Labour.
 - No physical address is shown yet.
 - The Formspree endpoint is empty.
+
+## SEO files
+- `robots.txt` and `sitemap.xml` sit next to `index.html`.
+- The schema (JSON-LD: Attorney, Person, WebSite) is in the `<head>` of `index.html`.
+- All three use `https://www.minnaar-law.co.za/`. If the domain changes, update it in all three places.
+- When blog articles are added, list each article URL in `sitemap.xml`.
