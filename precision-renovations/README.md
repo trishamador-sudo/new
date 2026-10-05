@@ -28,4 +28,5 @@ Until then, the form opens the visitor's email app, addressed to `leadEmail` (je
 ## Files
 - `assets/img`: logo (cut out from the supplied logo, with a white version for the footer), hero, and optimised project photos (WebP).
 - `assets/references`: the original hero, logo, wordmark and palette. These are not needed on the live site.
+- Facebook ("View our work on Facebook") links: header icon, hero pill, under the gallery and in the footer. Change the link in `SITE.facebook` in `main.js`.
 - Brand colours: deep teal `#133643`, forest green `#35523F`, bronze `#807253`, tan `#AB9D78`, cream `#E3DBB5`. They are tokens at the top of `styles.css`.

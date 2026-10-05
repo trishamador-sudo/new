@@ -485,3 +485,24 @@ textarea.input { resize: vertical; min-height: 88px; }
 @media (min-width: 900px) { .cta-band__inner { grid-template-columns: 1fr; gap: 24px; } .cta-band__inner h2 { max-width: 18ch; } }
 .cta-band__actions { flex-wrap: wrap; }
 .footer__social { white-space: nowrap; width: fit-content; }
+
+/* Facebook links (like Plumber Steve's Instagram) */
+.icon-btn--fb { color: #fff; border: 0; background: #1877F2; }
+.icon-btn--fb:hover { background: #166FE5; color: #fff; }
+.fb-link { display: flex; width: fit-content; align-items: center; gap: 14px; margin-top: 18px; padding: 8px 18px 8px 8px; border-radius: 999px; background: rgb(255 255 255 / .1); border: 1px solid rgb(255 255 255 / .22); color: #fff; text-decoration: none; backdrop-filter: blur(6px); transition: border-color var(--dur), transform 200ms var(--ease-out), background var(--dur); }
+.fb-link:hover { border-color: #fff; background: rgb(255 255 255 / .16); transform: translateY(-2px); }
+.fb-link__icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #1877F2; color: #fff; flex: none; }
+.fb-link strong { display: block; line-height: 1.2; font-family: var(--font-display); font-weight: 700; }
+.fb-link span span { font-size: .8125rem; color: #D6DFE2; }
+.fb-link__arrow { opacity: .8; }
+.gallery__more { display: flex; justify-content: center; margin-top: 32px; }
+.btn--fb { background: #1877F2; color: #fff; }
+.btn--fb:hover { background: #166FE5; }
+
+@media (max-width: 480px) {
+  .hero__title { font-size: clamp(1.9rem, 1rem + 5.4vw, 2.6rem); }
+  .hero__copy { min-width: 0; }
+  .hero__tagline { letter-spacing: .08em; }
+  .fb-link { padding-right: 14px; }
+  .gallery__more .btn { width: 100%; font-size: 1rem; }
+}

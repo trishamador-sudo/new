@@ -8,6 +8,7 @@ const SITE = {
   whatsappText: "Hi Precision Renovations, I'd like a free estimate for my project.",
   email: 'jean.pepler@gmail.com',
   serviceArea: 'Sandton · Centurion · Midrand',
+  facebook: 'https://www.facebook.com/profile.php?id=61588718769574',
   // Estimate requests are sent here. Create a free form at https://formspree.io,
   // then paste its endpoint, e.g. 'https://formspree.io/f/abcdwxyz'.
   formEndpoint: '',
@@ -27,6 +28,7 @@ const SITE = {
   $$('[data-cfg-href="tel"]').forEach(a => { a.href = `tel:${SITE.phoneLink}`; });
   $$('[data-cfg-href="mailto"]').forEach(a => { a.href = `mailto:${SITE.email}`; });
   $$('[data-cfg-href="wa"]').forEach(a => { a.href = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(SITE.whatsappText)}`; });
+  $$('[data-cfg-href="fb"]').forEach(a => { a.href = SITE.facebook; });
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
   // Mobile menu
