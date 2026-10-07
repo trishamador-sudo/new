@@ -4,8 +4,8 @@ A static one-page site (HTML, CSS and a little JavaScript), built on the Swift D
 
 ## Page sections
 1. **Top bar:** audience line, email and WhatsApp number.
-2. **Header:** logo, menu, a WhatsApp button and "Book a free call" (Calendly).
-3. **Hero:** headline, "Book a free call" and "WhatsApp me", and the 2-step free lead review form.
+2. **Header:** logo, menu, a WhatsApp button and "Book a free audit" (Calendly).
+3. **Hero:** headline, "Book a free audit" and "WhatsApp me", and the 2-step free audit form.
 4. **Trust strip.**
 5. **Who I help:** law firms in South Africa and contractors.
 6. **Services:** the six services, plus calls to action.
@@ -22,7 +22,7 @@ Everything is in `SITE` at the top of `main.js`:
 |---|---|
 | `phone`, `phoneLink`, `whatsapp`, `whatsappText` | WhatsApp number and the pre-filled message |
 | `email` | Contact email |
-| `calendly` | Booking link used by every "Book a free call" button |
+| `calendly` | Booking link used by every "Book a free audit" button |
 | `formEndpoint` | Formspree form: `https://formspree.io/f/mljgjnjy` |
 
 **Formspree:** the first live submission sends a confirmation email to the account that owns the form. Click the link in it to activate the form.
