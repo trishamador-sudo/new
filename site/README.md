@@ -29,8 +29,10 @@ To use a different form:
 - **`robots.txt`:** allows all search engines and points them to the sitemap.
 - **`sitemap.xml`:** lists the page for Google. Update `<lastmod>` (YYYY-MM-DD) when the site changes, and add any new pages.
 - **Canonical link:** the `<head>` of `index.html` points to `https://swiftdeals18.com/`.
+- **Schema (JSON-LD):** in the `<head>` of `index.html`. It describes the business as a GeneralContractor (phone, email, Welkom, Free State, hours Mon–Sat 07:30–17:30, services), with Ricardo Amador as founder. If the hours, area or services change, update them here too.
+- **Share preview:** the `og:` and `twitter:card` tags control the title, text and image (`assets/img/og.jpg`) shown when the link is shared on WhatsApp or Facebook.
 
-If the domain changes, update it in all three places: `index.html`, `robots.txt` and `sitemap.xml`.
+If the domain changes, update it in `index.html` (canonical, `og:` tags and schema), `robots.txt` and `sitemap.xml`.
 
 After the site is live, add it to [Google Search Console](https://search.google.com/search-console) and submit `https://swiftdeals18.com/sitemap.xml` so Google finds it quickly.
 
