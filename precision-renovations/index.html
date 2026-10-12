@@ -41,8 +41,14 @@
         },
         "areaServed": [
           {
-            "@type": "City",
-            "name": "Sandton"
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": -25.8603,
+              "longitude": 28.1894
+            },
+            "geoRadius": "45000",
+            "description": "Within 45 km of Centurion"
           },
           {
             "@type": "City",
@@ -51,6 +57,10 @@
           {
             "@type": "City",
             "name": "Midrand"
+          },
+          {
+            "@type": "City",
+            "name": "Sandton"
           }
         ],
         "sameAs": [
@@ -64,8 +74,8 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Home improvement",
-                "description": "All home improvement: bathroom and kitchen revamps, tiling and wood flooring."
+                "name": "Home renovation",
+                "description": "All home renovation: bathroom and kitchen revamps, tiling and wood flooring."
               }
             },
             {
@@ -191,7 +201,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow eyebrow--light">Home improvement · Cupboards · Woodwork</p>
+          <p class="eyebrow eyebrow--light">Home renovation · Cupboards · Woodwork</p>
           <h1 id="hero-title" class="hero__title">Exceptional craftsmanship,<br><span class="hl">intelligent home design.</span></h1>
           <p class="hero__tagline">End-to-end project <b>management</b></p>
           <p class="hero__lead">Welcome to Precision Renovations. Whether you're remodelling a kitchen, transforming a bathroom into a modern sanctuary, or building custom cabinetry tailored to your space, we manage the whole project from start to finish.</p>
@@ -215,7 +225,7 @@
           <form class="estimate__form" id="estimate-form" novalidate>
             <div class="estimate__head">
               <h2 class="estimate__title">Get your <span class="hl-dark">free estimate</span></h2>
-              <p class="estimate__sub">Takes less than a minute. We'll call you back.</p>
+              <p class="estimate__sub">Free estimates within a <strong>45 km radius of Centurion</strong>. Takes less than a minute. We'll call you back.</p>
               <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
               <p class="estimate__step" aria-live="polite">Step <span data-step-num>1</span> of 2</p>
             </div>
@@ -228,7 +238,7 @@
                 <label class="tile"><input type="radio" name="project" value="Cupboards"><span class="tile__box"><svg class="ic" aria-hidden="true"><use href="#i-cupboard"/></svg>Cupboards</span></label>
                 <label class="tile"><input type="radio" name="project" value="Tiling or flooring"><span class="tile__box"><svg class="ic" aria-hidden="true"><use href="#i-floor"/></svg>Tiling &amp; flooring</span></label>
                 <label class="tile"><input type="radio" name="project" value="Woodwork"><span class="tile__box"><svg class="ic" aria-hidden="true"><use href="#i-hammer"/></svg>Woodwork</span></label>
-                <label class="tile"><input type="radio" name="project" value="Other home improvement"><span class="tile__box"><svg class="ic" aria-hidden="true"><use href="#i-renovate"/></svg>Other</span></label>
+                <label class="tile"><input type="radio" name="project" value="Other home renovation"><span class="tile__box"><svg class="ic" aria-hidden="true"><use href="#i-renovate"/></svg>Other</span></label>
               </div>
               <p class="field-error" id="err-project" role="alert"></p>
               <button class="btn btn--primary btn--block" type="button" data-next>Next <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
@@ -247,6 +257,12 @@
                 <p class="field-error" id="err-phone"></p>
               </div>
               <div class="field">
+                <label class="field-label" for="f-location">Project location (suburb or area) <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="f-location" name="location" type="text" autocomplete="address-level2" required aria-describedby="hint-location err-location" placeholder="e.g. Centurion, Midrand, Sandton">
+                <p class="field-hint" id="hint-location">Free estimates are available within 45 km of Centurion.</p>
+                <p class="field-error" id="err-location"></p>
+              </div>
+              <div class="field">
                 <label class="field-label" for="f-details">Tell us a little about it <span class="opt">(optional)</span></label>
                 <textarea class="input" id="f-details" name="details" rows="3" placeholder="e.g. Bathroom revamp, new kitchen cupboards, wood flooring, a custom TV unit…"></textarea>
               </div>
@@ -254,7 +270,11 @@
                 <button class="btn btn--ghost" type="button" data-back><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg> Back</button>
                 <button class="btn btn--primary btn--grow" type="submit" data-submit>Get my free estimate</button>
               </div>
-              <p class="form-note">No spam, no obligation. We only use your details to contact you about your project.</p>
+              <div class="consent">
+                <label class="consent__label"><input type="checkbox" id="f-consent" name="popia_consent" value="Yes" required aria-describedby="err-consent"><span>I consent to Precision Renovations collecting and using my name, phone number, location and project details to respond to my estimate request, in line with the Protection of Personal Information Act (POPIA). My information will not be sold or shared with third parties for marketing. <a href="#popia">Privacy notice</a></span></label>
+                <p class="field-error" id="err-consent"></p>
+              </div>
+              <p class="form-note">No spam, no obligation.</p>
             </fieldset>
 
             <div class="step step--done" data-step="done" hidden tabindex="-1">
@@ -289,11 +309,11 @@
 
         <div class="svc-grid">
           <article class="svc">
-            <div class="svc__media"><img src="assets/img/bathroom-after-bath.webp" width="1400" height="1050" alt="Renovated bathroom with freestanding bath, brushed-gold tapware and wood-look vanity" loading="lazy"></div>
-            <div class="svc__body"><span class="svc__icon"><svg class="ic" aria-hidden="true"><use href="#i-renovate"/></svg></span><h3>Home improvement</h3><p>All home improvement, including bathroom and kitchen revamps, tiling and wood flooring.</p></div>
+            <div class="svc__media"><img src="assets/img/bathroom-reno.webp" width="1280" height="960" alt="Renovated bathroom with freestanding bath, brushed-gold tapware and wood-look vanity" loading="lazy"></div>
+            <div class="svc__body"><span class="svc__icon"><svg class="ic" aria-hidden="true"><use href="#i-renovate"/></svg></span><h3>Home renovation</h3><p>All home renovation, including bathroom and kitchen revamps, tiling and wood flooring.</p></div>
           </article>
           <article class="svc">
-            <div class="svc__media"><img src="assets/img/cupboards-white.webp" width="1000" height="1333" alt="Wall of white built-in cupboards and drawers with long black handles" loading="lazy" style="object-position:50% 45%"></div>
+            <div class="svc__media"><img src="assets/img/cupboards-wood.webp" width="590" height="1280" alt="Floor-to-ceiling oak-look built-in cupboards with drawers and slim black handles" loading="lazy" style="object-position:50% 58%"></div>
             <div class="svc__body"><span class="svc__icon"><svg class="ic" aria-hidden="true"><use href="#i-cupboard"/></svg></span><h3>Built cupboards</h3><p>Kitchen cupboards, bedroom built-ins and general storage, made to fit your space.</p></div>
           </article>
           <article class="svc">
@@ -316,7 +336,7 @@
         <div class="ba">
           <div class="ba__copy">
             <p class="eyebrow">Before &amp; after</p>
-            <span class="ba__meta"><svg class="ic" aria-hidden="true"><use href="#i-time"/></svg>Bathroom · 1 week</span>
+            <span class="ba__meta"><svg class="ic" aria-hidden="true"><use href="#i-time"/></svg>Bathroom 1 · 1 week</span>
             <h2 id="ba-title" class="section-title">From break-out to brand new in one week</h2>
             <p class="section-lead">One week from breaking out, re-routing the plumbing and the new installation. We handle all disciplines and manage the project as a whole, from start to finish.</p>
             <ul class="checklist">
@@ -327,17 +347,40 @@
           </div>
           <div class="pair">
             <figure class="pair__item">
-              <img src="assets/img/bathroom-before.webp" width="1000" height="1333" alt="Before: dated bathroom with beige tiles, bath and pedestal basin" loading="lazy">
+              <img src="assets/img/bathroom1-before.webp" width="1280" height="960" alt="Before: bathroom stripped back to the walls and screed, with the new freestanding bath still wrapped" loading="lazy">
               <figcaption class="pair__tag pair__tag--before">Before</figcaption>
             </figure>
             <figure class="pair__item">
-              <img src="assets/img/bathroom-after.webp" width="1000" height="1333" alt="After: bathroom with textured wave tiles, frameless shower, gold fittings and wood-look vanity" loading="lazy">
+              <img src="assets/img/bathroom1-after.webp" width="1280" height="960" alt="After: freestanding bath with gold floor mixer, wood-look vanity, vessel basin and gold-framed mirror" loading="lazy">
               <figcaption class="pair__tag pair__tag--after">After</figcaption>
             </figure>
           </div>
         </div>
 
         <div class="ba ba--flip">
+          <div class="ba__copy">
+            <span class="ba__meta"><svg class="ic" aria-hidden="true"><use href="#i-time"/></svg>Bathroom 2</span>
+            <h2 class="section-title">From dated to a modern walk-in shower</h2>
+            <p class="section-lead">The old bath, pedestal basin and patterned tiles made way for a clean, modern bathroom.</p>
+            <ul class="checklist">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Old bath, basin and tiles removed</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Walk-in shower with frameless glass screen</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Large-format grey tiles, floating vanity and matte black fittings</li>
+            </ul>
+          </div>
+          <div class="pair">
+            <figure class="pair__item">
+              <img src="assets/img/bathroom2-before.webp" width="960" height="1280" alt="Before: dated bathroom with beige tiles, built-in bath and pedestal basin" loading="lazy">
+              <figcaption class="pair__tag pair__tag--before">Before</figcaption>
+            </figure>
+            <figure class="pair__item">
+              <img src="assets/img/bathroom2-after.webp" width="960" height="1280" alt="After: grey-tiled bathroom with walk-in shower, black fittings, oval mirror and floating vanity" loading="lazy">
+              <figcaption class="pair__tag pair__tag--after">After</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="ba">
           <div class="ba__copy">
             <span class="ba__meta"><svg class="ic" aria-hidden="true"><use href="#i-time"/></svg>Kitchen · 1 day</span>
             <h2 class="section-title">A new kitchen look in a single day</h2>
@@ -380,7 +423,7 @@
           <figure class="g"><img src="assets/img/kitchen-granite-white.webp" width="1100" height="1100" alt="White kitchen with black granite tops, open shelving and brick-look splashback" loading="lazy"><figcaption>Kitchen cupboards &amp; granite</figcaption></figure>
           <figure class="g"><img src="assets/img/floor-tiles.webp" width="900" height="1200" alt="Wood-look porcelain floor tiles laid in a room with exposed beams" loading="lazy" style="object-position:50% 70%"><figcaption>Wood-look tiling</figcaption></figure>
           <figure class="g g--wide"><img src="assets/img/bathroom-breakout.webp" width="1400" height="1050" alt="Bathroom stripped back to brick and screed during break-out" loading="lazy"><figcaption>Bathroom break-out in progress</figcaption></figure>
-          <figure class="g g--tall"><img src="assets/img/cupboards-white.webp" width="1000" height="1333" alt="White built-in cupboards with drawers under a thatched roof" loading="lazy"><figcaption>Built-in cupboards</figcaption></figure>
+          <figure class="g g--tall"><img src="assets/img/cupboards-wood.webp" width="590" height="1280" alt="Oak-look built-in cupboards with drawers under a sloped ceiling" loading="lazy" style="object-position:50% 55%"><figcaption>Built-in cupboards</figcaption></figure>
           <figure class="g g--wide"><img src="assets/img/bathroom-after-bath.webp" width="1400" height="1050" alt="Freestanding bath with gold floor-mounted mixer" loading="lazy"><figcaption>Freestanding bath &amp; vanity</figcaption></figure>
         </div>
         <div class="gallery__more">
@@ -488,6 +531,10 @@
         </ul>
       </div>
     </div>
+    <div class="container footer__popia" id="popia">
+      <h3>Privacy notice (POPIA)</h3>
+      <p>Precision Renovations processes personal information in line with the Protection of Personal Information Act 4 of 2013 (POPIA). The details you share through this website, by phone, WhatsApp or email (such as your name, contact details, project location and project details) are used only to respond to your enquiry, prepare an estimate and, if you go ahead, to carry out your project. We keep your information secure, do not sell it, and share it only where needed to provide our services (for example, our website form provider) or where the law requires. You may ask to access, correct or delete your information, or object to its processing, by emailing <a data-cfg-href="mailto" href="mailto:jean.pepler@gmail.com"><span data-cfg="email">jean.pepler@gmail.com</span></a>. You may also lodge a complaint with the Information Regulator of South Africa.</p>
+    </div>
     <div class="container footer__bottom">
       <p>© <span data-year></span> Precision Renovations. All rights reserved.</p>
       <a href="#top">Back to top ↑</a>
@@ -503,6 +550,12 @@
     <a class="btn btn--wa" data-cfg-href="wa" href="https://wa.me/27749557990" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
     <a class="btn btn--primary" href="#estimate" data-focus-form>Estimate</a>
   </div>
+
+  <!-- Image viewer (click any project photo to see it in full) -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="lightbox__close" type="button" aria-label="Close image"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <figure class="lightbox__fig"><img alt=""><figcaption></figcaption></figure>
+  </dialog>
 
   <script src="main.js" defer></script>
 </body>

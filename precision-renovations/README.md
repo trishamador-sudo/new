@@ -15,9 +15,20 @@ At the top of `main.js` is `SITE`, which holds:
 
 Until then, the form opens the visitor's email app, addressed to `leadEmail` (jean.pepler@gmail.com).
 
+## Estimate form
+- **Service area:** free estimates within a 45 km radius of Centurion. This is stated in the form box and in the schema (a 45 km GeoCircle around Centurion).
+- **Required fields:** name, phone, project location (suburb or area), and a POPIA consent tick box. The location and consent are included in every request.
+- **POPIA:** the full privacy notice is in the footer (`#popia`), and the consent box links to it.
+
+## Photos
+- Click any service, before/after or gallery photo to open it in full, uncropped.
+- Before/after photos are shown at their natural shape, not cropped.
+- **Bathroom 1:** `bathroom1-before` and `bathroom1-after`.
+- **Bathroom 2:** `bathroom2-before` and `bathroom2-after`.
+
 ## SEO files
 - `robots.txt` and `sitemap.xml` sit next to `index.html`.
-- The schema (JSON-LD: GeneralContractor and WebSite) is in the `<head>` of `index.html`.
+- The canonical link (`<link rel="canonical">`) and the schema (JSON-LD: GeneralContractor and WebSite) are in the `<head>` of `index.html`.
 - The domain is **assumed** to be `https://www.precisionrenovations.co.za/`. Update it in `index.html` (canonical, og tags and schema), `robots.txt` and `sitemap.xml` once the real domain is known.
 
 ## Still to add

@@ -128,6 +128,13 @@ const SITE = {
     const digits = phone.value.replace(/\D/g, '');
     return setError(phone, $('#err-phone'), digits.length >= 7 ? '' : 'Please enter a phone number we can call you on (at least 7 digits).');
   };
+  const loc = $('#f-location');
+  const consent = $('#f-consent');
+  const validateLoc = () => setError(loc, $('#err-location'), loc.value.trim().length >= 2 ? '' : 'Please tell us where the project is (suburb or area).');
+  const validateConsent = () => setError(consent, $('#err-consent'), consent.checked ? '' : 'Please tick the box to give consent, so we can contact you about your estimate.');
+  loc.addEventListener('blur', () => loc.value && validateLoc());
+  loc.addEventListener('input', () => loc.getAttribute('aria-invalid') === 'true' && validateLoc());
+  consent.addEventListener('change', () => consent.getAttribute('aria-invalid') === 'true' && validateConsent());
   name.addEventListener('blur', () => name.value && validateName());
   phone.addEventListener('blur', () => phone.value && validatePhone());
   name.addEventListener('input', () => name.getAttribute('aria-invalid') === 'true' && validateName());
@@ -138,13 +145,17 @@ const SITE = {
     if ($('.step[data-step="1"]', form).classList.contains('is-active')) { $('[data-next]', form).click(); return; }
     const okName = validateName();
     const okPhone = validatePhone();
-    if (!okName || !okPhone) { (okName ? phone : name).focus(); return; }
+    const okLoc = validateLoc();
+    const okConsent = validateConsent();
+    if (!okName || !okPhone || !okLoc || !okConsent) { (!okName ? name : !okPhone ? phone : !okLoc ? loc : consent).focus(); return; }
 
     const data = {
       project: form.project.value,
       name: name.value.trim(),
       phone: phone.value.trim(),
+      location: loc.value.trim(),
       details: form.details.value.trim(),
+      popia_consent: 'Yes',
     };
     const btn = $('[data-submit]', form);
     btn.classList.add('is-loading'); btn.disabled = true;
@@ -156,22 +167,50 @@ const SITE = {
         const res = await fetch(SITE.formEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ ...data, _subject: `Free estimate request: ${data.project}` }),
+          body: JSON.stringify({ ...data, _subject: `Free estimate request: ${data.project} (${data.location})` }),
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
       } else {
-        const body = `Project: ${data.project}\nName: ${data.name}\nPhone: ${data.phone}\n\n${data.details}`;
+        const body = `Project: ${data.project}\nName: ${data.name}\nPhone: ${data.phone}\nLocation: ${data.location}\nPOPIA consent: Yes\n\n${data.details}`;
         window.location.href = `mailto:${SITE.leadEmail}?subject=${encodeURIComponent(`Free estimate request: ${data.project}`)}&body=${encodeURIComponent(body)}`;
       }
       $('[data-done-name]', form).textContent = data.name.split(' ')[0];
       show('done');
       $('.step--done', form).focus();
     } catch (err) {
-      setError(null, $('#err-phone'), `Sorry, something went wrong sending your request. Please try again, or call us on ${SITE.phone}.`);
+      setError(null, $('#err-consent'), `Sorry, something went wrong sending your request. Please try again, or call us on ${SITE.phone}.`);
     } finally {
       btn.classList.remove('is-loading'); btn.disabled = false;
     }
   });
+
+  /* ---------- Image viewer: click a photo to see it in full ---------- */
+  const lb = $('#lightbox');
+  if (lb && typeof lb.showModal === 'function') {
+    const lbImg = $('img', lb);
+    const lbCap = $('figcaption', lb);
+    let opener = null;
+    const open = img => {
+      opener = img;
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt;
+      const cap = img.closest('figure')?.querySelector('figcaption:not(.pair__tag)');
+      const tag = img.closest('figure')?.querySelector('.pair__tag');
+      lbCap.textContent = cap ? cap.textContent : (tag ? tag.textContent + ': ' : '') + (img.alt.replace(/^(Before|After):\s*/, ''));
+      lb.showModal();
+    };
+    $$('.svc__media img, .pair__item img, .g img').forEach(img => {
+      img.classList.add('zoomable');
+      img.tabIndex = 0;
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', `View full image: ${img.alt}`);
+      img.addEventListener('click', () => open(img));
+      img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img); } });
+    });
+    $('.lightbox__close', lb).addEventListener('click', () => lb.close());
+    lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+    lb.addEventListener('close', () => { opener && opener.focus(); });
+  }
 
   /* ---------- Gallery video ---------- */
   $$('.g--video').forEach(fig => {
