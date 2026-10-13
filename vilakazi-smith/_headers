@@ -1,0 +1,16 @@
+# Security and caching headers. Netlify and Cloudflare Pages read this file automatically.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/styles.css
+  Cache-Control: public, max-age=86400
+
+/main.js
+  Cache-Control: public, max-age=86400
