@@ -61,7 +61,7 @@ const FORM_ENDPOINT = '';
       if (!form.reportValidity()) return;
       if (form.querySelector('.hp input').value) return; // spam trap
       if (!FORM_ENDPOINT) {
-        say('Online requests are not switched on yet. Please call 012 492 5505 (Centurion) or 010 979 4130 (Sandton).', 'error');
+        say('Online requests are not switched on yet. Please call 012 492 5505 (Pretoria) or 010 979 4130 (Sandton).', 'error');
         return;
       }
       const btn = form.querySelector('button[type="submit"]');

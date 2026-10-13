@@ -8,7 +8,7 @@ A rebuild of www.vsinc.co.za as a fast, static, multi-page site. It is plain HTM
 | `/` | Home |
 | `/practice-areas/` | Overview of all practice areas |
 | `/practice-areas/<area>/` | One page per practice area (8 pages), each with its own services, 3 FAQs and schema |
-| `/attorneys-centurion/`, `/attorneys-sandton/` | One page per office, for local search |
+| `/attorneys-pretoria/`, `/attorneys-sandton/` | One page per office, for local search |
 | `/about/` | Firm background, mission, team, compliance documents |
 | `/blog/` | Legal insights (empty until the first article is published) |
 | `/contact/` | Consultation request form with POPIA consent, plus both offices |
@@ -79,7 +79,7 @@ Suggested first articles, matching the practice-area FAQs and common searches:
 | No blog | Blog section and article template ready |
 
 ## Off-site local SEO checklist (not part of the website files)
-- Claim and verify a **Google Business Profile for each office** (Centurion and Sandton), with the same name, address and phone number as the site (NAP), the category "Law firm", and a link to that office's page.
+- Claim and verify a **Google Business Profile for each office** (Pretoria and Sandton), with the same name, address and phone number as the site (NAP), the category "Law firm", and a link to that office's page.
 - Submit `https://www.vsinc.co.za/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 - List the firm, with identical NAP details, on Legal Practice Council / Law Society directories, Yellow Pages SA, Cylex, Brabys and Hotfrog.
 - Ask satisfied clients for Google reviews (on the Business Profile, not on the website).

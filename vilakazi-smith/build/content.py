@@ -22,9 +22,9 @@ FIRM = {
 
 OFFICES = [
     {
-        "slug": "centurion",
-        "name": "Centurion",
-        "title": "Attorneys in Centurion",
+        "slug": "pretoria",
+        "name": "Pretoria",
+        "title": "Attorneys in Pretoria",
         "lines": ["Cambridge Office Park, Building 32", "Ground Floor (Right)", "5 Bauhinia Street, Highveld Techno Park", "Centurion, 0157"],
         "street": "Cambridge Office Park, Building 32, Ground Floor (Right), 5 Bauhinia Street, Highveld Techno Park",
         "locality": "Centurion",
@@ -32,12 +32,12 @@ OFFICES = [
         "phones": [("012 492 5505", "+27124925505"), ("012 492 5506", "+27124925506")],
         "fax": "086 577 5456",
         "map_q": "Cambridge Office Park, 5 Bauhinia Street, Highveld Techno Park, Centurion, 0157",
-        "areas": ["Centurion", "Pretoria", "Midrand"],
-        "meta_title": "Attorneys in Centurion, Highveld Techno Park | Vilakazi Smith",
-        "meta_desc": "Vilakazi Smith Inc. in Highveld Techno Park, Centurion: family, labour, criminal, commercial, insurance, property and estate law. Call 012 492 5505.",
+        "areas": ["Pretoria", "Midrand"],
+        "meta_title": "Attorneys in Pretoria | Vilakazi Smith Inc. Law Firm",
+        "meta_desc": "Vilakazi Smith Inc. attorneys in Pretoria, at Highveld Techno Park: family, labour, criminal, commercial, insurance, property and estate law. Call 012 492 5505.",
         "intro": [
-            "Our Centurion office in Highveld Techno Park is the firm's main office. All of our records and files are managed here, so every matter, whichever office you visit, is run from Centurion.",
-            "It is convenient for clients in Centurion, Pretoria and Midrand.",
+            "Our Pretoria office in Highveld Techno Park is the firm's main office. All of our records and files are managed here, so every matter, whichever office you visit, is run from Pretoria.",
+            "It is convenient for clients across Pretoria and Midrand.",
         ],
     },
     {
@@ -56,7 +56,7 @@ OFFICES = [
         "meta_desc": "Vilakazi Smith Inc. at 66 Park Lane, Sandown, Sandton: commercial, labour, family, criminal, insurance, property and estate law. Call 010 979 4130.",
         "intro": [
             "Our Sandton office at 66 Park Lane in Sandown gives clients in Johannesburg's northern suburbs a place to meet their attorney close to home or work.",
-            "Files for Sandton clients are managed by our central team in Centurion, so you get the same service and the same record-keeping wherever you consult us.",
+            "Files for Sandton clients are managed by our central team in Pretoria, so you get the same service and the same record-keeping wherever you consult us.",
         ],
     },
 ]
@@ -69,9 +69,9 @@ PRACTICE = [
         "short": "Divorce, maintenance, children's court, protection orders and antenuptial contracts.",
         "img": "pa-family.webp",
         "img_alt": "Paper cut-out family of three standing beside a judge's gavel",
-        "h1": "Family law attorneys in Centurion & Sandton",
-        "meta_title": "Family & Divorce Attorneys, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Divorce, maintenance, children's court matters, protection orders and antenuptial contracts. Family law attorneys in Centurion and Sandton.",
+        "h1": "Family law attorneys in Pretoria & Sandton",
+        "meta_title": "Family & Divorce Attorneys, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Divorce, maintenance, children's court matters, protection orders and antenuptial contracts. Family law attorneys in Pretoria and Sandton.",
         "lead": "Clear, steady advice when your family's future is on the line: divorce, maintenance, children and the agreements that protect you before you marry.",
         "body": [
             "Family matters are personal and often urgent. We explain your rights and options in plain language, work towards a settlement where one is possible, and represent you firmly in court where it is not.",
@@ -99,9 +99,9 @@ PRACTICE = [
         "short": "Bond registration and cancellation, foreclosures, business rescue and insolvency.",
         "img": "pa-banking.webp",
         "img_alt": "Attorney and clients discussing documents beside a brass scale of justice",
-        "h1": "Banking & finance attorneys in Centurion & Sandton",
-        "meta_title": "Banking & Finance Attorneys, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Bond registration and cancellation, foreclosures, Section 129 notices, business rescue and insolvency. Attorneys in Centurion and Sandton.",
+        "h1": "Banking & finance attorneys in Pretoria & Sandton",
+        "meta_title": "Banking & Finance Attorneys, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Bond registration and cancellation, foreclosures, Section 129 notices, business rescue and insolvency. Attorneys in Pretoria and Sandton.",
         "lead": "Security for lenders and a clear way forward for borrowers and businesses in financial distress.",
         "body": [
             "We handle the legal work around secured lending, from registering a bond to cancelling it once it is paid up, and the proceedings that follow when an account falls into arrears.",
@@ -128,9 +128,9 @@ PRACTICE = [
         "short": "Wills, estate administration, insolvent estates, curatorships and trusts.",
         "img": "pa-wills.webp",
         "img_alt": "Fountain pen resting on a handwritten document",
-        "h1": "Wills & estates attorneys in Centurion & Sandton",
-        "meta_title": "Wills & Estates Attorneys, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Wills, deceased estates, insolvent estates, curatorships and trusts. Wills and estates attorneys in Centurion and Sandton.",
+        "h1": "Wills & estates attorneys in Pretoria & Sandton",
+        "meta_title": "Wills & Estates Attorneys, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Wills, deceased estates, insolvent estates, curatorships and trusts. Wills and estates attorneys in Pretoria and Sandton.",
         "lead": "Plan properly now, and your family is spared the delay and cost of sorting out your affairs later.",
         "body": [
             "A valid, up-to-date will is the simplest way to make sure your assets go to the people you choose. We draft wills and trusts that fit your family and your estate, and we administer deceased estates through the Master of the High Court.",
@@ -158,9 +158,9 @@ PRACTICE = [
         "short": "Commercial litigation, debt collection, contracts, liquidations, sequestrations and evictions.",
         "img": "pa-commercial.webp",
         "img_alt": "Glasses and a pen on an open notebook beside a laptop",
-        "h1": "Commercial law attorneys in Centurion & Sandton",
-        "meta_title": "Commercial Lawyers, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Commercial litigation, debt collection, contracts, liquidations, sequestrations and evictions. Commercial attorneys in Centurion and Sandton.",
+        "h1": "Commercial law attorneys in Pretoria & Sandton",
+        "meta_title": "Commercial Lawyers, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Commercial litigation, debt collection, contracts, liquidations, sequestrations and evictions. Commercial attorneys in Pretoria and Sandton.",
         "lead": "Practical legal support for businesses: sound agreements up front, and firm action when payment or performance doesn't follow.",
         "body": [
             "We advise businesses of all sizes on the agreements they sign and the disputes that follow. Where a matter can be settled, we settle it; where it cannot, we litigate.",
@@ -189,9 +189,9 @@ PRACTICE = [
         "short": "CCMA and bargaining council matters, employment contracts, retrenchments and disciplinary inquiries.",
         "img": "pa-labour.webp",
         "img_alt": "Shelves of leather-bound law reports",
-        "h1": "Labour law attorneys in Centurion & Sandton",
-        "meta_title": "Labour Law & CCMA Attorneys, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "CCMA and bargaining council representation, employment contracts, retrenchments and disciplinary hearings. Labour attorneys in Centurion and Sandton.",
+        "h1": "Labour law attorneys in Pretoria & Sandton",
+        "meta_title": "Labour Law & CCMA Attorneys, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "CCMA and bargaining council representation, employment contracts, retrenchments and disciplinary hearings. Labour attorneys in Pretoria and Sandton.",
         "lead": "Fair process protects both the employer and the employee. We help you get it right, and represent you when it is challenged.",
         "body": [
             "We advise employers on contracts, policies and procedures that hold up, and represent parties at the CCMA, bargaining councils and the Labour Court.",
@@ -219,9 +219,9 @@ PRACTICE = [
         "short": "Bail applications, plea and sentence agreements, criminal trials and expungements.",
         "img": "pa-criminal.webp",
         "img_alt": "Two people seated in a wood-panelled courtroom",
-        "h1": "Criminal defence attorneys in Centurion & Sandton",
-        "meta_title": "Criminal Lawyers & Bail, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Police and formal bail applications, plea agreements, criminal trials and expungements. Criminal defence attorneys in Centurion and Sandton.",
+        "h1": "Criminal defence attorneys in Pretoria & Sandton",
+        "meta_title": "Criminal Lawyers & Bail, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Police and formal bail applications, plea agreements, criminal trials and expungements. Criminal defence attorneys in Pretoria and Sandton.",
         "lead": "From the first hours after an arrest to the end of a trial, you need an attorney who acts quickly and knows the process.",
         "body": [
             "The first steps after an arrest often shape the rest of the case. We assist with bail at the police station and in court, advise you on your rights, and represent you through plea negotiations or trial.",
@@ -249,9 +249,9 @@ PRACTICE = [
         "short": "Rejected claims, FAIS Ombud referrals, policy reviews, recoveries and insurance litigation.",
         "img": "pa-insurance.webp",
         "img_alt": "A brass Lady Justice statuette on a desk while a document is signed",
-        "h1": "Insurance law attorneys in Centurion & Sandton",
-        "meta_title": "Insurance Claim Lawyers, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Rejected insurance claims, FAIS Ombud complaints, policy reviews, recoveries and insurance litigation. Attorneys in Centurion and Sandton.",
+        "h1": "Insurance law attorneys in Pretoria & Sandton",
+        "meta_title": "Insurance Claim Lawyers, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Rejected insurance claims, FAIS Ombud complaints, policy reviews, recoveries and insurance litigation. Attorneys in Pretoria and Sandton.",
         "lead": "When a claim is rejected or a policy is not what you were told, we help you understand where you stand and challenge the decision.",
         "body": [
             "Insurance disputes turn on the wording of the policy and the facts of the claim. We review both, give you a clear legal opinion, and take the matter further through the insurer's internal process, the ombuds or the courts.",
@@ -280,9 +280,9 @@ PRACTICE = [
         "short": "Property transfers, mortgage bonds, subdivisions, consolidations and sectional title extensions.",
         "img": "pa-conveyancing.webp",
         "img_alt": "Attorney pointing to a document beside a model building",
-        "h1": "Conveyancing attorneys in Centurion & Sandton",
-        "meta_title": "Conveyancing Attorneys, Centurion & Sandton | Vilakazi Smith",
-        "meta_desc": "Property transfers, bond registrations, subdivisions, consolidations and sectional title extensions. Conveyancers in Centurion and Sandton.",
+        "h1": "Conveyancing attorneys in Pretoria & Sandton",
+        "meta_title": "Conveyancing Attorneys, Pretoria & Sandton | Vilakazi Smith",
+        "meta_desc": "Property transfers, bond registrations, subdivisions, consolidations and sectional title extensions. Conveyancers in Pretoria and Sandton.",
         "lead": "Registering a property is the final step of a sale. We keep it moving, and keep buyers, sellers and banks informed along the way.",
         "body": [
             "We handle property transfers and bond registrations at the Deeds Office, from the signed offer to purchase through to registration.",
@@ -307,9 +307,9 @@ PRACTICE = [
 
 HOME_FAQS = [
     ("How do I book a consultation?",
-     "Call our Centurion office on 012 492 5505 or our Sandton office on 010 979 4130, or send a consultation request through our contact page. Tell us briefly what your matter is about and which office suits you."),
+     "Call our Pretoria office on 012 492 5505 or our Sandton office on 010 979 4130, or send a consultation request through our contact page. Tell us briefly what your matter is about and which office suits you."),
     ("Which office should I visit?",
-     "Choose whichever is more convenient for you: Centurion in Highveld Techno Park, or Sandton at 66 Park Lane, Sandown. All files are managed centrally from our Centurion office, so you receive the same service at either one."),
+     "Choose whichever is more convenient for you: Pretoria, at Highveld Techno Park, or Sandton at 66 Park Lane, Sandown. All files are managed centrally from our Pretoria office, so you receive the same service at either one."),
     ("What should I bring to my first consultation?",
      "Bring your ID and any documents related to your matter, such as contracts, letters, court papers, policy documents or title deeds, along with a short timeline of what happened."),
     ("Do you assist individuals and businesses?",
@@ -333,7 +333,7 @@ TEAM = [
 
 ABOUT = [
     "Vilakazi Smith Incorporated (VSI) was founded in 2020 and holds a B-BBEE Level 2 certificate (125% B-BBEE procurement recognition).",
-    "Although we have a presence in both Johannesburg and Pretoria, all our operations are centralised in Pretoria, at our Centurion office, where all records and files are managed.",
+    "Although we have a presence in both Johannesburg and Pretoria, all our operations are centralised in Pretoria, where all records and files are managed.",
     "We prioritise providing exceptional legal and business services while staying attuned to the practical challenges our clients and their customers face every day. Our philosophy centres on delivering outstanding legal and business solutions through personal interaction, resolving matters professionally and decisively, and always seeking the most cost-effective approach.",
 ]
 

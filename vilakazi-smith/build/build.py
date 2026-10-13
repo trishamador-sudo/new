@@ -20,7 +20,7 @@ PREVIEW = False
 
 FIRM_ID = f"{DOMAIN}/#firm"
 SITE_ID = f"{DOMAIN}/#website"
-CENTURION = OFFICES[0]
+MAIN_OFFICE = OFFICES[0]
 
 
 def e(s):
@@ -85,7 +85,7 @@ def header(cur, active):
 {ICONS}
 <div class="topbar">
   <div class="container topbar__inner">
-    <a href="tel:{tel(CENTURION['phones'][0][0])}">{ic('phone')}<span>Centurion {CENTURION['phones'][0][0]}</span></a>
+    <a href="tel:{tel(MAIN_OFFICE['phones'][0][0])}">{ic('phone')}<span>Pretoria {MAIN_OFFICE['phones'][0][0]}</span></a>
     <a class="topbar__hide-sm" href="tel:{tel(OFFICES[1]['phones'][0][0])}">{ic('phone')}<span>Sandton {OFFICES[1]['phones'][0][0]}</span></a>
     <span class="topbar__push topbar__hide-sm">Founded in {FIRM['founded']}, B-BBEE Level 2</span>
   </div>
@@ -102,7 +102,7 @@ def header(cur, active):
         <div class="nav__sub">{pa_links}</div>
       </div>
       <div class="nav__group">
-        <a class="nav__link" href="{link(cur, 'attorneys-centurion/')}"{off_cur}>Offices {ic('down', 'ic nav__caret')}</a>
+        <a class="nav__link" href="{link(cur, 'attorneys-pretoria/')}"{off_cur}>Offices {ic('down', 'ic nav__caret')}</a>
         <div class="nav__sub">{off_links}</div>
       </div>
       {nl('about/', 'About', 'about')}
@@ -110,7 +110,7 @@ def header(cur, active):
       {nl('contact/', 'Contact', 'contact')}
       <a class="btn btn--light nav__cta" href="{link(cur, 'contact/')}">Book a consultation</a>
     </nav>
-    <a class="header__call" href="tel:{tel(CENTURION['phones'][0][0])}" aria-label="Call Vilakazi Smith Inc.">{ic('phone')}</a>
+    <a class="header__call" href="tel:{tel(MAIN_OFFICE['phones'][0][0])}" aria-label="Call Vilakazi Smith Inc.">{ic('phone')}</a>
     <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
       {ic('menu', 'ic ic--open')}{ic('x', 'ic ic--close')}
     </button>
@@ -132,7 +132,7 @@ def footer(cur):
   <div class="container footer__grid">
     <div>
       <img class="footer__logo" src="{asset(cur, 'assets/img/logo-white.png')}" width="428" height="196" alt="{e(FIRM['name'])}" loading="lazy">
-      <p>Attorneys in Centurion and Sandton, Gauteng. Founded in {FIRM['founded']}. {e(FIRM['bbbee'])}.</p>
+      <p>Attorneys in Pretoria and Sandton, Gauteng. Founded in {FIRM['founded']}. {e(FIRM['bbbee'])}.</p>
     </div>
     <div>
       <h2>Offices</h2>
@@ -161,7 +161,7 @@ def footer(cur):
 </footer>"""
 
 
-def cta_band(cur, heading="Take action on your legal matter.", text="Book a consultation at our Centurion or Sandton office."):
+def cta_band(cur, heading="Take action on your legal matter.", text="Book a consultation at our Pretoria or Sandton office."):
     return f"""
 <section class="cta-band" aria-labelledby="cta-title">
   <div class="container cta-band__inner">
@@ -171,7 +171,7 @@ def cta_band(cur, heading="Take action on your legal matter.", text="Book a cons
     </div>
     <div class="cta-band__btns">
       <a class="btn btn--light btn--lg" href="{link(cur, 'contact/')}">{ic('calendar')}Book a consultation</a>
-      <a class="btn btn--outline-light btn--lg" href="tel:{tel(CENTURION['phones'][0][0])}">{ic('phone')}{CENTURION['phones'][0][0]}</a>
+      <a class="btn btn--outline-light btn--lg" href="tel:{tel(MAIN_OFFICE['phones'][0][0])}">{ic('phone')}{MAIN_OFFICE['phones'][0][0]}</a>
     </div>
   </div>
 </section>"""
@@ -238,12 +238,12 @@ def firm_node(full=True):
         "logo": DOMAIN + "/assets/img/logo.png",
         "image": DOMAIN + "/assets/img/og.jpg",
         "slogan": FIRM["slogan"],
-        "description": "Law firm with offices in Centurion and Sandton, Gauteng: family, banking and finance, wills and estates, commercial, labour, criminal, insurance and conveyancing law.",
+        "description": "Law firm with offices in Pretoria and Sandton, Gauteng: family, banking and finance, wills and estates, commercial, labour, criminal, insurance and conveyancing law.",
         "foundingDate": FIRM["founded"],
         "telephone": tel(FIRM["main_phone"]),
-        "faxNumber": tel(CENTURION["fax"]),
-        "address": office_postal(CENTURION),
-        "areaServed": [{"@type": "City", "name": n} for n in ["Centurion", "Pretoria", "Midrand", "Sandton", "Johannesburg"]]
+        "faxNumber": tel(MAIN_OFFICE["fax"]),
+        "address": office_postal(MAIN_OFFICE),
+        "areaServed": [{"@type": "City", "name": n} for n in ["Pretoria", "Midrand", "Sandton", "Johannesburg"]]
         + [{"@type": "AdministrativeArea", "name": "Gauteng"}],
         "department": [{"@id": f"{DOMAIN}/attorneys-{o['slug']}/#office"} for o in OFFICES],
         "knowsAbout": [p["name"] for p in PRACTICE],
@@ -331,7 +331,7 @@ def page(cur, *, title, desc, body, graph, active=None, preload_hero=False, noin
 <link rel="icon" type="image/png" href="{asset(cur, 'assets/img/favicon.png')}">
 <link rel="apple-touch-icon" href="{asset(cur, 'assets/img/apple-touch-icon.png')}">
 <link rel="preload" href="{asset(cur, 'assets/fonts/manrope.woff2')}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{asset(cur, 'assets/fonts/bodoni-moda.woff2')}" as="font" type="font/woff2" crossorigin>{preload}
+{preload}
 <link rel="stylesheet" href="{asset(cur, 'assets/fonts/fonts.css')}">
 <link rel="stylesheet" href="{asset(cur, 'styles.css')}">
 <script src="{asset(cur, 'main.js')}" defer></script>
@@ -446,9 +446,9 @@ def blog_empty(cur):
 
 def home():
     cur = ""
-    desc = ("Law firm in Centurion and Sandton: family and divorce, commercial, labour, criminal, insurance, banking, "
+    desc = ("Law firm in Pretoria and Sandton: family and divorce, commercial, labour, criminal, insurance, banking, "
             "conveyancing, wills and estates. Call 012 492 5505.")
-    title = "Attorneys in Centurion & Sandton | Vilakazi Smith Inc."
+    title = "Attorneys in Pretoria & Sandton | Vilakazi Smith Inc."
     body = f"""
 <section class="hero" aria-labelledby="hero-title">
   <picture class="hero__media">
@@ -457,7 +457,7 @@ def home():
   </picture>
   <div class="container hero__inner">
     <div class="hero__copy">
-      <h1 class="h1" id="hero-title"><span class="hero__slogan">Take action.</span><span class="hero__kw">Attorneys in Centurion &amp; Sandton for individuals and businesses</span></h1>
+      <h1 class="h1" id="hero-title"><span class="hero__slogan">Take action.</span><span class="hero__kw">Attorneys in Pretoria &amp; Sandton for individuals and businesses</span></h1>
       <p class="hero__sub">Tailored guidance and decisive advocacy in family, commercial, labour, criminal, insurance, property and estate law.</p>
       <div class="hero__ctas">
         <a class="btn btn--light btn--lg" href="{link(cur, 'contact/')}">{ic('calendar')}Book a consultation</a>
@@ -471,7 +471,7 @@ def home():
   <ul class="container facts__grid" role="list">
     <li>{ic('scale')}<div><strong>Founded in {FIRM['founded']}</strong><span>{e(FIRM['legal_name'])}</span></div></li>
     <li>{ic('shield')}<div><strong>B-BBEE Level 2</strong><span>125% procurement recognition</span></div></li>
-    <li>{ic('pin')}<div><strong>Centurion &amp; Sandton</strong><span>Files managed centrally in Centurion</span></div></li>
+    <li>{ic('pin')}<div><strong>Pretoria &amp; Sandton</strong><span>Files managed centrally in Pretoria</span></div></li>
   </ul>
 </section>
 
@@ -517,7 +517,7 @@ def home():
     <div class="section-head">
       <span class="stroke" aria-hidden="true"></span>
       <h2 class="h2" id="offices-title">Our offices</h2>
-      <p class="lead muted">See us in Centurion or Sandton. Postal address for both offices: {e(FIRM['postal'])}.</p>
+      <p class="lead muted">See us in Pretoria or Sandton. Postal address for both offices: {e(FIRM['postal'])}.</p>
     </div>
     {office_cards(cur)}
   </div>
@@ -548,7 +548,7 @@ def home():
 def practice_index():
     cur = "practice-areas/"
     title = "Practice Areas | Vilakazi Smith Inc. Attorneys"
-    desc = "Family, banking, wills and estates, commercial, labour, criminal, insurance and conveyancing law. Vilakazi Smith Inc., attorneys in Centurion and Sandton."
+    desc = "Family, banking, wills and estates, commercial, labour, criminal, insurance and conveyancing law. Vilakazi Smith Inc., attorneys in Pretoria and Sandton."
     trail = [("Home", ""), ("Practice areas", cur)]
     body = f"""
 <section class="page-hero page-hero--plain" aria-labelledby="page-title">
@@ -556,7 +556,7 @@ def practice_index():
   <div class="container page-hero__inner">
     <div>
       <h1 class="h1" id="page-title">Practice areas</h1>
-      <p class="page-hero__lead">Eight areas of law, handled from our offices in Centurion and Sandton. Each page explains what we do and answers the questions clients ask most.</p>
+      <p class="page-hero__lead">Eight areas of law, handled from our offices in Pretoria and Sandton. Each page explains what we do and answers the questions clients ask most.</p>
     </div>
   </div>
 </section>
@@ -641,7 +641,7 @@ def practice_page(p):
         "description": p["lead"],
         "url": url,
         "provider": {"@id": FIRM_ID},
-        "areaServed": [{"@type": "City", "name": n} for n in ["Centurion", "Pretoria", "Sandton", "Johannesburg"]],
+        "areaServed": [{"@type": "City", "name": n} for n in ["Pretoria", "Sandton", "Johannesburg"]],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": p["name"],
@@ -731,7 +731,7 @@ def about():
     cur = "about/"
     url = DOMAIN + "/" + cur
     title = "About Us | Vilakazi Smith Incorporated, Attorneys Since 2020"
-    desc = "Vilakazi Smith Incorporated (VSI), founded in 2020, B-BBEE Level 2. Offices in Centurion and Sandton, with all files managed centrally in Centurion."
+    desc = "Vilakazi Smith Incorporated (VSI), founded in 2020, B-BBEE Level 2. Offices in Pretoria and Sandton, with all files managed centrally in Pretoria."
     trail = [("Home", ""), ("About", cur)]
     about_p = "".join(f"<p>{e(x)}</p>" for x in ABOUT)
     body = f"""
@@ -740,7 +740,7 @@ def about():
   <div class="container page-hero__inner">
     <div>
       <h1 class="h1" id="page-title">Get to know Vilakazi Smith Inc.</h1>
-      <p class="page-hero__lead">A Gauteng law firm founded in {FIRM['founded']}, with offices in Centurion and Sandton.</p>
+      <p class="page-hero__lead">A Gauteng law firm founded in {FIRM['founded']}, with offices in Pretoria and Sandton.</p>
     </div>
   </div>
 </section>
@@ -787,7 +787,7 @@ def blog():
     cur = "blog/"
     url = DOMAIN + "/" + cur
     title = "Legal Insights Blog | Vilakazi Smith Inc. Attorneys"
-    desc = "Plain-language articles on South African law from the attorneys at Vilakazi Smith Inc. in Centurion and Sandton."
+    desc = "Plain-language articles on South African law from the attorneys at Vilakazi Smith Inc. in Pretoria and Sandton."
     trail = [("Home", ""), ("Blog", cur)]
     body = f"""
 <section class="page-hero page-hero--plain" aria-labelledby="page-title">
@@ -826,7 +826,7 @@ def contact():
     cur = "contact/"
     url = DOMAIN + "/" + cur
     title = "Contact Us & Book a Consultation | Vilakazi Smith Inc."
-    desc = "Book a consultation with Vilakazi Smith Inc. Centurion: 012 492 5505. Sandton: 010 979 4130. Or send a consultation request online."
+    desc = "Book a consultation with Vilakazi Smith Inc. Pretoria: 012 492 5505. Sandton: 010 979 4130. Or send a consultation request online."
     trail = [("Home", ""), ("Contact", cur)]
     pa_opts = "".join(f"<option>{e(p['name'])}</option>" for p in PRACTICE)
     off_opts = "".join(f"<option>{e(o['name'])}</option>" for o in OFFICES)
@@ -877,7 +877,7 @@ def not_found():
   <div class="hero__ctas"><a class="btn btn--light" href="/practice-areas/">Practice areas</a><a class="btn btn--outline-light" href="/contact/">Contact us</a></div>
 </div></div></section>""")
     html = html.replace('href="assets/', 'href="/assets/').replace('src="assets/', 'src="/assets/').replace('href="styles.css"', 'href="/styles.css"').replace('src="main.js"', 'src="/main.js"')
-    for o in ["practice-areas/", "attorneys-centurion/", "attorneys-sandton/", "about/", "blog/", "contact/"]:
+    for o in ["practice-areas/", "attorneys-pretoria/", "attorneys-sandton/", "about/", "blog/", "contact/"]:
         html = html.replace(f'href="{o}', f'href="/{o}')
     html = html.replace('href="./"', 'href="/"')
     return "404.html", html
@@ -917,7 +917,7 @@ def post_template():
     <p>Body text.</p>
     <p class="muted"><em>This article is general information and not legal advice. Speak to us about your matter.</em></p>
   </article>
-  <aside class="aside-card"><h2>Speak to an attorney</h2><p>Book a consultation at our Centurion or Sandton office.</p><a class="btn btn--light" href="{link(cur, 'contact/')}">Book a consultation</a></aside>
+  <aside class="aside-card"><h2>Speak to an attorney</h2><p>Book a consultation at our Pretoria or Sandton office.</p><a class="btn btn--light" href="{link(cur, 'contact/')}">Book a consultation</a></aside>
 </div></section>
 {cta_band(cur)}
 """
