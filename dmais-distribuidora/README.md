@@ -27,6 +27,7 @@ Site estático e rápido (HTML, CSS e um pouco de JavaScript), em português (pt
 | Transportadora | `/transportadora` |
 | Perguntas Frequentes | `/perguntas-frequentes` |
 | Trabalhe Conosco | `/trabalhe-conosco` |
+| Canal de Denúncias | `/canal-de-denuncias` |
 | Política de Privacidade (LGPD) | `/politica-de-privacidade` |
 | Página de erro | `404.html` (fora do sitemap) |
 
@@ -88,6 +89,17 @@ Enquanto `wixFunctionsUrl` estiver vazio, os formulários abrem o e-mail do visi
 1. Envie um cadastro "Seja Cliente" de teste e confira se ele aparece em `ClientesDmais`.
 2. Envie um currículo em PDF de teste pelo "Trabalhe Conosco". O arquivo deve aparecer em Media Manager > `curriculos`, e o registro deve aparecer em `CurriculosDmais` com o link do arquivo.
 3. O envio do currículo usa o link de upload do Wix (`mediaManager.getUploadUrl`). Se o registro chegar com `curriculoUrl` vazio, verifique a resposta do upload no console do navegador. O formato da resposta do Wix pode variar, e a leitura do link fica em `uploadCV`, no `main.js`.
+
+## Canal de Denúncias (e-mail para a diretoria)
+
+O formulário de `/canal-de-denuncias` envia para **diretoria@dmais-distribuidora.com** pelo Formspree. O link para ele fica no rodapé de todas as páginas.
+
+1. Crie um formulário em https://formspree.io com o e-mail de destino `diretoria@dmais-distribuidora.com`. A diretoria precisa confirmar o e-mail de verificação que o Formspree envia.
+2. Cole o endereço do formulário (ex.: `https://formspree.io/f/abcdwxyz`) em `denunciaEndpoint`, no topo de `site/assets/js/main.js`.
+
+Quem escolhe "Quero ficar anônimo" não informa nome, e-mail nem telefone; esses campos só aparecem para quem quer se identificar.
+
+**Importante:** enquanto `denunciaEndpoint` estiver vazio, o formulário abre o programa de e-mail do visitante, o que **revela o remetente**. Configure o Formspree antes de divulgar o canal.
 
 ## SEO
 

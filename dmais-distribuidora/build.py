@@ -182,6 +182,7 @@ def footer():
           <li><a href="/transportadora">Transportadora</a></li>
           <li><a href="/perguntas-frequentes">Perguntas Frequentes</a></li>
           <li><a href="/trabalhe-conosco">Trabalhe Conosco</a></li>
+          <li><a href="/canal-de-denuncias">Canal de Denúncias</a></li>
           <li><a href="/politica-de-privacidade">Política de Privacidade (LGPD)</a></li>
         </ul>
       </div>
@@ -193,6 +194,16 @@ def footer():
           <div><dt>Suporte WhatsApp</dt><dd>24 horas</dd></div>
         </dl>
         <p style="margin-top:16px">Sua avaliação é muito importante para nós. <a href="{REVIEW_URL}" target="_blank" rel="noopener"><strong>Avalie nosso serviço no Google</strong></a>.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="report-band">
+        <span class="report-band__icon">{ic('shield')}</span>
+        <div>
+          <h2>Canal de Denúncias</h2>
+          <p>Presenciou alguma irregularidade, fraude, assédio ou risco à segurança? Relate de forma anônima ou identificada. As denúncias vão direto para a diretoria e são tratadas com sigilo.</p>
+        </div>
+        <a class="btn btn--yellow" href="/canal-de-denuncias">Fazer uma denúncia {ic('arrow')}</a>
       </div>
     </div>
     <div class="container footer__bottom">
@@ -353,7 +364,7 @@ def home():
     body = f"""  <main id="main">
     <!-- HERO + FORMULÁRIO SEJA CLIENTE -->
     <section class="hero" id="seja-cliente" aria-labelledby="hero-title">
-      <img class="hero__img" src="/assets/img/hero.webp" srcset="/assets/img/hero-960.webp 960w, /assets/img/hero.webp 1600w" sizes="100vw" width="1600" height="900" alt="Caminhão-tanque da D'Mais Distribuidora em frente aos tanques de armazenamento de combustível ao pôr do sol" fetchpriority="high">
+      <img class="hero__img" src="/assets/img/hero.webp" srcset="/assets/img/hero-960.webp 960w, /assets/img/hero.webp 1672w" sizes="100vw" width="1672" height="941" alt="Caminhão-tanque da D'Mais Distribuidora em frente aos tanques de armazenamento de combustível ao pôr do sol" fetchpriority="high">
       <div class="container hero__grid">
         <div class="hero__copy">
           <p class="hero__badge">Distribuidora de combustíveis · Postos bandeira branca · SP</p>
@@ -370,7 +381,7 @@ def home():
           </ul>
         </div>
 
-        <form class="form-card" id="form-cliente" data-form="cliente" novalidate>
+        <form class="form-card form-card--glass" id="form-cliente" data-form="cliente" novalidate>
           <h2 class="form-card__title">Seja você também um cliente D'Mais</h2>
           <p class="form-card__sub">Preencha o formulário e nossa equipe comercial entrará em contato. Todos os campos são obrigatórios.</p>
           <div class="hp" aria-hidden="true"><label>Não preencha<input class="hp-input" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
@@ -527,7 +538,7 @@ def home():
         "path": "/", "file": "index.html", "active": None,
         "title": "D'Mais Distribuidora de Petróleo | Combustíveis para Postos Bandeira Branca em SP",
         "description": "Distribuidora de combustíveis para postos bandeira branca em SP: gasolina, etanol, diesel S10 e S500 com bombeio Petrobras e logística própria.",
-        "preload": '  <link rel="preload" as="image" href="/assets/img/hero.webp" imagesrcset="/assets/img/hero-960.webp 960w, /assets/img/hero.webp 1600w" imagesizes="100vw">\n',
+        "preload": '  <link rel="preload" as="image" href="/assets/img/hero.webp" imagesrcset="/assets/img/hero-960.webp 960w, /assets/img/hero.webp 1672w" imagesizes="100vw">\n',
         "schema": [ORG, DIRECTOR, WEBSITE],
         "body": body,
     }
@@ -760,6 +771,7 @@ def privacidade():
         <ul>
           <li><strong>Seja cliente:</strong> razão social, CNPJ, inscrição estadual, endereço, e-mail, telefone, nome e cargo do responsável, vínculo com a empresa e como nos conheceu.</li>
           <li><strong>Trabalhe Conosco:</strong> nome, sobrenome, e-mail, telefone, data de nascimento, cidade, cargo pretendido e o currículo enviado.</li>
+          <li><strong>Canal de Denúncias:</strong> o relato enviado e, somente se você escolher se identificar, nome, e-mail e telefone. Esses dados são usados apenas para apurar a denúncia e são acessados somente pela diretoria.</li>
         </ul>
         <h2>Para que usamos</h2>
         <ul>
@@ -795,6 +807,65 @@ def privacidade():
     }
 
 
+def denuncias():
+    cats = "".join(f'<option value="{c}">{c}</option>' for c in [
+        "Fraude, corrupção ou suborno", "Assédio moral ou sexual", "Discriminação",
+        "Segurança, saúde ou meio ambiente", "Qualidade ou adulteração de combustível",
+        "Conflito de interesses", "Uso indevido de bens ou informações", "Outro assunto"])
+    ident = "".join(f'<label class="choice"><input type="radio" name="identificacao" value="{v}" required>{t}</label>' for v, t in [("Anônima", "Quero ficar anônimo"), ("Identificada", "Quero me identificar")])
+    body = page_hero("Canal de Denúncias", "Canal de <span>denúncias</span>",
+                     "Um canal seguro para relatar irregularidades, de forma anônima ou identificada. Cada denúncia é recebida diretamente pela diretoria da D'Mais.",
+                     "Canal de Denúncias") + f"""
+    <section class="section section--deep" aria-labelledby="den-title">
+      <div class="container job-grid">
+        <div>
+          <p class="eyebrow">Ética e transparência</p>
+          <h2 class="h2" id="den-title">Sua denúncia faz diferença</h2>
+          <p class="lead">Use este canal para relatar condutas contrárias à lei, à ética ou às políticas da D'Mais, envolvendo colaboradores, clientes, fornecedores ou parceiros.</p>
+          <ul class="job-perks">
+            <li>{ic('shield')}<div><strong>Anonimato garantido</strong><br>Se escolher ficar anônimo, não pedimos nome, e-mail nem telefone.</div></li>
+            <li>{ic('users')}<div><strong>Direto para a diretoria</strong><br>O relato é enviado somente para a diretoria e tratado com sigilo.</div></li>
+            <li>{ic('check')}<div><strong>Sem retaliação</strong><br>A D'Mais não tolera retaliação contra quem denuncia de boa-fé.</div></li>
+          </ul>
+        </div>
+
+        <form class="form-card" id="form-denuncia" data-form="denuncia" novalidate>
+          <h2 class="form-card__title">Fazer uma denúncia</h2>
+          <p class="form-card__sub">Campos com <span class="req">*</span> são obrigatórios. Descreva os fatos com o máximo de detalhes possível.</p>
+          <div class="hp" aria-hidden="true"><label>Não preencha<input class="hp-input" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+          <fieldset class="fieldset" style="margin-top:0" data-group-required="err-identificacao">
+            <legend>Como deseja enviar? <span class="req">*</span></legend>
+            <div class="choices choices--2">{ident}</div>
+            <p class="field-error" id="err-identificacao" role="alert"></p>
+          </fieldset>
+          <div class="conditional grid-2" data-show-when="identificacao=Identificada" hidden>
+{field('den_nome', 'Nome', auto='name', full=True)}
+{field('den_email', 'E-mail', 'email', 'email')}
+{field('den_telefone', 'Telefone', 'tel', 'tel', ' inputmode="tel" data-mask="phone" placeholder="(11) 99999-9999" data-optional', required=False)}
+          </div>
+          <div class="grid-2" style="margin-top:14px">
+            <div class="field" style="grid-column:1/-1"><label for="f-categoria">Assunto <span class="req" aria-hidden="true">*</span></label><select class="input" id="f-categoria" name="categoria" required aria-describedby="err-categoria"><option value="">Selecione o assunto</option>{cats}</select><p class="field-error" id="err-categoria"></p></div>
+{field('envolvidos', 'Pessoas ou áreas envolvidas', required=False, full=True)}
+{field('quando_onde', 'Quando e onde aconteceu', required=False, full=True, extra=' placeholder="Ex.: março de 2026, base de Paulínia"')}
+            <div class="field" style="grid-column:1/-1"><label for="f-descricao">Descrição dos fatos <span class="req" aria-hidden="true">*</span></label><textarea class="input" id="f-descricao" name="descricao" rows="6" required aria-describedby="err-descricao" placeholder="O que aconteceu, quem estava envolvido e se há provas ou testemunhas."></textarea><p class="field-error" id="err-descricao"></p></div>
+          </div>
+          <p class="form-note">Os dados informados são usados apenas para apurar a denúncia, conforme a nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+          <div class="form-actions"><button class="btn btn--blue btn--lg btn--block" type="submit">Enviar denúncia {ic('arrow')}</button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+"""
+    return {
+        "path": "/canal-de-denuncias", "file": "canal-de-denuncias.html", "active": None,
+        "title": "Canal de Denúncias | D'Mais Distribuidora de Petróleo",
+        "description": "Canal de denúncias da D'Mais Distribuidora: relate irregularidades de forma anônima ou identificada, com sigilo e envio direto à diretoria.",
+        "schema": [crumbs("Canal de Denúncias", "/canal-de-denuncias")],
+        "body": body,
+    }
+
+
 def notfound():
     body = page_hero("Erro 404", "Página <span>não encontrada</span>", "O endereço que você procurou não existe ou mudou de lugar.", "Página não encontrada") + """
     <section class="section"><div class="container"><a class="btn btn--yellow btn--lg" href="/">Voltar para a página inicial</a></div></section>
@@ -805,7 +876,7 @@ def notfound():
             "schema": [WEBSITE], "body": body}
 
 
-PAGES = [home(), rede(), fornecedores(), transportadora(), faq(), trabalhe(), privacidade(), notfound()]
+PAGES = [home(), rede(), fornecedores(), transportadora(), faq(), trabalhe(), denuncias(), privacidade(), notfound()]
 
 
 def main():

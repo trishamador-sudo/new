@@ -8,6 +8,10 @@ const SITE = {
   whatsappDisplay: '(11) 99371-9036',
   whatsappText: 'Olá, D\'Mais! Gostaria de mais informações sobre o fornecimento de combustíveis.',
   email: 'contato@dmais-distribuidora.com',
+  // Canal de Denúncias: endereço do formulário Formspree que entrega em diretoria@dmais-distribuidora.com.
+  // Ex.: 'https://formspree.io/f/abcdwxyz'. Enquanto estiver vazio, abre o e-mail do visitante (sem anonimato).
+  denunciaEndpoint: '',
+  denunciaEmail: 'diretoria@dmais-distribuidora.com',
   // Endereço das HTTP Functions do Wix (Velo), SEM barra no final.
   // Ex.: 'https://dmaisdistribuidora.wixsite.com/dmais/_functions'
   // Enquanto estiver vazio, os formulários abrem o e-mail do visitante como alternativa.
@@ -79,7 +83,7 @@ const SITE = {
         return $$(`[name="${name}"]`, form).some(i => i.checked && i.value === val);
       });
       box.hidden = !on;
-      $$('input, textarea', box).forEach(i => { i.required = on; if (!on) { i.value = ''; i.removeAttribute('aria-invalid'); } });
+      $$('input, textarea, select', box).forEach(i => { i.required = on && !i.hasAttribute('data-optional'); if (!on) { i.value = ''; i.removeAttribute('aria-invalid'); } });
     });
   };
 
@@ -141,7 +145,7 @@ const SITE = {
       data[name] = $$(`input[name="${name}"]:checked`, form).map(i => i.value);
     });
     delete data._gotcha;
-    data.consentimento_lgpd = true;
+    if ($('[name="consentimento_lgpd"]', form)) data.consentimento_lgpd = true;
     data.pagina = location.pathname;
     return data;
   };
@@ -171,7 +175,12 @@ const SITE = {
 
   $$('form[data-form]').forEach(form => {
     syncConditionals(form);
-    form.addEventListener('change', () => syncConditionals(form));
+    form.addEventListener('change', () => {
+      syncConditionals(form);
+      $$('[data-group-required]', form).forEach(fs => {
+        if ($$('input', fs).some(i => i.checked)) { const out = document.getElementById(fs.dataset.groupRequired); if (out) out.textContent = ''; }
+      });
+    });
     form.addEventListener('input', e => { if (e.target.getAttribute('aria-invalid') === 'true') setErr(e.target, ''); });
 
     form.addEventListener('submit', async e => {
@@ -190,6 +199,18 @@ const SITE = {
       try {
         if (SITE.preview) {
           await new Promise(r => setTimeout(r, 600));
+        } else if (kind === 'denuncia') {
+          if (SITE.denunciaEndpoint) {
+            const res = await fetch(SITE.denunciaEndpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+              body: JSON.stringify({ _subject: `Canal de Denúncias: ${data.categoria} (${data.identificacao})`, ...data }),
+            });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          } else {
+            const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n');
+            location.href = `mailto:${SITE.denunciaEmail}?subject=${encodeURIComponent(`Canal de Denúncias: ${data.categoria}`)}&body=${encodeURIComponent(body)}`;
+          }
         } else if (SITE.wixFunctionsUrl) {
           if (kind === 'curriculo') {
             const file = $('input[type="file"]', form).files[0];
@@ -209,9 +230,10 @@ const SITE = {
         form.reset();
         syncConditionals(form);
         status.classList.add('form-status--ok');
-        status.textContent = kind === 'curriculo'
-          ? 'Obrigado! Recebemos o seu currículo e entraremos em contato caso haja uma oportunidade compatível.'
-          : 'Obrigado! Recebemos o seu cadastro. Nossa equipe comercial entrará em contato em breve.';
+        status.textContent = {
+          curriculo: 'Obrigado! Recebemos o seu currículo e entraremos em contato caso haja uma oportunidade compatível.',
+          denuncia: 'Denúncia enviada à diretoria. Obrigado por nos ajudar a manter a D\'Mais íntegra e segura.',
+        }[kind] || 'Obrigado! Recebemos o seu cadastro. Nossa equipe comercial entrará em contato em breve.';
       } catch (err) {
         status.classList.add('form-status--err');
         status.textContent = `Não foi possível enviar agora. Tente novamente ou fale conosco pelo WhatsApp ${SITE.whatsappDisplay}.`;

@@ -123,7 +123,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* Hero */
 .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--navy-900); }
-.hero__img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 70% 40%; }
+/* Imagem no formato original (16:9), sem esticar: ocupa a largura e se funde ao azul na parte de baixo */
+.hero__img { position: absolute; top: 0; left: 0; z-index: -2; width: 100%; height: auto; -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%); mask-image: linear-gradient(180deg, #000 78%, transparent 100%); }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(1 11 56 / .9) 0%, rgb(2 19 88 / .72) 38%, rgb(2 19 88 / .3) 70%, rgb(2 19 88 / .12) 100%); }
 @media (max-width: 1023px) { .hero::before { background: linear-gradient(180deg, rgb(1 11 56 / .55) 0%, rgb(1 11 56 / .85) 45%, rgb(1 11 56 / .95) 100%); } }
 .hero__grid { display: grid; gap: 40px; padding-block: clamp(48px, 6vw, 88px); align-items: start; }
@@ -169,6 +170,17 @@ textarea.input { min-height: 90px; resize: vertical; }
 .consent a { color: var(--blue); font-weight: 700; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-actions { margin-top: 16px; }
+/* Formulário principal em vidro desfocado sobre a imagem */
+.form-card--glass { background: rgb(255 255 255 / .62); -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); border: 1px solid rgb(255 255 255 / .55); border-top: 6px solid var(--yellow); }
+.form-card--glass .form-card__sub, .form-card--glass .consent { color: #26304F; }
+.form-card--glass .input { background: rgb(255 255 255 / .82); border-color: rgb(4 33 156 / .28); }
+.form-card--glass .choice { background: rgb(255 255 255 / .5); border-color: rgb(4 33 156 / .28); }
+.form-card--glass .choice:has(input:checked) { background: rgb(238 242 255 / .92); border-color: var(--blue); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .form-card--glass { background: rgb(255 255 255 / .94); } }
+@media (max-width: 1023px) { .form-card--glass { background: rgb(255 255 255 / .9); } }
+.form-note { margin: 16px 0 0; font-size: .85rem; color: var(--muted); }
+.form-note a { color: var(--blue); font-weight: 700; }
+select.input { appearance: none; padding-right: 40px; background-image: linear-gradient(45deg, transparent 50%, var(--blue) 50%), linear-gradient(135deg, var(--blue) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; }
 .form-status { margin: 12px 0 0; font-weight: 700; }
 .form-status:empty { display: none; }
 .form-status--ok { color: #11743B; }
@@ -359,6 +371,12 @@ a.c-tile:hover { background: rgb(255 255 255 / .16); transform: translateY(-2px)
 .social a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: rgb(255 255 255 / .08); border: 1px solid var(--line-dark); color: var(--white); transition: background .2s, color .2s; }
 .social a:hover { background: var(--yellow); color: var(--navy-900); text-decoration: none; }
 .social .ic { width: 20px; height: 20px; }
+.report-band { display: grid; gap: 16px 22px; align-items: center; margin-top: 48px; padding: 22px 24px; border-radius: var(--radius-lg); background: rgb(255 255 255 / .06); border: 1px solid var(--line-dark); }
+@media (min-width: 820px) { .report-band { grid-template-columns: auto 1fr auto; } }
+.report-band__icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--yellow); color: var(--navy-900); }
+.report-band__icon .ic { width: 26px; height: 26px; }
+.report-band h2 { margin-bottom: 6px; }
+.report-band p { margin: 0; max-width: 70ch; }
 .footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 48px; padding-block: 22px; border-top: 1px solid var(--line-dark); font-size: .85rem; }
 
 /* WhatsApp flutuante + barra móvel */
