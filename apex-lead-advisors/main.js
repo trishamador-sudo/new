@@ -74,7 +74,8 @@ const SITE = {
     }, reduceMotion ? 0 : 450);
   }));
 
-  /* ---------- Estimate form ---------- */
+  /* ---------- Estimate form (homepage only) ---------- */
+  if (form) {
   const steps = $$('.step', form);
   const bar = $('.progress__bar', form);
   const stepNum = $('[data-step-num]', form);
@@ -173,6 +174,8 @@ const SITE = {
     }
   });
 
+  }
+
   /* ---------- Gallery video ---------- */
   $$('.g--video').forEach(fig => {
     const video = $('video', fig);
@@ -186,4 +189,18 @@ const SITE = {
     video.addEventListener('pause', () => { fig.classList.remove('is-playing'); btn.innerHTML = playIcon; btn.setAttribute('aria-label', 'Play video'); });
   });
 
+})();
+
+/* Portfolio videos: play muted while on screen, pause when scrolled away */
+(() => {
+  const vids = document.querySelectorAll('.work-card video');
+  if (!vids.length || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (isIntersecting) target.play().catch(() => {});
+      else target.pause();
+    });
+  }, { threshold: 0.5 });
+  vids.forEach(v => io.observe(v));
 })();
