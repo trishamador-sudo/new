@@ -469,7 +469,7 @@ def home():
         </ul>
         </div>
         <figure class="hero__logo">
-          <img src="assets/img/hero-monogram.webp" srcset="assets/img/hero-monogram-360.webp 360w, assets/img/hero-monogram.webp 560w" sizes="(min-width: 960px) 440px, 80vw" width="560" height="556" alt="The SAS monogram of Sahil Samlal Attorneys Inc." fetchpriority="high">
+          <img src="assets/img/hero-monogram.webp" srcset="assets/img/hero-monogram-360.webp 432w, assets/img/hero-monogram.webp 720w" sizes="(min-width: 960px) 560px, 90vw" width="720" height="556" alt="The SAS monogram of Sahil Samlal Attorneys Inc." fetchpriority="high">
         </figure>
       </div>
     </section>
