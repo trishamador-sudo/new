@@ -84,30 +84,54 @@ AREAS = [
      "We draft wills, administer deceased estates and establish trusts, to safeguard your assets and your loved ones' financial security."),
 ]
 
+# Anti-GBV section: wording and layout kept exactly as on the firm's current site.
+GBV_PLEDGE = (f"Sahil Samlal Attorneys Inc. stands unequivocally against Gender-Based Violence (GBV). We commit our time, talent, "
+              "and resources to protect survivors, hold perpetrators accountable, and advance a justice system that is "
+              "survivor-centred, trauma-informed, and rights-based.")
+GBV_COMMITMENTS = [
+    ("Survivor-centred practice", "Your safety, dignity, and informed choice come first. We explain options in plain language and you decide the path."),
+    ("Confidentiality &amp; POPIA compliance", "Sensitive information is handled with strict privacy safeguards and need-to-know access only."),
+    ("Accessible services", "Discreet consultations (in-person or virtual), flexible hours for urgent matters, and language support (e.g., isiZulu/English)."),
+]
 GBV_SERVICES = [
-    ("Protection Orders (Domestic Violence)", "Drafting, filing and arguing for interim and final protection orders; variations and enforcement for breaches."),
-    ("Harassment Protection Orders", "Applications under the Protection from Harassment framework, including digital and online harassment and stalking."),
+    ("Protection Orders (Domestic Violence)", "Drafting, filing, and arguing for interim/final Protection Orders; variations and enforcement for breaches."),
+    ("Harassment Protection Orders", "Applications under the Protection from Harassment framework, including digital/online harassment and stalking."),
     ("Urgent Interdicts", "After-hours and urgent applications for immediate protection and access to children or property."),
-    ("Criminal Process Support", "Opening cases, statement taking, liaison with SAPS and the NPA, opposing or supporting bail, and court accompaniment for complainants."),
-    ("Family Law Remedies", "Divorce, parental responsibilities and rights, care and contact variations, Rule 43/58 interim relief, and supervised contact where appropriate."),
-    ("Maintenance &amp; Financial Relief", "New applications, arrears enforcement, garnishee orders and financial disclosure."),
-    ("Workplace GBV &amp; Harassment", "Grievances, investigations, CCMA referrals, unfair discrimination and harassment claims, and employer compliance advisory."),
-    ("Civil Claims for Damages", "Delictual claims for assault, emotional shock and related harms; institutional or employer liability where applicable."),
-    ("Evidence &amp; Case Building", "Preservation of digital evidence (messages, emails, social media), subpoenas and discovery, affidavits, and medico-legal documentation."),
-    ("Safety Planning &amp; Risk Management", "Tailored plans addressing protection, housing, children, communication boundaries and safe digital practices."),
+    ("Criminal Process Support", "Opening cases, statement taking, liaison with SAPS/NPA, opposing or supporting bail, and court accompaniment for complainants."),
+    ("Family Law Remedies", "Divorce, parental responsibilities and rights, care/contact variations, Rule 43/58 interim relief, and supervised contact where appropriate."),
+    ("Maintenance &amp; Financial Relief", "New applications, arrears enforcement, garnishee orders, and financial disclosure."),
+    ("Workplace GBV &amp; Harassment", "Grievances, investigations, CCMA referrals, unfair discrimination/harassment claims, and employer compliance advisory."),
+    ("Civil Claims for Damages", "Delictual claims for assault, emotional shock, and related harms; institutional/employer liability where applicable."),
+    ("Evidence &amp; Case Building", "Preservation of digital evidence (messages, emails, social media), subpoenas/discovery, affidavits, medico-legal documentation coordination."),
+    ("Safety Planning &amp; Risk Management", "Tailored plans addressing protection, housing, children, communication boundaries, and safe digital practices."),
+]
+GBV_PROMISE = ("We will treat you with respect, believe you, protect your privacy, and pursue remedies swiftly and strategically. "
+               "Fighting GBV is core to our mission and to the values of a just South Africa")
+
+FAQS = [
+    ("Where is your office?", "Our offices are at Office Suite 2, 54 Bird Street, Newcastle, 2940, KwaZulu-Natal."),
+    ("What are your office hours?", "Monday to Friday from 08h00 to 12h00 and from 13h00 to 16h30 (closed for lunch from 12h00 to 13h00). We are closed on weekends and public holidays."),
+    ("Can I have a consultation online?", "Yes. When you book, choose a consultation at our offices or a virtual consultation, and tell us when you are available."),
+    ("How do I book a consultation?", "Use the booking form, call (034) 315 5315 or 082 762 5716, or send us a WhatsApp. Selected dates and times are subject to our consulting team's availability."),
+    ("Which courts do you appear in?", "Magistrates' district and regional courts in Newcastle, Madadeni, Utrecht, uMnambithi (Ladysmith), Endumeni (Dundee), Dannhauser, Glencoe and Volksrust, and the KwaZulu-Natal High Courts in Durban and Pietermaritzburg."),
+    ("What areas of law do you handle?", "Criminal and civil litigation, personal injury, Road Accident Fund claims, commercial and corporate law, debt collection, family law, divorces, labour law, and estates and trusts."),
+    ("I need help with a gender-based violence matter. Is it confidential?", "Yes. Sensitive information is handled with strict privacy safeguards and need-to-know access only. We offer discreet consultations in person or virtually, and urgent applications for protection."),
+    ("Do you offer language support?", "Yes. Our services for GBV matters include language support, for example isiZulu and English."),
 ]
 
-GBV_COMMITMENTS = [
-    ("heart", "Survivor-centred practice", "Your safety, dignity and informed choice come first. We explain options in plain language and you decide the path."),
-    ("lock", "Confidentiality &amp; POPIA compliance", "Sensitive information is handled with strict privacy safeguards and need-to-know access only."),
-    ("chat", "Accessible services", "Discreet consultations in person or virtual, flexible hours for urgent matters, and language support (e.g. isiZulu and English)."),
+INSIGHTS = [
+    ("Road Accident Fund", "How to claim from the Road Accident Fund", "What you need to lodge an RAF claim for medical expenses, loss of income, and pain and suffering."),
+    ("Family law", "Protection orders: how they work", "The difference between interim and final protection orders, and how to apply for one."),
+    ("Labour law", "Dismissed? Your first steps", "What to do after an unfair dismissal, from disciplinary hearings to the CCMA."),
+    ("Estates &amp; trusts", "Why every adult needs a valid will", "How a will protects your loved ones, and what happens to an estate without one."),
 ]
 
 MAGISTRATES = ["Newcastle", "Madadeni", "Utrecht", "uMnambithi (Ladysmith)", "Endumeni (Dundee)", "Dannhauser", "Glencoe", "Volksrust"]
 HIGH_COURTS = ["Durban", "Pietermaritzburg"]
 
 NAV = [("index.html", "Home", "home"), ("practice-areas.html", "Practice Areas", "areas"),
-       ("anti-gbv.html", "Anti-GBV", "gbv"), ("about.html", "About", "about"), ("contact.html", "Contact", "contact")]
+       ("anti-gbv.html", "Anti-GBV", "gbv"), ("about.html", "About", "about"), ("index.html#faq", "FAQ", "faq"),
+       ("index.html#insights", "Insights", "insights"), ("contact.html", "Contact", "contact")]
 
 
 # ------------------------------------------------------------------ Shared parts
@@ -115,7 +139,7 @@ def head(p):
     canonical = DOMAIN + "/" + ("" if p["file"] == "index.html" else p["file"])
     schema = json.dumps({"@context": "https://schema.org", "@graph": p["schema"]}, ensure_ascii=False, indent=2)
     robots = '  <meta name="robots" content="noindex">\n' if p.get("noindex") else ""
-    preload = '  <link rel="preload" as="image" href="assets/img/hero.webp" imagesrcset="assets/img/hero-960.webp 960w, assets/img/hero.webp 1915w" imagesizes="100vw">\n' if p["file"] == "index.html" else ""
+    preload = '  <link rel="preload" as="image" href="assets/img/hero-monogram.webp">\n' if p["file"] == "index.html" else ""
     return f"""<!doctype html>
 <html lang="en-ZA">
 <head>
@@ -356,12 +380,80 @@ def courts_block():
         </div>"""
 
 
+def gbv_original():
+    commits = "".join(f'''<article class="gbvo__commit"><img src="assets/img/gbv-heart.png" width="63" height="55" alt="" loading="lazy"><h4>{t}</h4><p>{d}</p></article>''' for t, d in GBV_COMMITMENTS)
+    services = "".join(f"<li><strong>{t}:</strong><br>{d}</li>" for t, d in GBV_SERVICES)
+    return f"""    <section class="gbvo" id="gbv" aria-labelledby="gbv-title">
+      <div class="gbvo__inner">
+        <h2 id="gbv-title" class="gbvo__title">Anti-GBV Pledge</h2>
+        <p class="gbvo__intro">{GBV_PLEDGE}</p>
+        <h3 class="gbvo__red">Our Commitments</h3>
+        <div class="gbvo__commits">{commits}</div>
+        <h3 class="gbvo__red">Legal Services for GBV Matters</h3>
+        <ul class="gbvo__services">{services}</ul>
+        <div class="gbvo__promise">
+          <img src="assets/img/our-promise.webp" width="195" height="190" alt="Our Promise" loading="lazy">
+          <p>{GBV_PROMISE}</p>
+        </div>
+      </div>
+    </section>
+"""
+
+
+def faq_block():
+    items = "\n".join(f"""          <details class="faq__item"><summary>{q}</summary><p>{a}</p></details>""" for q, a in FAQS)
+    return f"""    <section class="section section--soft" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+          <p>Can't find your answer? Speak to us directly.</p>
+          <div class="btn-col">
+            <a class="btn btn--light btn--lg" href="contact.html#book">{ic('cal')}Book a consultation</a>
+            <a class="btn btn--outline btn--lg" href="tel:{TEL_LINK}">{ic('phone')}Call {TEL}</a>
+            <a class="btn btn--outline btn--lg" href="{WA}" target="_blank" rel="noopener">{ic('wa')}Ask on WhatsApp</a>
+          </div>
+        </div>
+        <div class="faq__list">
+{items}
+        </div>
+      </div>
+    </section>
+"""
+
+
+def insights_block():
+    cards = "\n".join(f"""          <article class="insight">
+            <p class="insight__tag">{tag}</p>
+            <h3>{title}</h3>
+            <p>{text}</p>
+            <span class="insight__soon">Article coming soon</span>
+          </article>""" for tag, title, text in INSIGHTS)
+    return f"""    <section class="section section--light" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Insights</p>
+            <h2 class="h2" id="insights-title">Legal insights &amp; guides</h2>
+          </div>
+          <div>
+            <p>Plain-language guides to common legal questions in South Africa. New articles are on the way. In the meantime, ask us about your matter.</p>
+            <a class="btn btn--light" href="contact.html#book">{ic('cal')}Book a consultation</a>
+          </div>
+        </div>
+        <div class="insight-grid">
+{cards}
+        </div>
+      </div>
+    </section>
+"""
+
+
 def home():
-    gbv = "".join(f'<li>{ic(i)}<div><strong>{t}</strong><span>{d}</span></div></li>' for i, t, d in GBV_COMMITMENTS)
     body = f"""  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero__img" src="assets/img/hero.webp" srcset="assets/img/hero-960.webp 960w, assets/img/hero.webp 1915w" sizes="100vw" width="1915" height="556" alt="" fetchpriority="high">
-      <div class="container hero__inner">
+      <div class="container hero__grid">
+        <div class="hero__copy">
         <p class="eyebrow">Attorneys in Newcastle, KwaZulu-Natal</p>
         <h1 id="hero-title" class="hero__title">Dedicated to Results.<br><em>Driven by Excellence.</em></h1>
         <p class="hero__lead">Efficient, affordable legal solutions, custom-tailored for every client. Criminal and civil litigation, family and divorce, labour, RAF and estate matters across KwaZulu-Natal.</p>
@@ -375,6 +467,10 @@ def home():
           <li>{ic('video')}<span><strong>In-office or virtual</strong>consultations</span></li>
           <li>{ic('shield')}<span><strong>LPC Firm No. {LPC}</strong>registered law firm</span></li>
         </ul>
+        </div>
+        <figure class="hero__logo">
+          <img src="assets/img/hero-monogram.webp" srcset="assets/img/hero-monogram-360.webp 360w, assets/img/hero-monogram.webp 560w" sizes="(min-width: 960px) 440px, 80vw" width="560" height="556" alt="The SAS monogram of Sahil Samlal Attorneys Inc." fetchpriority="high">
+        </figure>
       </div>
     </section>
 
@@ -432,37 +528,8 @@ def home():
       </div>
     </section>
 
-    <section class="section section--navy" id="gbv" aria-labelledby="gbv-title">
-      <div class="container gbv-teaser">
-        <div>
-          <p class="eyebrow">Anti-GBV pledge</p>
-          <h2 class="h2" id="gbv-title">We stand against gender-based violence</h2>
-          <p class="lead">We commit our time, talent and resources to protect survivors, hold perpetrators accountable, and advance a justice system that is survivor-centred, trauma-informed and rights-based.</p>
-          <div class="btn-row">
-            <a class="btn btn--light btn--lg" href="contact.html?area=gbv#book">{ic('lock')}Get confidential help</a>
-            <a class="btn btn--outline btn--lg" href="anti-gbv.html">How we help {ic('arrow')}</a>
-          </div>
-          <p class="emergency">{ic('alert')}<span>In immediate danger? Call SAPS on <a href="tel:10111">10111</a> or the GBV Command Centre on <a href="tel:0800428428">0800 428 428</a>.</span></p>
-        </div>
-        <ul class="commit-list">{gbv}</ul>
-      </div>
-    </section>
-
-    <section class="section section--light" id="steps" aria-labelledby="steps-title">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--dark">How to get started</p>
-          <h2 class="h2" id="steps-title">Three steps to clear legal direction</h2>
-        </div>
-        <ol class="steps">
-          <li><span class="steps__n">1</span><h3>Tell us about your matter</h3><p>Use the booking form, call {TEL} or send us a WhatsApp.</p></li>
-          <li><span class="steps__n">2</span><h3>Meet with us</h3><p>Consult at our offices in Newcastle or virtually, at a time that suits you.</p></li>
-          <li><span class="steps__n">3</span><h3>Get a clear plan</h3><p>We explain your options in plain language and act quickly on your instructions.</p></li>
-        </ol>
-        <div class="center-cta"><a class="btn btn--navy btn--lg" href="contact.html#book">{ic('cal')}Book your consultation</a></div>
-      </div>
-    </section>
-
+{gbv_original()}
+{cta_band("Need confidential help with a GBV matter?", "Consultations are discreet, in person or virtual. Speak to us today.")}
     <section class="section section--soft" id="jurisdiction" aria-labelledby="jur-title">
       <div class="container">
         <div class="section-head">
@@ -473,12 +540,14 @@ def home():
       </div>
     </section>
 
+{faq_block()}
+{insights_block()}
 {cta_band("Dedicated to results. Let's discuss your matter.", "Office hours: Monday to Friday, 08h00–16h30 (closed 12h00–13h00 and on public holidays).")}  </main>
 """
     return {"file": "index.html", "active": "home",
             "title": "Sahil Samlal Attorneys Inc. | Attorneys in Newcastle, KwaZulu-Natal",
             "description": "Attorneys in Newcastle, KZN: criminal and civil litigation, divorce and family law, labour law, RAF and personal injury claims, and estates. Book a consultation.",
-            "schema": [FIRM_SCHEMA, PERSON_SCHEMA, WEBSITE_SCHEMA], "body": body}
+            "schema": [FIRM_SCHEMA, PERSON_SCHEMA, WEBSITE_SCHEMA, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQS]}], "body": body}
 
 
 def practice():
@@ -511,51 +580,11 @@ def practice():
 
 
 def gbv_page():
-    commits = "".join(f'<article class="commit">{ic(i)}<h3>{t}</h3><p>{d}</p></article>' for i, t, d in GBV_COMMITMENTS)
-    services = "".join(f'<li><h3>{t}</h3><p>{d}</p></li>' for t, d in GBV_SERVICES)
     body = page_hero("Anti-GBV pledge", "We stand against gender-based violence",
-                     f"{FIRM} stands unequivocally against gender-based violence (GBV). We commit our time, talent and resources to protect survivors, hold perpetrators accountable, and advance a justice system that is survivor-centred, trauma-informed and rights-based.",
+                     "Confidential, survivor-centred legal help. Consultations are discreet, in person or virtual.",
                      "Anti-GBV") + f"""
-    <section class="alert-strip" aria-label="Emergency numbers">
-      <div class="container alert-strip__inner">
-        {ic('alert')}<p><strong>In immediate danger?</strong> Call SAPS on <a href="tel:10111">10111</a> or the GBV Command Centre on <a href="tel:0800428428">0800 428 428</a> (24 hours, free).</p>
-      </div>
-    </section>
-
-    <section class="section section--light" aria-labelledby="commit-title">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--dark">Our commitments</p>
-          <h2 class="h2" id="commit-title">Safe, confidential and on your terms</h2>
-        </div>
-        <div class="commit-grid">{commits}</div>
-      </div>
-    </section>
-
-    <section class="section section--soft" aria-labelledby="gbvs-title">
-      <div class="container gbv-services">
-        <div class="gbv-services__head">
-          <p class="eyebrow eyebrow--dark">Legal services for GBV matters</p>
-          <h2 class="h2" id="gbvs-title">How we can help</h2>
-          <p>Speak to us confidentially. Consultations are discreet, in person or virtual.</p>
-          <div class="btn-col">
-            <a class="btn btn--navy btn--lg" href="contact.html?area=gbv#book">{ic('lock')}Request a confidential consultation</a>
-            <a class="btn btn--ghost-dark btn--lg" href="tel:{TEL_LINK}">{ic('phone')}Call {TEL}</a>
-            <a class="btn btn--ghost-dark btn--lg" href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp us</a>
-          </div>
-        </div>
-        <ul class="service-list">{services}</ul>
-      </div>
-    </section>
-
-    <section class="section section--navy promise" aria-labelledby="promise-title">
-      <div class="container promise__inner">
-        <h2 class="promise__title" id="promise-title">Our promise</h2>
-        <blockquote>We will treat you with respect, believe you, protect your privacy, and pursue remedies swiftly and strategically. Fighting GBV is core to our mission and to the values of a just South Africa.</blockquote>
-        <a class="btn btn--light btn--lg" href="contact.html?area=gbv#book">{ic('lock')}Get confidential help</a>
-      </div>
-    </section>
-  </main>
+{gbv_original()}
+{cta_band("Speak to us confidentially", "Discreet consultations in person or virtual, with flexible hours for urgent matters.")}  </main>
 """
     return {"file": "anti-gbv.html", "active": "gbv",
             "title": "Anti-GBV Legal Services | Protection Orders | Sahil Samlal Attorneys",

@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="assets/img/hero.webp" imagesrcset="assets/img/hero-960.webp 960w, assets/img/hero.webp 1915w" imagesizes="100vw">
+  <link rel="preload" as="image" href="assets/img/hero-monogram.webp">
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
   <script type="application/ld+json">
@@ -232,6 +232,75 @@
       "publisher": {
         "@id": "https://samlalattorneys.com/#firm"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is your office?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our offices are at Office Suite 2, 54 Bird Street, Newcastle, 2940, KwaZulu-Natal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your office hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monday to Friday from 08h00 to 12h00 and from 13h00 to 16h30 (closed for lunch from 12h00 to 13h00). We are closed on weekends and public holidays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have a consultation online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. When you book, choose a consultation at our offices or a virtual consultation, and tell us when you are available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the booking form, call (034) 315 5315 or 082 762 5716, or send us a WhatsApp. Selected dates and times are subject to our consulting team's availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which courts do you appear in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Magistrates' district and regional courts in Newcastle, Madadeni, Utrecht, uMnambithi (Ladysmith), Endumeni (Dundee), Dannhauser, Glencoe and Volksrust, and the KwaZulu-Natal High Courts in Durban and Pietermaritzburg."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas of law do you handle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Criminal and civil litigation, personal injury, Road Accident Fund claims, commercial and corporate law, debt collection, family law, divorces, labour law, and estates and trusts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I need help with a gender-based violence matter. Is it confidential?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sensitive information is handled with strict privacy safeguards and need-to-know access only. We offer discreet consultations in person or virtually, and urgent applications for protection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer language support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our services for GBV matters include language support, for example isiZulu and English."
+          }
+        }
+      ]
     }
   ]
 }
@@ -259,6 +328,8 @@
         <a href="practice-areas.html">Practice Areas</a>
         <a href="anti-gbv.html">Anti-GBV</a>
         <a href="about.html">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#insights">Insights</a>
         <a href="contact.html">Contact</a>
         <a class="btn btn--light nav__cta-mobile" href="contact.html#book"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Book a consultation</a>
       </nav>
@@ -273,8 +344,8 @@
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero__img" src="assets/img/hero.webp" srcset="assets/img/hero-960.webp 960w, assets/img/hero.webp 1915w" sizes="100vw" width="1915" height="556" alt="" fetchpriority="high">
-      <div class="container hero__inner">
+      <div class="container hero__grid">
+        <div class="hero__copy">
         <p class="eyebrow">Attorneys in Newcastle, KwaZulu-Natal</p>
         <h1 id="hero-title" class="hero__title">Dedicated to Results.<br><em>Driven by Excellence.</em></h1>
         <p class="hero__lead">Efficient, affordable legal solutions, custom-tailored for every client. Criminal and civil litigation, family and divorce, labour, RAF and estate matters across KwaZulu-Natal.</p>
@@ -288,6 +359,10 @@
           <li><svg class="ic" aria-hidden="true"><use href="#i-video"/></svg><span><strong>In-office or virtual</strong>consultations</span></li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>LPC Firm No. 73764</strong>registered law firm</span></li>
         </ul>
+        </div>
+        <figure class="hero__logo">
+          <img src="assets/img/hero-monogram.webp" srcset="assets/img/hero-monogram-360.webp 360w, assets/img/hero-monogram.webp 560w" sizes="(min-width: 960px) 440px, 80vw" width="560" height="556" alt="The SAS monogram of Sahil Samlal Attorneys Inc." fetchpriority="high">
+        </figure>
       </div>
     </section>
 
@@ -417,34 +492,32 @@
       </div>
     </section>
 
-    <section class="section section--navy" id="gbv" aria-labelledby="gbv-title">
-      <div class="container gbv-teaser">
-        <div>
-          <p class="eyebrow">Anti-GBV pledge</p>
-          <h2 class="h2" id="gbv-title">We stand against gender-based violence</h2>
-          <p class="lead">We commit our time, talent and resources to protect survivors, hold perpetrators accountable, and advance a justice system that is survivor-centred, trauma-informed and rights-based.</p>
-          <div class="btn-row">
-            <a class="btn btn--light btn--lg" href="contact.html?area=gbv#book"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Get confidential help</a>
-            <a class="btn btn--outline btn--lg" href="anti-gbv.html">How we help <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </div>
-          <p class="emergency"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>In immediate danger? Call SAPS on <a href="tel:10111">10111</a> or the GBV Command Centre on <a href="tel:0800428428">0800 428 428</a>.</span></p>
+    <section class="gbvo" id="gbv" aria-labelledby="gbv-title">
+      <div class="gbvo__inner">
+        <h2 id="gbv-title" class="gbvo__title">Anti-GBV Pledge</h2>
+        <p class="gbvo__intro">Sahil Samlal Attorneys Inc. stands unequivocally against Gender-Based Violence (GBV). We commit our time, talent, and resources to protect survivors, hold perpetrators accountable, and advance a justice system that is survivor-centred, trauma-informed, and rights-based.</p>
+        <h3 class="gbvo__red">Our Commitments</h3>
+        <div class="gbvo__commits"><article class="gbvo__commit"><img src="assets/img/gbv-heart.png" width="63" height="55" alt="" loading="lazy"><h4>Survivor-centred practice</h4><p>Your safety, dignity, and informed choice come first. We explain options in plain language and you decide the path.</p></article><article class="gbvo__commit"><img src="assets/img/gbv-heart.png" width="63" height="55" alt="" loading="lazy"><h4>Confidentiality &amp; POPIA compliance</h4><p>Sensitive information is handled with strict privacy safeguards and need-to-know access only.</p></article><article class="gbvo__commit"><img src="assets/img/gbv-heart.png" width="63" height="55" alt="" loading="lazy"><h4>Accessible services</h4><p>Discreet consultations (in-person or virtual), flexible hours for urgent matters, and language support (e.g., isiZulu/English).</p></article></div>
+        <h3 class="gbvo__red">Legal Services for GBV Matters</h3>
+        <ul class="gbvo__services"><li><strong>Protection Orders (Domestic Violence):</strong><br>Drafting, filing, and arguing for interim/final Protection Orders; variations and enforcement for breaches.</li><li><strong>Harassment Protection Orders:</strong><br>Applications under the Protection from Harassment framework, including digital/online harassment and stalking.</li><li><strong>Urgent Interdicts:</strong><br>After-hours and urgent applications for immediate protection and access to children or property.</li><li><strong>Criminal Process Support:</strong><br>Opening cases, statement taking, liaison with SAPS/NPA, opposing or supporting bail, and court accompaniment for complainants.</li><li><strong>Family Law Remedies:</strong><br>Divorce, parental responsibilities and rights, care/contact variations, Rule 43/58 interim relief, and supervised contact where appropriate.</li><li><strong>Maintenance &amp; Financial Relief:</strong><br>New applications, arrears enforcement, garnishee orders, and financial disclosure.</li><li><strong>Workplace GBV &amp; Harassment:</strong><br>Grievances, investigations, CCMA referrals, unfair discrimination/harassment claims, and employer compliance advisory.</li><li><strong>Civil Claims for Damages:</strong><br>Delictual claims for assault, emotional shock, and related harms; institutional/employer liability where applicable.</li><li><strong>Evidence &amp; Case Building:</strong><br>Preservation of digital evidence (messages, emails, social media), subpoenas/discovery, affidavits, medico-legal documentation coordination.</li><li><strong>Safety Planning &amp; Risk Management:</strong><br>Tailored plans addressing protection, housing, children, communication boundaries, and safe digital practices.</li></ul>
+        <div class="gbvo__promise">
+          <img src="assets/img/our-promise.webp" width="195" height="190" alt="Our Promise" loading="lazy">
+          <p>We will treat you with respect, believe you, protect your privacy, and pursue remedies swiftly and strategically. Fighting GBV is core to our mission and to the values of a just South Africa</p>
         </div>
-        <ul class="commit-list"><li><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><div><strong>Survivor-centred practice</strong><span>Your safety, dignity and informed choice come first. We explain options in plain language and you decide the path.</span></div></li><li><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><div><strong>Confidentiality &amp; POPIA compliance</strong><span>Sensitive information is handled with strict privacy safeguards and need-to-know access only.</span></div></li><li><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><div><strong>Accessible services</strong><span>Discreet consultations in person or virtual, flexible hours for urgent matters, and language support (e.g. isiZulu and English).</span></div></li></ul>
       </div>
     </section>
 
-    <section class="section section--light" id="steps" aria-labelledby="steps-title">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--dark">How to get started</p>
-          <h2 class="h2" id="steps-title">Three steps to clear legal direction</h2>
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <div>
+          <h2 class="cta-band__title">Need confidential help with a GBV matter?</h2>
+          <p>Consultations are discreet, in person or virtual. Speak to us today.</p>
         </div>
-        <ol class="steps">
-          <li><span class="steps__n">1</span><h3>Tell us about your matter</h3><p>Use the booking form, call (034) 315 5315 or send us a WhatsApp.</p></li>
-          <li><span class="steps__n">2</span><h3>Meet with us</h3><p>Consult at our offices in Newcastle or virtually, at a time that suits you.</p></li>
-          <li><span class="steps__n">3</span><h3>Get a clear plan</h3><p>We explain your options in plain language and act quickly on your instructions.</p></li>
-        </ol>
-        <div class="center-cta"><a class="btn btn--navy btn--lg" href="contact.html#book"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Book your consultation</a></div>
+        <div class="cta-band__actions">
+          <a class="btn btn--light btn--lg" href="contact.html#book"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Book a consultation</a>
+          <a class="btn btn--outline btn--lg" href="tel:+27343155315"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call (034) 315 5315</a>
+          <a class="btn btn--outline btn--lg" href="https://wa.me/27827625716?text=Hello%20Sahil%20Samlal%20Attorneys%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp us</a>
+        </div>
       </div>
     </section>
 
@@ -470,6 +543,72 @@
           <figure class="courts__map">
             <img src="assets/img/kzn-courts-map.webp" width="357" height="405" alt="Map of KwaZulu-Natal showing the courts where Sahil Samlal Attorneys appears: Volksrust, Utrecht, Newcastle, Madadeni, Dannhauser, Dundee, Glencoe and Ladysmith, with High Courts in Pietermaritzburg and Durban" loading="lazy">
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+          <p>Can't find your answer? Speak to us directly.</p>
+          <div class="btn-col">
+            <a class="btn btn--light btn--lg" href="contact.html#book"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Book a consultation</a>
+            <a class="btn btn--outline btn--lg" href="tel:+27343155315"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call (034) 315 5315</a>
+            <a class="btn btn--outline btn--lg" href="https://wa.me/27827625716?text=Hello%20Sahil%20Samlal%20Attorneys%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>Ask on WhatsApp</a>
+          </div>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item"><summary>Where is your office?</summary><p>Our offices are at Office Suite 2, 54 Bird Street, Newcastle, 2940, KwaZulu-Natal.</p></details>
+          <details class="faq__item"><summary>What are your office hours?</summary><p>Monday to Friday from 08h00 to 12h00 and from 13h00 to 16h30 (closed for lunch from 12h00 to 13h00). We are closed on weekends and public holidays.</p></details>
+          <details class="faq__item"><summary>Can I have a consultation online?</summary><p>Yes. When you book, choose a consultation at our offices or a virtual consultation, and tell us when you are available.</p></details>
+          <details class="faq__item"><summary>How do I book a consultation?</summary><p>Use the booking form, call (034) 315 5315 or 082 762 5716, or send us a WhatsApp. Selected dates and times are subject to our consulting team's availability.</p></details>
+          <details class="faq__item"><summary>Which courts do you appear in?</summary><p>Magistrates' district and regional courts in Newcastle, Madadeni, Utrecht, uMnambithi (Ladysmith), Endumeni (Dundee), Dannhauser, Glencoe and Volksrust, and the KwaZulu-Natal High Courts in Durban and Pietermaritzburg.</p></details>
+          <details class="faq__item"><summary>What areas of law do you handle?</summary><p>Criminal and civil litigation, personal injury, Road Accident Fund claims, commercial and corporate law, debt collection, family law, divorces, labour law, and estates and trusts.</p></details>
+          <details class="faq__item"><summary>I need help with a gender-based violence matter. Is it confidential?</summary><p>Yes. Sensitive information is handled with strict privacy safeguards and need-to-know access only. We offer discreet consultations in person or virtually, and urgent applications for protection.</p></details>
+          <details class="faq__item"><summary>Do you offer language support?</summary><p>Yes. Our services for GBV matters include language support, for example isiZulu and English.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Insights</p>
+            <h2 class="h2" id="insights-title">Legal insights &amp; guides</h2>
+          </div>
+          <div>
+            <p>Plain-language guides to common legal questions in South Africa. New articles are on the way. In the meantime, ask us about your matter.</p>
+            <a class="btn btn--light" href="contact.html#book"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Book a consultation</a>
+          </div>
+        </div>
+        <div class="insight-grid">
+          <article class="insight">
+            <p class="insight__tag">Road Accident Fund</p>
+            <h3>How to claim from the Road Accident Fund</h3>
+            <p>What you need to lodge an RAF claim for medical expenses, loss of income, and pain and suffering.</p>
+            <span class="insight__soon">Article coming soon</span>
+          </article>
+          <article class="insight">
+            <p class="insight__tag">Family law</p>
+            <h3>Protection orders: how they work</h3>
+            <p>The difference between interim and final protection orders, and how to apply for one.</p>
+            <span class="insight__soon">Article coming soon</span>
+          </article>
+          <article class="insight">
+            <p class="insight__tag">Labour law</p>
+            <h3>Dismissed? Your first steps</h3>
+            <p>What to do after an unfair dismissal, from disciplinary hearings to the CCMA.</p>
+            <span class="insight__soon">Article coming soon</span>
+          </article>
+          <article class="insight">
+            <p class="insight__tag">Estates &amp; trusts</p>
+            <h3>Why every adult needs a valid will</h3>
+            <p>How a will protects your loved ones, and what happens to an estate without one.</p>
+            <span class="insight__soon">Article coming soon</span>
+          </article>
         </div>
       </div>
     </section>
