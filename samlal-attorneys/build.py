@@ -119,6 +119,10 @@ FAQS = [
     ("Do you offer language support?", "Yes. Our services for GBV matters include language support, for example isiZulu and English."),
 ]
 
+# Google reviews: paste real reviews here as (text, name). Leave empty to show the placeholder cards.
+REVIEWS = []
+GOOGLE_REVIEWS_URL = "https://www.google.com/maps/search/?api=1&query=Sahil+Samlal+Attorneys+Inc+54+Bird+Street+Newcastle"
+
 INSIGHTS = [
     ("Road Accident Fund", "How to claim from the Road Accident Fund", "What you need to lodge an RAF claim for medical expenses, loss of income, and pain and suffering."),
     ("Family law", "Protection orders: how they work", "The difference between interim and final protection orders, and how to apply for one."),
@@ -400,6 +404,39 @@ def gbv_original():
 """
 
 
+G = '<svg class="g-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>'
+
+
+def reviews_block():
+    stars = '<span class="stars" aria-label="5 out of 5 stars">★★★★★</span>'
+    if REVIEWS:
+        cards = "\n".join(f"""          <figure class="review">{stars}<blockquote>“{t}”</blockquote><figcaption>{G}<span><strong>{n}</strong>Google review</span></figcaption></figure>""" for t, n in REVIEWS)
+    else:
+        cards = "\n".join(f"""          <figure class="review review--placeholder">{stars}<blockquote>Client review from Google appears here: the client's own words about their experience with the firm.</blockquote><figcaption>{G}<span><strong>Client name</strong>Google review</span></figcaption></figure>""" for _ in range(3))
+    return f"""    <section class="section section--soft" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Google reviews</p>
+            <h2 class="h2" id="reviews-title">What our clients say</h2>
+          </div>
+          <div class="reviews__actions">
+            <p>Read what clients say about working with {FIRM}, or share your own experience.</p>
+            <div class="btn-row">
+              <a class="btn btn--light" href="{GOOGLE_REVIEWS_URL}" target="_blank" rel="noopener">{G}Read our Google reviews</a>
+              <a class="btn btn--outline" href="{GOOGLE_REVIEWS_URL}" target="_blank" rel="noopener">Leave a review</a>
+            </div>
+          </div>
+        </div>
+        <div class="review-grid">
+{cards}
+        </div>
+        <div class="center-cta"><a class="btn btn--light btn--lg" href="contact.html#book">{ic('cal')}Book a consultation</a></div>
+      </div>
+    </section>
+"""
+
+
 def faq_block():
     items = "\n".join(f"""          <details class="faq__item"><summary>{q}</summary><p>{a}</p></details>""" for q, a in FAQS)
     return f"""    <section class="section section--soft" id="faq" aria-labelledby="faq-title">
@@ -528,6 +565,7 @@ def home():
       </div>
     </section>
 
+{reviews_block()}
 {gbv_original()}
 {cta_band("Need confidential help with a GBV matter?", "Consultations are discreet, in person or virtual. Speak to us today.")}
     <section class="section section--soft" id="jurisdiction" aria-labelledby="jur-title">

@@ -441,3 +441,16 @@ h1, h2, h3 { color: var(--white); }
 .footer { background: var(--navy-950); }
 .faq__item, .insight, .form-card, .practice { background: rgba(195, 199, 206, .025); }
 .pull { border-left-color: var(--grey-400); }
+
+/* Google reviews */
+.review-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.review { display: flex; flex-direction: column; margin: 0; padding: 30px 28px; border: 1px solid var(--line-dark); border-radius: var(--radius); background: linear-gradient(180deg, rgba(195, 199, 206, .06), rgba(195, 199, 206, .015)); }
+.stars { color: #F4C150; letter-spacing: .18em; font-size: 1.05rem; }
+.review blockquote { flex: 1; margin: 16px 0 24px; font: italic 500 1.3rem/1.45 var(--serif); color: var(--grey-200); }
+.review--placeholder blockquote { color: var(--grey-400); }
+.review figcaption { display: flex; align-items: center; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line-dark); font-size: .85rem; color: var(--grey-400); }
+.review figcaption strong { display: block; color: var(--white); font-size: .95rem; }
+.g-logo { width: 22px; height: 22px; flex: none; }
+.btn .g-logo { width: 18px; height: 18px; }
+.reviews__actions p { margin-bottom: 0; }
+.reviews__actions .btn-row { margin-top: 18px; }

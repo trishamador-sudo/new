@@ -29,6 +29,7 @@ Content lives in `build.py`. Run `python3 build.py` to rebuild every page, `site
 - WhatsApp is linked to the cell number 082 762 5716. Confirm that this number uses WhatsApp.
 - On the current site the Criminal Litigation and Civil Litigation descriptions are swapped. They are corrected here.
 - **Insights:** the four article cards are planned topics marked "Article coming soon". Add real articles as new pages (with BlogPosting schema) and list them in `sitemap.xml`.
+- **Google reviews:** the home page has a reviews section with three placeholder cards. Paste real reviews into `REVIEWS` in `build.py` as (text, name) and rebuild. The buttons open the firm on Google Maps; swap in the firm's own review link from its Google Business Profile.
 - **FAQ:** the answers use only facts from the current site. Edit them in `FAQS` in `build.py`.
 - The domain is assumed to be `https://samlalattorneys.com`. Update `DOMAIN` in `build.py` if it differs.
 - Images (hero, director photo and court map) were cropped from screenshots of the current site. Replace them with the original files for full quality.
