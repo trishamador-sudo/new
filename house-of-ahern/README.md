@@ -4,7 +4,7 @@ A one-page sample design for House of Ahern, Rhodesian Ridgeback breeders. It is
 
 ## Design
 - **Look:** dark editorial layout, after the inspiration image (`assets/references/inspiration.png`).
-- **Colours (from the brand palette):** espresso `#251C15`, rust `#AC592F`, taupe `#897D6E`, crest green `#1F5709` and cream `#FDFDFC`.
+- **Colours:** black background, a green info bar and green script headings (crest green `#1F5709` and lighter shades), with rust `#AC592F` buttons, taupe and cream from the brand palette.
 - **Fonts:**
   - Pinyon Script for the large script words, to match the crest's "House of Ahern" lettering;
   - Cormorant Garamond for subheadings;
