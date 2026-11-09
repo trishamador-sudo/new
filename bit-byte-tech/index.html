@@ -113,8 +113,8 @@
         <a href="index.html#diagnosis">Diagnosis</a>
         <a href="index.html#new-computer">New computers</a>
         <a href="index.html#why">Why me</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn--blue nav__cta" href="contact.html">Get a free quote</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn btn--blue nav__cta" href="#quote">Get a free quote</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg class="ic ic-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="ic ic-close" aria-hidden="true"><use href="#i-x"/></svg>
@@ -123,22 +123,42 @@
   </header>
   <main id="main">
     <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <img class="hero__logo" src="assets/img/logo.webp" width="900" height="494" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
-        <p class="hero__script">Your Friendly Neighbourhood Geek</p>
-        <h1 id="hero-title" class="hero__title">Computer giving you trouble?</h1>
-        <p class="hero__lead">I'm a qualified technician working on my own, so you deal with me the whole way through. You get the price in writing before I open anything. If it's not worth fixing, I'll tell you.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--blue btn--lg" href="contact.html">Get a free quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost btn--lg" href="#services">See what I fix</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <img class="hero__logo" src="assets/img/logo.webp" width="900" height="494" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
+          <p class="hero__script">Your Friendly Neighbourhood Geek</p>
+          <h1 id="hero-title" class="hero__title">Computer giving you trouble?</h1>
+          <p class="hero__lead">I'm a qualified technician working on my own, so you deal with me the whole way through. You get the price in writing before I open anything. If it's not worth fixing, I'll tell you.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--blue btn--lg" href="tel:+27768030406"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call 076 803 0406</a>
+            <a class="btn btn--wa btn--lg" href="https://wa.me/27768030406?text=Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
+          </div>
+          <ul class="hero__badges" aria-label="At a glance">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>CompTIA A+ certified</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Written price first</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Quotes cost nothing</li>
+          </ul>
         </div>
-        <ul class="hero__badges" aria-label="At a glance">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>CompTIA A+ certified</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Written price first</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Quotes cost nothing</li>
-        </ul>
+
+        <form class="form hero__form" id="quote" novalidate>
+          <p class="form__kicker">Free, no-obligation quote</p>
+          <h2>Get a free quote</h2>
+          <p class="form__sub">Tell me what's going on and I'll get back to you with a price.</p>
+          <div class="form__grid">
+            <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" autocomplete="name" required><p class="field__err" id="err-name"></p></div>
+            <div class="field"><label for="f-phone">Phone or WhatsApp *</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><p class="field__err" id="err-phone"></p></div>
+            <div class="field field--full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="f-device">Device</label><select id="f-device" name="device"><option>Laptop</option><option>Desktop PC</option><option>New computer</option></select></div>
+            <div class="field"><label for="f-problem">What's the problem?</label><select id="f-problem" name="problem"><option>It won't switch on</option><option>It's gotten really slow</option><option>Blue screen or keeps restarting</option><option>It's hot and the fan is loud</option><option>Cracked screen, keyboard or charging port</option><option>I need my files or photos off it</option><option>It can't run the games I want</option><option>I want an upgrade</option><option>I need a new computer</option><option>Parts advice</option><option>Something else</option></select></div>
+            <div class="field field--full"><label for="f-msg">Tell me more *</label><textarea id="f-msg" name="message" rows="3" placeholder="What's it doing? Or your budget and what you'll use it for." required></textarea><p class="field__err" id="err-message"></p></div>
+          </div>
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn--blue btn--lg btn--block" type="submit">Send for a free quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+          <p class="form__call">Prefer to talk? <a href="tel:+27768030406"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call 076 803 0406</a></p>
+        </form>
       </div>
     </section>
 
@@ -265,7 +285,7 @@
                 <p class="sheet__label sheet__label--light">Consultation</p>
                 <p class="consult__title">The quote costs you nothing.</p>
                 <p>Tell me what it's doing, or what you want to spend and what you need it for. I'll price the parts and the labour. And if it's cheaper to replace than repair, I'll tell you that instead of taking the job.</p>
-                <a class="btn btn--light" href="contact.html">Book a free quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--light" href="#quote">Book a free quote <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
               </div>
           <div class="qr">
             <img src="assets/img/whatsapp-qr.png" width="480" height="480" alt="QR code to chat with Bit Byte Tech on WhatsApp: scan with your phone camera" loading="lazy">
@@ -285,7 +305,7 @@
           <h2 class="h2" id="new-title">Not sure what parts to buy?</h2>
           <p>I can help you choose the right components for your budget and needs. Whether you're looking for a gaming PC, an office computer, an editing workstation or a home computer, I'll recommend the best build and give you a competitive quote.</p>
           <p class="newpc__note">Every build is tailored to your needs and budget.</p>
-          <a class="btn btn--blue btn--lg" href="contact.html">Contact me for a free quotation <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--blue btn--lg" href="#quote">Contact me for a free quotation <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
         <ul class="newpc__uses" aria-label="Builds for">
           <li><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg>Gaming</li>
@@ -316,18 +336,18 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact" aria-labelledby="contact-title">
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact__inner">
         <div>
           <p class="eyebrow">Looking for a price?</p>
           <h2 class="h2" id="contact-title">Contact me today for a no-obligation quotation</h2>
           <p class="contact__lead">Whether you need a repair, an upgrade or a completely new computer, call, WhatsApp or email me.</p>
         <ul class="ctiles">
-          <li class="ctile"><span class="ctile__ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Call</small>076 803 0406</span></li>
-          <li class="ctile"><span class="ctile__ic ctile__ic--wa"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small>076 803 0406</span></li>
-          <li class="ctile"><span class="ctile__ic"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small>riccomdr@gmail.com</span></li>
+          <li><a class="ctile" href="tel:+27768030406"><span class="ctile__ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Call</small>076 803 0406</span></a></li>
+          <li><a class="ctile" href="https://wa.me/27768030406?text=Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><span class="ctile__ic ctile__ic--wa"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small>076 803 0406</span></a></li>
+          <li><a class="ctile" href="mailto:riccomdr@gmail.com"><span class="ctile__ic"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small>riccomdr@gmail.com</span></a></li>
         </ul>
-          <a class="btn btn--blue btn--lg" href="contact.html">Send me a message <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--blue btn--lg" href="#quote">Fill in the quote form <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
           <div class="qr">
             <img src="assets/img/whatsapp-qr.png" width="480" height="480" alt="QR code to chat with Bit Byte Tech on WhatsApp" loading="lazy">
@@ -348,11 +368,11 @@
   </section>
   <footer class="footer">
     <div class="container footer__inner">
-      <a class="brand" href="index.html"><img src="assets/img/logo-mark-300.png" width="300" height="112" alt=""><span class="brand__name">Bit Byte Tech</span></a>
+      <a class="brand" href="#top"><img src="assets/img/logo-mark-300.png" width="300" height="112" alt=""><span class="brand__name">Bit Byte Tech</span></a>
       <ul class="footer__contact">
-        <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>076 803 0406</li>
-        <li><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>076 803 0406</li>
-        <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>riccomdr@gmail.com</li>
+        <li><a href="tel:+27768030406"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>076 803 0406</a></li>
+        <li><a href="https://wa.me/27768030406?text=Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+        <li><a href="mailto:riccomdr@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>riccomdr@gmail.com</a></li>
       </ul>
       <p class="footer__cert">CompTIA A+ certified technician</p>
     </div>
@@ -361,5 +381,10 @@
       <p class="footer__tag">Your Tech. Our Priority.</p>
     </div>
   </footer>
+  <nav class="mbar" aria-label="Quick contact">
+    <a href="tel:+27768030406"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+    <a href="https://wa.me/27768030406?text=Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="mbar__primary" href="#quote"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Free quote</a>
+  </nav>
 </body>
 </html>

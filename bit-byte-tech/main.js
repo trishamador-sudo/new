@@ -18,7 +18,7 @@ const FORM_ENDPOINT = 'https://formspree.io/f/xaeerwne';
   document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
   // Contact form (mock-up only)
-  const form = $('#contact-form');
+  const form = $('#quote');
   if (!form) return;
   const rules = {
     name: v => v.trim().length >= 2 ? '' : 'Please enter your name.',
@@ -45,7 +45,6 @@ const FORM_ENDPOINT = 'https://formspree.io/f/xaeerwne';
     status.textContent = 'Sending…';
     try {
       const data = new FormData(form);
-      data.set('symptoms', data.getAll('symptoms').join(', ') || 'None ticked');
       data.append('_subject', `Bit Byte Tech enquiry from ${data.get('name')}`);
       const res = await fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       if (!res.ok) throw new Error(res.status);

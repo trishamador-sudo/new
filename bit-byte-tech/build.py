@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bit Byte Tech (mock-up): builds index.html and contact.html from shared parts.
+"""Bit Byte Tech: builds the one-page site (index.html) from shared parts.
 
 Run `python3 build.py` after editing. Content comes from the client's three
 posters in assets/references/. Contact details are shown as text and icons only:
@@ -11,6 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 DOMAIN = "https://www.bitbytetech.co.za"
 PHONE = "076 803 0406"
+TEL = "tel:+27768030406"
+WA = "https://wa.me/27768030406?text=" + "Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote."
 EMAIL = "riccomdr@gmail.com"
 
 ICONS = {
@@ -50,7 +52,7 @@ def ic(name, cls="ic"):
 
 
 NAV = [("index.html#services", "Services"), ("index.html#diagnosis", "Diagnosis"),
-       ("index.html#new-computer", "New computers"), ("index.html#why", "Why me"), ("contact.html", "Contact")]
+       ("index.html#new-computer", "New computers"), ("index.html#why", "Why me"), ("index.html#contact", "Contact")]
 
 FIRM = {
     "@type": "LocalBusiness", "@id": DOMAIN + "/#business", "name": "Bit Byte Tech",
@@ -119,7 +121,7 @@ def header(active):
       </a>
       <nav class="nav" id="site-nav" aria-label="Main">
 {links}
-        <a class="btn btn--blue nav__cta" href="contact.html">Get a free quote</a>
+        <a class="btn btn--blue nav__cta" href="#quote">Get a free quote</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         {ic('menu', 'ic ic-open')}{ic('x', 'ic ic-close')}
@@ -134,9 +136,9 @@ CUR = ' aria-current="page"'
 
 def contact_tiles(compact=False):
     return f"""        <ul class="ctiles{' ctiles--compact' if compact else ''}">
-          <li class="ctile"><span class="ctile__ic">{ic('phone')}</span><span><small>Call</small>{PHONE}</span></li>
-          <li class="ctile"><span class="ctile__ic ctile__ic--wa">{ic('wa')}</span><span><small>WhatsApp</small>{PHONE}</span></li>
-          <li class="ctile"><span class="ctile__ic">{ic('mail')}</span><span><small>Email</small>{EMAIL}</span></li>
+          <li><a class="ctile" href="{TEL}"><span class="ctile__ic">{ic('phone')}</span><span><small>Call</small>{PHONE}</span></a></li>
+          <li><a class="ctile" href="{WA}" target="_blank" rel="noopener"><span class="ctile__ic ctile__ic--wa">{ic('wa')}</span><span><small>WhatsApp</small>{PHONE}</span></a></li>
+          <li><a class="ctile" href="mailto:{EMAIL}"><span class="ctile__ic">{ic('mail')}</span><span><small>Email</small>{EMAIL}</span></a></li>
         </ul>"""
 
 
@@ -159,11 +161,11 @@ def footer():
   </section>
   <footer class="footer">
     <div class="container footer__inner">
-      <a class="brand" href="index.html"><img src="assets/img/logo-mark-300.png" width="300" height="112" alt=""><span class="brand__name">Bit Byte Tech</span></a>
+      <a class="brand" href="#top"><img src="assets/img/logo-mark-300.png" width="300" height="112" alt=""><span class="brand__name">Bit Byte Tech</span></a>
       <ul class="footer__contact">
-        <li>{ic('phone')}{PHONE}</li>
-        <li>{ic('wa')}{PHONE}</li>
-        <li>{ic('mail')}{EMAIL}</li>
+        <li><a href="{TEL}">{ic('phone')}{PHONE}</a></li>
+        <li><a href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp</a></li>
+        <li><a href="mailto:{EMAIL}">{ic('mail')}{EMAIL}</a></li>
       </ul>
       <p class="footer__cert">CompTIA A+ certified technician</p>
     </div>
@@ -172,6 +174,11 @@ def footer():
       <p class="footer__tag">Your Tech. Our Priority.</p>
     </div>
   </footer>
+  <nav class="mbar" aria-label="Quick contact">
+    <a href="{TEL}">{ic('phone')}Call</a>
+    <a href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp</a>
+    <a class="mbar__primary" href="#quote">{ic('arrow')}Free quote</a>
+  </nav>
 </body>
 </html>
 """
@@ -204,22 +211,42 @@ def home():
     why_html = "\n".join(f"          <li>{ic(i)}<span>{t}</span></li>" for i, t in why)
     body = f"""  <main id="main">
     <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <img class="hero__logo" src="assets/img/logo.webp" width="900" height="494" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
-        <p class="hero__script">Your Friendly Neighbourhood Geek</p>
-        <h1 id="hero-title" class="hero__title">Computer giving you trouble?</h1>
-        <p class="hero__lead">I'm a qualified technician working on my own, so you deal with me the whole way through. You get the price in writing before I open anything. If it's not worth fixing, I'll tell you.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--blue btn--lg" href="contact.html">Get a free quote {ic('arrow')}</a>
-          <a class="btn btn--ghost btn--lg" href="#services">See what I fix</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <img class="hero__logo" src="assets/img/logo.webp" width="900" height="494" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
+          <p class="hero__script">Your Friendly Neighbourhood Geek</p>
+          <h1 id="hero-title" class="hero__title">Computer giving you trouble?</h1>
+          <p class="hero__lead">I'm a qualified technician working on my own, so you deal with me the whole way through. You get the price in writing before I open anything. If it's not worth fixing, I'll tell you.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--blue btn--lg" href="{TEL}">{ic('phone')}Call {PHONE}</a>
+            <a class="btn btn--wa btn--lg" href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp me</a>
+          </div>
+          <ul class="hero__badges" aria-label="At a glance">
+            <li>{ic('shield')}CompTIA A+ certified</li>
+            <li>{ic('check')}Written price first</li>
+            <li>{ic('check')}Quotes cost nothing</li>
+          </ul>
         </div>
-        <ul class="hero__badges" aria-label="At a glance">
-          <li>{ic('shield')}CompTIA A+ certified</li>
-          <li>{ic('check')}Written price first</li>
-          <li>{ic('check')}Quotes cost nothing</li>
-        </ul>
+
+        <form class="form hero__form" id="quote" novalidate>
+          <p class="form__kicker">Free, no-obligation quote</p>
+          <h2>Get a free quote</h2>
+          <p class="form__sub">Tell me what's going on and I'll get back to you with a price.</p>
+          <div class="form__grid">
+            <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" autocomplete="name" required><p class="field__err" id="err-name"></p></div>
+            <div class="field"><label for="f-phone">Phone or WhatsApp *</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><p class="field__err" id="err-phone"></p></div>
+            <div class="field field--full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="f-device">Device</label><select id="f-device" name="device"><option>Laptop</option><option>Desktop PC</option><option>New computer</option></select></div>
+            <div class="field"><label for="f-problem">What's the problem?</label><select id="f-problem" name="problem"><option>It won't switch on</option><option>It's gotten really slow</option><option>Blue screen or keeps restarting</option><option>It's hot and the fan is loud</option><option>Cracked screen, keyboard or charging port</option><option>I need my files or photos off it</option><option>It can't run the games I want</option><option>I want an upgrade</option><option>I need a new computer</option><option>Parts advice</option><option>Something else</option></select></div>
+            <div class="field field--full"><label for="f-msg">Tell me more *</label><textarea id="f-msg" name="message" rows="3" placeholder="What's it doing? Or your budget and what you'll use it for." required></textarea><p class="field__err" id="err-message"></p></div>
+          </div>
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn--blue btn--lg btn--block" type="submit">Send for a free quote {ic('arrow')}</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+          <p class="form__call">Prefer to talk? <a href="{TEL}">{ic('phone')}Call {PHONE}</a></p>
+        </form>
       </div>
     </section>
 
@@ -321,7 +348,7 @@ def home():
                 <p class="sheet__label sheet__label--light">Consultation</p>
                 <p class="consult__title">The quote costs you nothing.</p>
                 <p>Tell me what it's doing, or what you want to spend and what you need it for. I'll price the parts and the labour. And if it's cheaper to replace than repair, I'll tell you that instead of taking the job.</p>
-                <a class="btn btn--light" href="contact.html">Book a free quote {ic('arrow')}</a>
+                <a class="btn btn--light" href="#quote">Book a free quote {ic('arrow')}</a>
               </div>
 {QR.replace('Scan to chat', 'Book it in').replace('on WhatsApp', 'on WhatsApp: scan with your phone camera')}
             </div>
@@ -338,7 +365,7 @@ def home():
           <h2 class="h2" id="new-title">Not sure what parts to buy?</h2>
           <p>I can help you choose the right components for your budget and needs. Whether you're looking for a gaming PC, an office computer, an editing workstation or a home computer, I'll recommend the best build and give you a competitive quote.</p>
           <p class="newpc__note">Every build is tailored to your needs and budget.</p>
-          <a class="btn btn--blue btn--lg" href="contact.html">Contact me for a free quotation {ic('arrow')}</a>
+          <a class="btn btn--blue btn--lg" href="#quote">Contact me for a free quotation {ic('arrow')}</a>
         </div>
         <ul class="newpc__uses" aria-label="Builds for">
           <li>{ic('gamepad')}Gaming</li>
@@ -364,14 +391,14 @@ def home():
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact" aria-labelledby="contact-title">
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact__inner">
         <div>
           <p class="eyebrow">Looking for a price?</p>
           <h2 class="h2" id="contact-title">Contact me today for a no-obligation quotation</h2>
           <p class="contact__lead">Whether you need a repair, an upgrade or a completely new computer, call, WhatsApp or email me.</p>
 {contact_tiles()}
-          <a class="btn btn--blue btn--lg" href="contact.html">Send me a message {ic('arrow')}</a>
+          <a class="btn btn--blue btn--lg" href="#quote">Fill in the quote form {ic('arrow')}</a>
         </div>
 {QR}
       </div>
@@ -384,63 +411,8 @@ def home():
             "schema": [FIRM, WEBSITE], "body": body}
 
 
-def contact():
-    body = f"""  <main id="main">
-    <section class="page-hero">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span>Contact</nav>
-        <p class="eyebrow">Call or WhatsApp</p>
-        <h1 class="page-hero__title">Get a free quote</h1>
-        <p class="page-hero__lead">Tell me what your computer is doing, or what you want to spend and what you need it for. The quote costs you nothing.</p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="form-title">
-      <div class="container contact-page">
-        <aside class="contact-card">
-          <h2>Contact details</h2>
-{contact_tiles(compact=True)}
-{QR}
-          <p class="contact-card__cert">{ic('shield')}CompTIA A+ certified technician</p>
-        </aside>
-
-        <form class="form" id="contact-form" novalidate>
-          <h2 id="form-title">Send me a message</h2>
-          <p class="form__sub">Fields marked * are required. I'll get back to you with a free quote.</p>
-          <div class="form__grid">
-            <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" autocomplete="name" required><p class="field__err" id="err-name"></p></div>
-            <div class="field"><label for="f-phone">Phone or WhatsApp *</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><p class="field__err" id="err-phone"></p></div>
-            <div class="field field--full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-            <div class="field field--full"><label for="f-device">Device</label>
-              <select id="f-device" name="device"><option>Laptop</option><option>Desktop PC</option><option>I need a new computer</option></select>
-            </div>
-            <fieldset class="field field--full choices">
-              <legend>What's it doing? Tick what sounds familiar</legend>
-              {''.join(f'<label class="choice"><input type="checkbox" name="symptoms" value="{s}"><span>{s}</span></label>' for s in ["It won't switch on", "It's gotten really slow", "Blue screen / restarts", "Hot and the fan is loud", "Cracked screen", "I need my photos off it", "Can't run my games", "I need a new computer", "Upgrade", "Parts advice"])}
-            </fieldset>
-            <div class="field field--full"><label for="f-msg">Tell me more *</label><textarea id="f-msg" name="message" rows="5" placeholder="What's it doing? Or, for a new build: your budget and what you'll use it for." required></textarea><p class="field__err" id="err-message"></p></div>
-          </div>
-          <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-          <button class="btn btn--blue btn--lg btn--block" type="submit">Send message {ic('arrow')}</button>
-          <p class="form__status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-"""
-    return {"file": "contact.html", "active": "contact.html",
-            "title": "Contact Bit Byte Tech | Free Computer Repair Quotes",
-            "description": "Get a free quote for computer repairs, upgrades or a new PC build. Call or WhatsApp 076 803 0406, or email riccomdr@gmail.com.",
-            "schema": [{"@type": "ContactPage", "url": DOMAIN + "/contact.html", "about": {"@id": DOMAIN + "/#business"}},
-                       {"@type": "BreadcrumbList", "itemListElement": [
-                           {"@type": "ListItem", "position": 1, "name": "Home", "item": DOMAIN + "/"},
-                           {"@type": "ListItem", "position": 2, "name": "Contact", "item": DOMAIN + "/contact.html"}]}],
-            "body": body}
-
-
 def main():
-    pages = [home(), contact()]
+    pages = [home()]
     for p in pages:
         html = head(p) + header(p["active"]) + p["body"] + footer()
         assert html.count("<h1") == 1, p["file"]

@@ -260,3 +260,45 @@ a { color: inherit; }
   .brand__name { font-size: 1.05rem; }
 }
 @media (max-width: 420px) { .container { width: calc(100% - 32px); } }
+
+/* ==========================================================
+   Hero with the quote form on the right (main call to action)
+   ========================================================== */
+.hero { text-align: left; }
+.hero__grid { position: relative; display: grid; gap: 40px; align-items: center; padding-block: clamp(40px, 5vw, 72px) clamp(56px, 6vw, 88px); }
+@media (min-width: 1020px) { .hero__grid { grid-template-columns: 1.05fr .95fr; gap: 56px; } }
+.hero__copy { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+.hero__copy .hero__logo { width: min(440px, 100%); margin-left: -8px; }
+.hero__copy .hero__script { margin: 2px 0 22px; }
+.hero__copy .hero__title { max-width: 16ch; font-size: clamp(2.3rem, 1.4rem + 3vw, 3.7rem); }
+.hero__copy .hero__lead { margin: 18px 0 28px; max-width: 54ch; }
+.hero__copy .hero__ctas { justify-content: flex-start; }
+.hero__copy .hero__badges { justify-content: flex-start; margin-top: 30px; }
+.hero__glow { left: 72%; top: 18%; }
+.btn--wa { background: #25D366; color: #04210F; }
+.btn--wa:hover { background: #3BE07A; box-shadow: 0 0 24px rgba(37, 211, 102, .4); }
+.hero__form { position: relative; border-color: rgba(55, 184, 255, .55); box-shadow: 0 0 0 1px rgba(55, 184, 255, .15), 0 30px 80px -30px rgba(55, 184, 255, .55); }
+.hero__form h2 { font-size: clamp(1.7rem, 1.4rem + 1vw, 2.2rem); font-style: italic; }
+.form__kicker { display: inline-block; margin: 0 0 12px; padding: 6px 12px; border-radius: 999px; background: rgba(55, 184, 255, .12); color: var(--blue-bright); font: 700 .72rem/1 var(--display); letter-spacing: .2em; text-transform: uppercase; }
+.hero__form .form__grid { gap: 12px 14px; margin-bottom: 18px; }
+.hero__form .field input, .hero__form .field select { min-height: 46px; padding-block: 10px; }
+.form__call { margin: 16px 0 0; text-align: center; color: var(--muted); font-size: .92rem; }
+.form__call a { display: inline-flex; align-items: center; gap: 6px; color: var(--white); font-weight: 700; text-decoration: none; }
+.form__call a:hover { color: var(--blue-bright); }
+.form__call .ic { color: var(--blue-bright); }
+a.ctile { text-decoration: none; transition: border-color .2s, transform .2s var(--ease); }
+a.ctile:hover { border-color: var(--blue-bright); transform: translateY(-2px); }
+.footer__contact a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.footer__contact a:hover { color: var(--blue-bright); }
+@media (max-width: 1019px) { .hero__copy { align-items: center; text-align: center; } .hero__copy .hero__ctas, .hero__copy .hero__badges { justify-content: center; } .hero__copy .hero__logo { margin-left: 0; } }
+
+/* Sticky call / WhatsApp / quote bar on phones */
+.mbar { display: none; }
+@media (max-width: 767px) {
+  .mbar { position: fixed; inset: auto 0 0; z-index: 60; display: grid; grid-template-columns: 1fr 1fr 1.25fr; background: var(--bg-950); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .mbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 62px; color: var(--white); text-decoration: none; font: 700 .78rem/1 var(--display); }
+  .mbar .ic { width: 22px; height: 22px; color: var(--blue-bright); }
+  .mbar__primary { background: var(--blue); color: var(--bg-950) !important; }
+  .mbar__primary .ic { color: var(--bg-950); }
+  .footer { padding-bottom: 72px; }
+}
