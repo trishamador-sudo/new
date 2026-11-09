@@ -14,6 +14,9 @@ PHONE = "076 803 0406"
 TEL = "tel:+27768030406"
 WA = "https://wa.me/27768030406?text=" + "Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote."
 EMAIL = "riccomdr@gmail.com"
+KEYWORDS = ("computer repairs, laptop repairs, PC repairs, computer technician, CompTIA A+ technician, "
+            "hardware diagnostics, data recovery, blue screen repair, SSD upgrade, RAM upgrade, graphics card upgrade, "
+            "custom gaming PC, gaming PC build, workstation build, refurbished computers, PC components")
 
 ICONS = {
     "arrow": '<path d="M5 12h14M13 6l6 6-6 6"/>',
@@ -51,23 +54,30 @@ def ic(name, cls="ic"):
     return f'<svg class="{cls}" aria-hidden="true"><use href="#i-{name}"/></svg>'
 
 
-NAV = [("index.html#services", "Services"), ("index.html#diagnosis", "Diagnosis"),
-       ("index.html#new-computer", "New computers"), ("index.html#why", "Why me"), ("index.html#contact", "Contact")]
+NAV = [("#services", "Services"), ("#diagnosis", "Diagnosis"), ("#new-computer", "New computers"),
+       ("#why", "Why me"), ("#faq", "FAQ"), ("#contact", "Contact")]
 
+SERVICES = [
+    ("Computer and laptop repairs", "Computers that won't switch on or keep restarting, blue screens and Windows problems, overheating, cracked screens, keyboards and charging ports, for laptops and desktop PCs."),
+    ("Hardware diagnostics", "Finding the actual fault and explaining it without the jargon, with a written price before any work starts."),
+    ("Data recovery", "Getting files and photos off a dying drive."),
+    ("Software troubleshooting", "Fixing Windows problems, blue screens and software faults."),
+    ("PC and laptop upgrades", "SSD and RAM upgrades, graphics cards, power supplies, cooling solutions and motherboards."),
+    ("Custom gaming and workstation builds", "PCs built to your budget for gaming, business, graphic design, video editing and everyday home use."),
+    ("PC components and accessories", "Help choosing the right components for your budget and needs."),
+    ("New and refurbished computer sales", "New and refurbished computers and full systems."),
+]
 FIRM = {
-    "@type": "LocalBusiness", "@id": DOMAIN + "/#business", "name": "Bit Byte Tech",
+    "@type": "ProfessionalService", "@id": DOMAIN + "/#business", "name": "Bit Byte Tech",
+    "alternateName": "Bit Byte Tech: Your Friendly Neighbourhood Geek",
     "slogan": "Your Tech. Our Priority.",
-    "description": "Computer repairs and diagnostics, upgrades, and custom gaming and workstation builds by a CompTIA A+ certified technician.",
+    "description": "Computer and laptop repairs, hardware diagnostics, data recovery, upgrades, and custom gaming and workstation PC builds by a CompTIA A+ certified technician. Quotes are free and you get a written price before any work starts.",
     "url": DOMAIN + "/", "logo": DOMAIN + "/assets/img/icon-512.png", "image": DOMAIN + "/assets/img/og.jpg",
     "telephone": "+27768030406", "email": EMAIL,
+    "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+27768030406", "email": EMAIL, "availableLanguage": "English"},
+    "knowsAbout": ["Computer repair", "Laptop repair", "Hardware diagnostics", "Data recovery", "SSD upgrades", "RAM upgrades", "Graphics cards", "Gaming PC builds", "Workstation builds", "CompTIA A+"],
     "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Computer services", "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "description": d}} for n, d in [
-            ("Repairs and diagnostics", "Slow computers, computers that won't start, blue screens, data recovery, hardware replacement and software troubleshooting, for laptops and desktop PCs."),
-            ("Upgrades", "SSD and RAM upgrades, graphics cards, power supplies, cooling solutions and motherboards."),
-            ("Custom gaming and workstation builds", "PCs built to your budget for gaming, business, graphic design, video editing and everyday home use."),
-            ("PC components and accessories", "Help choosing the right components for your budget and needs."),
-            ("New and refurbished computer sales", "New and refurbished computers and full systems."),
-        ]]},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "description": d}} for n, d in SERVICES]},
 }
 WEBSITE = {"@type": "WebSite", "@id": DOMAIN + "/#website", "url": DOMAIN + "/", "name": "Bit Byte Tech",
            "inLanguage": "en-ZA", "publisher": {"@id": DOMAIN + "/#business"}}
@@ -76,27 +86,40 @@ WEBSITE = {"@type": "WebSite", "@id": DOMAIN + "/#website", "url": DOMAIN + "/",
 def head(p):
     url = DOMAIN + "/" + ("" if p["file"] == "index.html" else p["file"])
     schema = json.dumps({"@context": "https://schema.org", "@graph": p["schema"]}, ensure_ascii=False, indent=2)
-    preload = '  <link rel="preload" as="image" href="assets/img/logo.webp">\n' if p["file"] == "index.html" else ""
+    robots = "noindex, follow" if p.get("noindex") else "index, follow, max-image-preview:large"
+    preload = ('  <link rel="preload" as="image" href="assets/img/logo-880.webp" imagesrcset="assets/img/logo-480.webp 480w, assets/img/logo-880.webp 880w" imagesizes="(min-width: 1020px) 440px, 90vw" fetchpriority="high">\n'
+               if p["file"] == "index.html" else "")
+    base = '  <base href="/">\n' if p.get("noindex") else ""
+    canon = "" if p.get("noindex") else f'  <link rel="canonical" href="{url}">\n'
     return f"""<!doctype html>
 <html lang="en-ZA">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{p['title']}</title>
+{base}  <title>{p['title']}</title>
   <meta name="description" content="{p['description']}">
+  <meta name="keywords" content="{KEYWORDS}">
+  <meta name="robots" content="{robots}">
   <meta name="theme-color" content="#070C13">
-  <link rel="canonical" href="{url}">
-  <meta property="og:type" content="website">
+  <meta name="format-detection" content="telephone=no">
+{canon}  <meta property="og:type" content="website">
   <meta property="og:locale" content="en_ZA">
   <meta property="og:site_name" content="Bit Byte Tech">
   <meta property="og:url" content="{url}">
-  <meta property="og:title" content="{p['title']}">
+  <meta property="og:title" content="{p.get('og_title', p['title'])}">
   <meta property="og:description" content="{p['description']}">
   <meta property="og:image" content="{DOMAIN}/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bit Byte Tech logo: Your Tech. Our Priority.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{p.get('og_title', p['title'])}">
+  <meta name="twitter:description" content="{p['description']}">
+  <meta name="twitter:image" content="{DOMAIN}/assets/img/og.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="assets/fonts/exo2-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 {preload}  <link rel="stylesheet" href="styles.css">
@@ -108,20 +131,20 @@ def head(p):
 """
 
 
-def header(active):
-    links = "\n".join(f'        <a href="{h}"{CUR if h == active else ""}>{t}</a>' for h, t in NAV)
+def header(active, prefix=""):
+    links = "\n".join(f'        <a href="{prefix}{h}"{CUR if h == active else ""}>{t}</a>' for h, t in NAV)
     return f"""<body>
   <a class="skip-link" href="#main">Skip to content</a>
   {SPRITE}
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="Bit Byte Tech, home">
-        <img src="assets/img/logo-mark-300.png" width="300" height="112" alt="">
+      <a class="brand" href="{prefix or '#top'}" aria-label="Bit Byte Tech, home">
+        <img src="assets/img/logo-mark.webp" width="200" height="74" alt="">
         <span class="brand__name">Bit Byte Tech</span>
       </a>
       <nav class="nav" id="site-nav" aria-label="Main">
 {links}
-        <a class="btn btn--blue nav__cta" href="#quote">Get a free quote</a>
+        <a class="btn btn--blue nav__cta" href="{prefix}#quote">Get a free quote</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         {ic('menu', 'ic ic-open')}{ic('x', 'ic ic-close')}
@@ -148,7 +171,7 @@ QR = """          <div class="qr">
           </div>"""
 
 
-def footer():
+def footer(prefix=""):
     return f"""  <section class="pledge" aria-label="Our promise">
     <div class="container">
       <p class="pledge__line">Reliable tech. Better solutions. Stronger tomorrows.</p>
@@ -161,7 +184,7 @@ def footer():
   </section>
   <footer class="footer">
     <div class="container footer__inner">
-      <a class="brand" href="#top"><img src="assets/img/logo-mark-300.png" width="300" height="112" alt=""><span class="brand__name">Bit Byte Tech</span></a>
+      <a class="brand" href="{prefix or '#top'}"><img src="assets/img/logo-mark.webp" width="200" height="74" alt="" loading="lazy"><span class="brand__name">Bit Byte Tech</span></a>
       <ul class="footer__contact">
         <li><a href="{TEL}">{ic('phone')}{PHONE}</a></li>
         <li><a href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp</a></li>
@@ -177,10 +200,40 @@ def footer():
   <nav class="mbar" aria-label="Quick contact">
     <a href="{TEL}">{ic('phone')}Call</a>
     <a href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp</a>
-    <a class="mbar__primary" href="#quote">{ic('arrow')}Free quote</a>
+    <a class="mbar__primary" href="{prefix}#quote">{ic('arrow')}Free quote</a>
   </nav>
 </body>
 </html>
+"""
+
+
+FAQS = [
+    ("How much does a quote cost?", "Nothing. Tell me what your computer is doing, or what you want to spend and what you need it for, and I'll price the parts and the labour. You get the price in writing, and nothing happens until you say go ahead."),
+    ("Will you tell me if my computer isn't worth fixing?", "Yes. If it's not worth fixing, or buying new works out cheaper, I'll tell you that rather than take the repair job."),
+    ("Do I have to bring my computer in?", "You can drop it off, or I can fetch it if you're nearby."),
+    ("Do you repair laptops and desktop PCs?", "Yes. I repair computers that won't switch on or keep restarting, blue screens and Windows problems, overheating and loud fans, cracked screens, keyboards and charging ports."),
+    ("Can you get my files and photos off a broken computer?", "Yes. Data recovery, including getting files off a dying drive, is one of the repairs I do."),
+    ("What upgrade will make my computer faster?", "An SSD is the biggest speed jump you can buy. More RAM helps if it chokes with tabs open, and a new graphics card helps with games and rendering."),
+    ("Can you build me a gaming PC?", "Yes. I build gaming PCs to your budget, as well as office, home, editing and design machines. If you're building it yourself, I can just advise on parts."),
+    ("Are you qualified?", "Yes. I'm a CompTIA A+ certified technician, and I work on my own, so you deal with the same person from start to finish."),
+]
+
+
+def faq_section():
+    items = "\n".join(f"""          <details class="faq__item"><summary>{q}</summary><p>{a}</p></details>""" for q, a in FAQS)
+    return f"""    <section class="section section--alt" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2" id="faq-title">Computer repair questions, answered</h2>
+          <p>Still not sure? Ask me directly. Quotes cost nothing.</p>
+          <a class="btn btn--blue btn--lg" href="#quote">Get a free quote {ic('arrow')}</a>
+        </div>
+        <div class="faq__list">
+{items}
+        </div>
+      </div>
+    </section>
 """
 
 
@@ -215,9 +268,9 @@ def home():
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__copy">
-          <img class="hero__logo" src="assets/img/logo.webp" width="900" height="494" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
+          <img class="hero__logo" src="assets/img/logo-880.webp" srcset="assets/img/logo-480.webp 480w, assets/img/logo-880.webp 880w" sizes="(min-width: 1020px) 440px, 90vw" width="880" height="483" fetchpriority="high" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
           <p class="hero__script">Your Friendly Neighbourhood Geek</p>
-          <h1 id="hero-title" class="hero__title">Computer giving you trouble?</h1>
+          <h1 id="hero-title" class="hero__title"><span class="hero__kicker">Computer &amp; laptop repairs · Upgrades · Gaming PC builds</span>Computer giving you trouble?</h1>
           <p class="hero__lead">I'm a qualified technician working on my own, so you deal with me the whole way through. You get the price in writing before I open anything. If it's not worth fixing, I'll tell you.</p>
           <div class="hero__ctas">
             <a class="btn btn--blue btn--lg" href="{TEL}">{ic('phone')}Call {PHONE}</a>
@@ -254,8 +307,8 @@ def home():
     <section class="section section--alt" aria-labelledby="pro-title">
       <div class="container pro">
         <div>
-          <p class="eyebrow">Computer repairs &amp; diagnostics</p>
-          <h2 class="h2" id="pro-title">Professional computer services</h2>
+          <p class="eyebrow">CompTIA A+ certified technician</p>
+          <h2 class="h2" id="pro-title">Professional computer &amp; laptop repair services</h2>
           <ul class="pro__list">
 {pro_html}
           </ul>
@@ -272,12 +325,12 @@ def home():
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Services I offer</p>
-          <h2 class="h2" id="services-title">Repairs, upgrades and new builds</h2>
+          <h2 class="h2" id="services-title">Computer repairs, upgrades and custom PC builds</h2>
         </div>
         <div class="services">
           <article class="service">
             <div class="service__top"><span class="service__n">01</span>{ic('gear', 'ic service__ic')}</div>
-            <h3>Repairs &amp; diagnostics</h3>
+            <h3>Computer &amp; laptop repairs</h3>
             <ul>
               <li>Slow computers</li>
               <li>Computers that won't start or keep restarting</li>
@@ -291,7 +344,7 @@ def home():
           </article>
           <article class="service">
             <div class="service__top"><span class="service__n">02</span>{ic('upload', 'ic service__ic')}</div>
-            <h3>Upgrades</h3>
+            <h3>PC &amp; laptop upgrades</h3>
             <ul>
               <li>SSD upgrades: the biggest speed jump you can buy</li>
               <li>RAM upgrades, if it chokes with tabs open</li>
@@ -303,7 +356,7 @@ def home():
           </article>
           <article class="service">
             <div class="service__top"><span class="service__n">03</span>{ic('monitor', 'ic service__ic')}</div>
-            <h3>New computers</h3>
+            <h3>New computers &amp; gaming PCs</h3>
             <ul>
               <li>Gaming PCs built to your budget</li>
               <li>Business and office machines</li>
@@ -361,8 +414,8 @@ def home():
     <section class="section" id="new-computer" aria-labelledby="new-title">
       <div class="container newpc">
         <div class="newpc__card">
-          <p class="eyebrow">Need a new computer?</p>
-          <h2 class="h2" id="new-title">Not sure what parts to buy?</h2>
+          <p class="eyebrow">Need a new computer? Not sure what parts to buy?</p>
+          <h2 class="h2" id="new-title">Custom gaming PCs and workstations, built to your budget</h2>
           <p>I can help you choose the right components for your budget and needs. Whether you're looking for a gaming PC, an office computer, an editing workstation or a home computer, I'll recommend the best build and give you a competitive quote.</p>
           <p class="newpc__note">Every build is tailored to your needs and budget.</p>
           <a class="btn btn--blue btn--lg" href="#quote">Contact me for a free quotation {ic('arrow')}</a>
@@ -390,6 +443,7 @@ def home():
       </div>
     </section>
 
+{faq_section()}
     <!-- CONTACT -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact__inner">
@@ -406,18 +460,47 @@ def home():
   </main>
 """
     return {"file": "index.html", "active": None,
-            "title": "Bit Byte Tech | Computer Repairs, Upgrades &amp; Custom PC Builds",
-            "description": "Computer repairs and diagnostics, upgrades and custom gaming PC builds by a CompTIA A+ certified technician. Free quotes. Call or WhatsApp 076 803 0406.",
-            "schema": [FIRM, WEBSITE], "body": body}
+            "title": "Computer &amp; Laptop Repairs &amp; Gaming PCs | Bit Byte Tech",
+            "og_title": "Bit Byte Tech | Your Tech. Our Priority.",
+            "description": "Computer and laptop repairs, data recovery, SSD and RAM upgrades, and custom gaming PC builds by a CompTIA A+ technician. Free quotes: 076 803 0406.",
+            "schema": [FIRM, WEBSITE,
+                       {"@type": "WebPage", "@id": DOMAIN + "/#webpage", "url": DOMAIN + "/", "name": "Computer and laptop repairs, upgrades and custom PC builds",
+                        "isPartOf": {"@id": DOMAIN + "/#website"}, "about": {"@id": DOMAIN + "/#business"}, "inLanguage": "en-ZA",
+                        "primaryImageOfPage": {"@type": "ImageObject", "url": DOMAIN + "/assets/img/og.jpg"}},
+                       {"@type": "FAQPage", "@id": DOMAIN + "/#faq", "mainEntity": [
+                           {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQS]}],
+            "body": body}
+
+
+def notfound():
+    body = f"""  <main id="main">
+    <section class="page-hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow">Error 404</p>
+        <h1 class="page-hero__title">This page could not be found</h1>
+        <p class="page-hero__lead">The link may be broken or the page may have moved. Computer still giving you trouble? Quotes cost nothing.</p>
+        <div class="hero__ctas nf__ctas">
+          <a class="btn btn--blue btn--lg" href="/">Back to the homepage {ic('arrow')}</a>
+          <a class="btn btn--ghost btn--lg" href="/#quote">Get a free quote</a>
+          <a class="btn btn--wa btn--lg" href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+"""
+    return {"file": "404.html", "active": None, "noindex": True, "prefix": "/",
+            "title": "Page not found | Bit Byte Tech", "description": "This page could not be found. Go back to the Bit Byte Tech homepage or get a free computer repair quote.",
+            "schema": [WEBSITE], "body": body}
 
 
 def main():
-    pages = [home()]
+    pages = [home(), notfound()]
     for p in pages:
-        html = head(p) + header(p["active"]) + p["body"] + footer()
+        html = head(p) + header(p["active"], p.get("prefix", "")) + p["body"] + footer(p.get("prefix", ""))
         assert html.count("<h1") == 1, p["file"]
         (ROOT / p["file"]).write_text(html, encoding="utf-8")
-    urls = "\n".join(f"  <url>\n    <loc>{DOMAIN}/{'' if p['file'] == 'index.html' else p['file']}</loc>\n    <lastmod>2026-11-09</lastmod>\n  </url>" for p in pages)
+    urls = "\n".join(f"  <url>\n    <loc>{DOMAIN}/{'' if p['file'] == 'index.html' else p['file']}</loc>\n    <lastmod>2026-11-09</lastmod>\n  </url>" for p in pages if not p.get("noindex"))
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n', encoding="utf-8")
     print("Built:", ", ".join(p["file"] for p in pages))
 
