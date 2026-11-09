@@ -17,6 +17,7 @@
 
   // Contact form (mock-up only)
   const form = $('#contact-form');
+  if (!form) return;
   const rules = {
     name: v => v.trim().length >= 2 ? '' : 'Please enter your name.',
     phone: v => v.replace(/\D/g, '').length >= 10 ? '' : 'Please enter a phone number with 10 digits.',
