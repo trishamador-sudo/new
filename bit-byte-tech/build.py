@@ -3,7 +3,7 @@
 
 Run `python3 build.py` after editing. Content comes from the client's three
 posters in assets/references/. Contact details are shown as text and icons only:
-nothing links out, and the form sends nothing (mock-up).
+nothing links out. The contact form sends to Formspree (see main.js).
 """
 import json
 from pathlib import Path
@@ -421,6 +421,7 @@ def contact():
             </fieldset>
             <div class="field field--full"><label for="f-msg">Tell me more *</label><textarea id="f-msg" name="message" rows="5" placeholder="What's it doing? Or, for a new build: your budget and what you'll use it for." required></textarea><p class="field__err" id="err-message"></p></div>
           </div>
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
           <button class="btn btn--blue btn--lg btn--block" type="submit">Send message {ic('arrow')}</button>
           <p class="form__status" role="status" aria-live="polite"></p>
         </form>

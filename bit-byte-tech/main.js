@@ -1,5 +1,7 @@
-/* Bit Byte Tech (mock-up). The contact form is not connected to anything:
-   it checks the fields and shows a thank-you message, but sends nothing. */
+/* Bit Byte Tech. The contact form sends to Formspree (FORM_ENDPOINT below);
+   messages arrive at the email address that owns the Formspree form. */
+const FORM_ENDPOINT = 'https://formspree.io/f/xaeerwne';
+
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
@@ -31,12 +33,29 @@
     return !msg;
   };
   form.addEventListener('input', e => { if (rules[e.target.name] && e.target.getAttribute('aria-invalid') === 'true') check(e.target.name); });
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const bad = Object.keys(rules).filter(n => !check(n));
     const status = $('.form__status', form);
+    status.classList.remove('form__status--err');
     if (bad.length) { status.textContent = ''; form.elements[bad[0]].focus(); return; }
-    form.reset();
-    status.textContent = "Thanks! Your message has been received. I'll get back to you with a free quote soon.";
+    if ($('[name="_gotcha"]', form)?.value) return; // spam trap
+    const btn = $('[type="submit"]', form);
+    btn.disabled = true;
+    status.textContent = 'Sending…';
+    try {
+      const data = new FormData(form);
+      data.set('symptoms', data.getAll('symptoms').join(', ') || 'None ticked');
+      data.append('_subject', `Bit Byte Tech enquiry from ${data.get('name')}`);
+      const res = await fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      status.textContent = "Thanks! Your message has been sent. I'll get back to you with a free quote soon.";
+    } catch {
+      status.classList.add('form__status--err');
+      status.textContent = 'Sorry, your message could not be sent. Please call or WhatsApp 076 803 0406.';
+    } finally {
+      btn.disabled = false;
+    }
   });
 })();

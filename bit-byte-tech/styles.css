@@ -227,6 +227,8 @@ a { color: inherit; }
 .field__err:empty { display: none; }
 .form__status { margin: 14px 0 0; font-weight: 700; color: var(--blue-bright); }
 .form__status:empty { display: none; }
+.form__status--err { color: #FF9A9A; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Pledge strip */
 .pledge { padding-block: 36px; border-top: 1px solid var(--line); background: linear-gradient(180deg, var(--bg-900), var(--bg-950)); text-align: center; }
