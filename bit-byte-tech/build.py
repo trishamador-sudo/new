@@ -14,7 +14,11 @@ PHONE = "076 803 0406"
 TEL = "tel:+27768030406"
 WA = "https://wa.me/27768030406?text=" + "Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote."
 EMAIL = "riccomdr@gmail.com"
-KEYWORDS = ("computer repairs, laptop repairs, PC repairs, computer technician, CompTIA A+ technician, "
+AREA = "Welkom and surrounding areas"
+HOURS = "9:00 to 18:00"
+KEYWORDS = ("computer repairs Welkom, laptop repairs Welkom, computer upgrades Welkom, PC repairs Welkom, "
+            "computer technician Welkom, computer repairs Free State, "
+            "computer repairs, laptop repairs, PC repairs, computer technician, CompTIA A+ technician, "
             "hardware diagnostics, data recovery, blue screen repair, SSD upgrade, RAM upgrade, graphics card upgrade, "
             "custom gaming PC, gaming PC build, workstation build, refurbished computers, PC components")
 
@@ -44,6 +48,7 @@ ICONS = {
     "tag": '<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/>',
     "bolt": '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
     "headset": '<path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z"/><path d="M19 17v1a3 3 0 0 1-3 3h-3"/>',
+    "clock": '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
     "pin": '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
 }
 SPRITE = '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>' + "".join(
@@ -71,9 +76,11 @@ FIRM = {
     "@type": "ProfessionalService", "@id": DOMAIN + "/#business", "name": "Bit Byte Tech",
     "alternateName": "Bit Byte Tech: Your Friendly Neighbourhood Geek",
     "slogan": "Your Tech. Our Priority.",
-    "description": "Computer and laptop repairs, hardware diagnostics, data recovery, upgrades, and custom gaming and workstation PC builds by a CompTIA A+ certified technician. Quotes are free and you get a written price before any work starts.",
+    "description": "Computer and laptop repairs and upgrades in Welkom and surrounding areas: hardware diagnostics, data recovery, upgrades, and custom gaming and workstation PC builds by a CompTIA A+ certified technician. Quotes are free and you get a written price before any work starts.",
     "url": DOMAIN + "/", "logo": DOMAIN + "/assets/img/icon-512.png", "image": DOMAIN + "/assets/img/og.jpg",
     "telephone": "+27768030406", "email": EMAIL,
+    "address": {"@type": "PostalAddress", "addressLocality": "Welkom", "addressRegion": "Free State", "addressCountry": "ZA"},
+    "areaServed": [{"@type": "City", "name": "Welkom"}, {"@type": "AdministrativeArea", "name": "Welkom and surrounding areas, Free State"}],
     "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+27768030406", "email": EMAIL, "availableLanguage": "English"},
     "knowsAbout": ["Computer repair", "Laptop repair", "Hardware diagnostics", "Data recovery", "SSD upgrades", "RAM upgrades", "Graphics cards", "Gaming PC builds", "Workstation builds", "CompTIA A+"],
     "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Computer services", "itemListElement": [
@@ -162,6 +169,8 @@ def contact_tiles(compact=False):
           <li><a class="ctile" href="{TEL}"><span class="ctile__ic">{ic('phone')}</span><span><small>Call</small>{PHONE}</span></a></li>
           <li><a class="ctile" href="{WA}" target="_blank" rel="noopener"><span class="ctile__ic ctile__ic--wa">{ic('wa')}</span><span><small>WhatsApp</small>{PHONE}</span></a></li>
           <li><a class="ctile" href="mailto:{EMAIL}"><span class="ctile__ic">{ic('mail')}</span><span><small>Email</small>{EMAIL}</span></a></li>
+          <li class="ctile ctile--info"><span class="ctile__ic">{ic('pin')}</span><span><small>Service area</small>Welkom &amp; surrounding areas</span></li>
+          <li class="ctile ctile--info"><span class="ctile__ic">{ic('clock')}</span><span><small>Hours</small>9:00 to 18:00</span></li>
         </ul>"""
 
 
@@ -190,7 +199,10 @@ def footer(prefix=""):
         <li><a href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp</a></li>
         <li><a href="mailto:{EMAIL}">{ic('mail')}{EMAIL}</a></li>
       </ul>
-      <p class="footer__cert">CompTIA A+ certified technician</p>
+      <div class="footer__meta">
+        <p class="footer__area">{ic('pin')}Welkom &amp; surrounding areas · {ic('clock')}9:00 to 18:00</p>
+        <p class="footer__cert">CompTIA A+ certified technician</p>
+      </div>
     </div>
     <div class="container footer__bottom">
       <p>© <span data-year>2026</span> Bit Byte Tech. All rights reserved.</p>
@@ -215,6 +227,8 @@ FAQS = [
     ("Can you get my files and photos off a broken computer?", "Yes. Data recovery, including getting files off a dying drive, is one of the repairs I do."),
     ("What upgrade will make my computer faster?", "An SSD is the biggest speed jump you can buy. More RAM helps if it chokes with tabs open, and a new graphics card helps with games and rendering."),
     ("Can you build me a gaming PC?", "Yes. I build gaming PCs to your budget, as well as office, home, editing and design machines. If you're building it yourself, I can just advise on parts."),
+    ("Which areas do you cover?", "I do computer and laptop repairs and upgrades in Welkom and surrounding areas. I can fetch your computer if you're nearby."),
+    ("What are your hours?", "I'm available from 9:00 to 18:00. You can also send a WhatsApp or fill in the quote form at any time, and I'll get back to you."),
     ("Are you qualified?", "Yes. I'm a CompTIA A+ certified technician, and I work on my own, so you deal with the same person from start to finish."),
 ]
 
@@ -270,12 +284,13 @@ def home():
         <div class="hero__copy">
           <img class="hero__logo" src="assets/img/logo-880.webp" srcset="assets/img/logo-480.webp 480w, assets/img/logo-880.webp 880w" sizes="(min-width: 1020px) 440px, 90vw" width="880" height="483" fetchpriority="high" alt="Bit Byte Tech: Your Tech. Our Priority. Built on trust. Powered by technology. Connecting our community.">
           <p class="hero__script">Your Friendly Neighbourhood Geek</p>
-          <h1 id="hero-title" class="hero__title"><span class="hero__kicker">Computer &amp; laptop repairs · Upgrades · Gaming PC builds</span>Computer giving you trouble?</h1>
+          <h1 id="hero-title" class="hero__title"><span class="hero__kicker">Computer &amp; laptop repairs and upgrades in Welkom &amp; surrounding areas</span>Computer giving you trouble?</h1>
           <p class="hero__lead">I'm a qualified technician working on my own, so you deal with me the whole way through. You get the price in writing before I open anything. If it's not worth fixing, I'll tell you.</p>
           <div class="hero__ctas">
             <a class="btn btn--blue btn--lg" href="{TEL}">{ic('phone')}Call {PHONE}</a>
             <a class="btn btn--wa btn--lg" href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp me</a>
           </div>
+          <p class="hero__area">{ic('pin')}<span>In <strong>Welkom &amp; surrounding areas</strong></span><span class="hero__sep" aria-hidden="true">·</span>{ic('clock')}<span><strong>9:00 to 18:00</strong></span></p>
           <ul class="hero__badges" aria-label="At a glance">
             <li>{ic('shield')}CompTIA A+ certified</li>
             <li>{ic('check')}Written price first</li>
@@ -450,7 +465,7 @@ def home():
         <div>
           <p class="eyebrow">Looking for a price?</p>
           <h2 class="h2" id="contact-title">Contact me today for a no-obligation quotation</h2>
-          <p class="contact__lead">Whether you need a repair, an upgrade or a completely new computer, call, WhatsApp or email me.</p>
+          <p class="contact__lead">Whether you need a repair, an upgrade or a completely new computer, call, WhatsApp or email me. I work in Welkom and surrounding areas, from 9:00 to 18:00.</p>
 {contact_tiles()}
           <a class="btn btn--blue btn--lg" href="#quote">Fill in the quote form {ic('arrow')}</a>
         </div>
@@ -460,9 +475,9 @@ def home():
   </main>
 """
     return {"file": "index.html", "active": None,
-            "title": "Computer &amp; Laptop Repairs &amp; Gaming PCs | Bit Byte Tech",
+            "title": "Computer &amp; Laptop Repairs &amp; Upgrades in Welkom | Bit Byte Tech",
             "og_title": "Bit Byte Tech | Your Tech. Our Priority.",
-            "description": "Computer and laptop repairs, data recovery, SSD and RAM upgrades, and custom gaming PC builds by a CompTIA A+ technician. Free quotes: 076 803 0406.",
+            "description": "Computer and laptop repairs and upgrades in Welkom and surrounding areas, 9:00 to 18:00. CompTIA A+ technician. Free quotes: 076 803 0406.",
             "schema": [FIRM, WEBSITE,
                        {"@type": "WebPage", "@id": DOMAIN + "/#webpage", "url": DOMAIN + "/", "name": "Computer and laptop repairs, upgrades and custom PC builds",
                         "isPartOf": {"@id": DOMAIN + "/#website"}, "about": {"@id": DOMAIN + "/#business"}, "inLanguage": "en-ZA",
