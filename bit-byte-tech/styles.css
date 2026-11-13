@@ -341,3 +341,10 @@ a.ctile:hover { border-color: var(--blue-bright); transform: translateY(-2px); }
 .hero__sep { margin-inline: 2px; }
 .footer__meta { gap: 6px; }
 @media (max-width: 1019px) { .hero__area { justify-items: start; text-align: left; } }
+
+/* Open mobile menu: solid dark panel covering the whole screen below the header.
+   The header's blur (backdrop-filter) traps fixed children, so it is switched off while the menu is open. */
+@media (max-width: 860px) {
+  .nav-open .header { background: var(--bg-950); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .nav { top: 72px; height: calc(100vh - 72px); height: calc(100dvh - 72px); overflow-y: auto; background: var(--bg-950); box-shadow: 0 30px 60px rgba(0, 0, 0, .6); }
+}
