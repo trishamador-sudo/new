@@ -15,7 +15,7 @@ TEL = "tel:+27768030406"
 WA = "https://wa.me/27768030406?text=" + "Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote."
 EMAIL = "riccomdr@gmail.com"
 AREA = "Welkom and surrounding areas"
-HOURS = "9:00 to 18:00"
+HOURS = "Mon–Fri 9am–7pm · Sat 10am–4pm"
 KEYWORDS = ("computer repairs Welkom, laptop repairs Welkom, computer upgrades Welkom, PC repairs Welkom, "
             "computer technician Welkom, computer repairs Free State, "
             "computer repairs, laptop repairs, PC repairs, computer technician, CompTIA A+ technician, "
@@ -81,6 +81,10 @@ FIRM = {
     "telephone": "+27768030406", "email": EMAIL,
     "address": {"@type": "PostalAddress", "addressLocality": "Welkom", "addressRegion": "Free State", "addressCountry": "ZA"},
     "areaServed": [{"@type": "City", "name": "Welkom"}, {"@type": "AdministrativeArea", "name": "Welkom and surrounding areas, Free State"}],
+    "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00"},
+    ],
     "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+27768030406", "email": EMAIL, "availableLanguage": "English"},
     "knowsAbout": ["Computer repair", "Laptop repair", "Hardware diagnostics", "Data recovery", "SSD upgrades", "RAM upgrades", "Graphics cards", "Gaming PC builds", "Workstation builds", "CompTIA A+"],
     "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Computer services", "itemListElement": [
@@ -170,7 +174,7 @@ def contact_tiles(compact=False):
           <li><a class="ctile" href="{WA}" target="_blank" rel="noopener"><span class="ctile__ic ctile__ic--wa">{ic('wa')}</span><span><small>WhatsApp</small>{PHONE}</span></a></li>
           <li><a class="ctile" href="mailto:{EMAIL}"><span class="ctile__ic">{ic('mail')}</span><span><small>Email</small>{EMAIL}</span></a></li>
           <li class="ctile ctile--info"><span class="ctile__ic">{ic('pin')}</span><span><small>Service area</small>Welkom &amp; surrounding areas</span></li>
-          <li class="ctile ctile--info"><span class="ctile__ic">{ic('clock')}</span><span><small>Hours</small>9:00 to 18:00</span></li>
+          <li class="ctile ctile--info"><span class="ctile__ic">{ic('clock')}</span><span><small>Hours</small>Mon–Fri 9am–7pm<br>Sat 10am–4pm</span></li>
         </ul>"""
 
 
@@ -200,7 +204,8 @@ def footer(prefix=""):
         <li><a href="mailto:{EMAIL}">{ic('mail')}{EMAIL}</a></li>
       </ul>
       <div class="footer__meta">
-        <p class="footer__area">{ic('pin')}Welkom &amp; surrounding areas · {ic('clock')}9:00 to 18:00</p>
+        <p class="footer__area">{ic('pin')}Welkom &amp; surrounding areas</p>
+        <p class="footer__area">{ic('clock')}Mon–Fri 9am–7pm · Sat 10am–4pm</p>
         <p class="footer__cert">CompTIA A+ certified technician</p>
       </div>
     </div>
@@ -228,7 +233,7 @@ FAQS = [
     ("What upgrade will make my computer faster?", "An SSD is the biggest speed jump you can buy. More RAM helps if it chokes with tabs open, and a new graphics card helps with games and rendering."),
     ("Can you build me a gaming PC?", "Yes. I build gaming PCs to your budget, as well as office, home, editing and design machines. If you're building it yourself, I can just advise on parts."),
     ("Which areas do you cover?", "I do computer and laptop repairs and upgrades in Welkom and surrounding areas. I can fetch your computer if you're nearby."),
-    ("What are your hours?", "I'm available from 9:00 to 18:00. You can also send a WhatsApp or fill in the quote form at any time, and I'll get back to you."),
+    ("What are your hours?", "Monday to Friday from 9am to 7pm, and Saturday from 10am to 4pm. You can also send a WhatsApp or fill in the quote form at any time, and I'll get back to you."),
     ("Are you qualified?", "Yes. I'm a CompTIA A+ certified technician, and I work on my own, so you deal with the same person from start to finish."),
 ]
 
@@ -290,7 +295,10 @@ def home():
             <a class="btn btn--blue btn--lg" href="{TEL}">{ic('phone')}Call {PHONE}</a>
             <a class="btn btn--wa btn--lg" href="{WA}" target="_blank" rel="noopener">{ic('wa')}WhatsApp me</a>
           </div>
-          <p class="hero__area">{ic('pin')}<span>In <strong>Welkom &amp; surrounding areas</strong></span><span class="hero__sep" aria-hidden="true">·</span>{ic('clock')}<span><strong>9:00 to 18:00</strong></span></p>
+          <ul class="hero__area">
+            <li>{ic('pin')}<span>In <strong>Welkom &amp; surrounding areas</strong></span></li>
+            <li>{ic('clock')}<span><strong>Mon–Fri</strong> 9am–7pm <span class="hero__sep" aria-hidden="true">·</span> <strong>Sat</strong> 10am–4pm</span></li>
+          </ul>
           <ul class="hero__badges" aria-label="At a glance">
             <li>{ic('shield')}CompTIA A+ certified</li>
             <li>{ic('check')}Written price first</li>
@@ -465,7 +473,7 @@ def home():
         <div>
           <p class="eyebrow">Looking for a price?</p>
           <h2 class="h2" id="contact-title">Contact me today for a no-obligation quotation</h2>
-          <p class="contact__lead">Whether you need a repair, an upgrade or a completely new computer, call, WhatsApp or email me. I work in Welkom and surrounding areas, from 9:00 to 18:00.</p>
+          <p class="contact__lead">Whether you need a repair, an upgrade or a completely new computer, call, WhatsApp or email me. I work in Welkom and surrounding areas, Monday to Friday from 9am to 7pm and Saturday from 10am to 4pm.</p>
 {contact_tiles()}
           <a class="btn btn--blue btn--lg" href="#quote">Fill in the quote form {ic('arrow')}</a>
         </div>
@@ -477,7 +485,7 @@ def home():
     return {"file": "index.html", "active": None,
             "title": "Computer &amp; Laptop Repairs &amp; Upgrades in Welkom | Bit Byte Tech",
             "og_title": "Bit Byte Tech | Your Tech. Our Priority.",
-            "description": "Computer and laptop repairs and upgrades in Welkom and surrounding areas, 9:00 to 18:00. CompTIA A+ technician. Free quotes: 076 803 0406.",
+            "description": "Computer and laptop repairs and upgrades in Welkom and surrounding areas. Mon–Fri 9am–7pm, Sat 10am–4pm. CompTIA A+ technician. Call 076 803 0406.",
             "schema": [FIRM, WEBSITE,
                        {"@type": "WebPage", "@id": DOMAIN + "/#webpage", "url": DOMAIN + "/", "name": "Computer and laptop repairs, upgrades and custom PC builds",
                         "isPartOf": {"@id": DOMAIN + "/#website"}, "about": {"@id": DOMAIN + "/#business"}, "inLanguage": "en-ZA",

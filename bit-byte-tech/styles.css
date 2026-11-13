@@ -74,7 +74,9 @@ a { color: inherit; }
 .nav a:not(.btn) { font: 600 .92rem/1 var(--display); color: var(--text); text-decoration: none; letter-spacing: .02em; }
 .nav a:not(.btn):hover { color: var(--blue-bright); }
 .nav__cta { min-height: 42px; padding: 10px 20px; font-size: .88rem; }
-.menu-toggle { display: none; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--white); cursor: pointer; place-items: center; }
+.menu-toggle { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--blue); color: var(--bg-950); cursor: pointer; place-items: center; box-shadow: 0 0 18px rgba(55, 184, 255, .45); transition: background .2s; }
+.menu-toggle:hover, .nav-open .menu-toggle { background: var(--blue-bright); }
+.menu-toggle .ic { width: 22px; height: 22px; stroke-width: 2.4; }
 .menu-toggle .ic-close, .nav-open .menu-toggle .ic-open { display: none; }
 .nav-open .menu-toggle .ic-close { display: block; }
 @media (max-width: 860px) {
@@ -331,3 +333,11 @@ a.ctile:hover { border-color: var(--blue-bright); transform: translateY(-2px); }
 .footer__area { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--white); font-weight: 600; }
 .footer__area .ic { color: var(--blue-bright); }
 @media (max-width: 760px) { .footer__meta { justify-items: start; } }
+
+/* Service area and hours: one item per line */
+.hero__area { display: inline-grid; gap: 8px; list-style: none; border-radius: var(--radius); padding: 12px 18px; }
+.hero__area li { display: flex; align-items: center; gap: 10px; }
+.hero__area .ic { flex: none; }
+.hero__sep { margin-inline: 2px; }
+.footer__meta { gap: 6px; }
+@media (max-width: 1019px) { .hero__area { justify-items: start; text-align: left; } }

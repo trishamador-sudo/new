@@ -46,7 +46,7 @@ The form sends to `https://formspree.io/f/xaeerwne`, set in `FORM_ENDPOINT` at t
 
 ### In the `<head>` of `index.html`
 - **Title (62 characters):** "Computer & Laptop Repairs & Upgrades in Welkom | Bit Byte Tech"
-- **Meta description (138 characters):** "Computer and laptop repairs and upgrades in Welkom and surrounding areas, 9:00 to 18:00. CompTIA A+ technician. Free quotes: 076 803 0406."
+- **Meta description:** "Computer and laptop repairs and upgrades in Welkom and surrounding areas. Mon–Fri 9am–7pm, Sat 10am–4pm. CompTIA A+ technician. Call 076 803 0406."
 - **Other tags:**
   - meta keywords, led by local terms (for example "computer repairs Welkom" and "laptop repairs Welkom");
   - `robots: index, follow`;
@@ -58,13 +58,13 @@ The form sends to `https://formspree.io/f/xaeerwne`, set in `FORM_ENDPOINT` at t
   - share image: `assets/img/og.jpg` (1200×630).
 
 ### Schema (JSON-LD)
-- `ProfessionalService`: Bit Byte Tech, with phone, email, address (Welkom, Free State), `areaServed` (Welkom and surrounding areas), contact point, slogan, `knowsAbout`, and an `OfferCatalog` of 8 services.
+- `ProfessionalService`: Bit Byte Tech, with phone, email, address (Welkom, Free State), `areaServed` (Welkom and surrounding areas), opening hours (Mon–Fri 09:00–19:00, Sat 10:00–16:00), contact point, slogan, `knowsAbout`, and an `OfferCatalog` of 8 services.
 - `WebSite` and `WebPage`.
 - `FAQPage`: the 10 questions in the FAQ section, so they can show as rich results.
 
 ### On the page
 - **One H1.** It includes the keywords and location: "Computer & laptop repairs and upgrades in Welkom & surrounding areas / Computer giving you trouble?"
-- **Service area and hours** ("Welkom & surrounding areas", "9:00 to 18:00") are shown under the hero buttons, in the contact section, in the FAQ and in the footer.
+- **Service area and hours** ("Welkom & surrounding areas", "Mon–Fri 9am–7pm · Sat 10am–4pm") are shown under the hero buttons, in the contact section, in the FAQ and in the footer.
 - **Headings with search terms:**
   - "Professional computer & laptop repair services";
   - "Computer repairs, upgrades and custom PC builds";
@@ -80,7 +80,6 @@ The form sends to `https://formspree.io/f/xaeerwne`, set in `FORM_ENDPOINT` at t
 
 ### Not set up yet (needs the client's information)
 These were not on the posters, so they are left out:
-- **Days of the week:** the hours 9:00 to 18:00 are shown on the page. They are not in the schema yet, because the days (for example Monday to Saturday) are not confirmed. Once they are, add `openingHoursSpecification` to `FIRM` in `build.py`.
 - **Street address:** only the town (Welkom) is in the schema. Add the street address if he works from a fixed address that customers visit.
 - **Owner's name:** add it as a `Person` (founder) in the schema, and to the "Why me" section if he wants it shown.
 - **Social links / Google Business Profile:** add them to the schema `sameAs` and the footer.
