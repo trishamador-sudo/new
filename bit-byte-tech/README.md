@@ -2,7 +2,7 @@
 
 A one-page website for Bit Byte Tech (computer and laptop repairs, upgrades and custom PC builds). It is a static site (HTML, CSS and a little JavaScript) with no server or build step needed to host it.
 
-- **Domain:** https://www.bitbytetech.co.za (`bitbytetech.co.za` redirects to `www`)
+- **Domain:** https://bitbytetech.co.za (no www; `www.bitbytetech.co.za` redirects to it)
 - **Content:** from the client's three posters in `assets/references/`
 
 ## Files
@@ -50,7 +50,7 @@ The form sends to `https://formspree.io/f/xaeerwne`, set in `FORM_ENDPOINT` at t
 - **Other tags:**
   - meta keywords, led by local terms (for example "computer repairs Welkom" and "laptop repairs Welkom");
   - `robots: index, follow`;
-  - canonical `https://www.bitbytetech.co.za/`;
+  - canonical `https://bitbytetech.co.za/`;
   - theme colour.
 - **Sharing tags (WhatsApp, Facebook, X):**
   - Open Graph with absolute URLs, plus image size and alt text;
@@ -87,12 +87,12 @@ These were not on the posters, so they are left out:
 
 ## Going live (Cloudflare Pages)
 1. **Upload:** create a Pages project and upload this folder, or connect the GitHub repository with `bit-byte-tech` as the root. There is no build command.
-2. **Domain:** add `www.bitbytetech.co.za` and `bitbytetech.co.za` as custom domains.
-3. **HTTPS and www:**
+2. **Domain:** add `bitbytetech.co.za` and `www.bitbytetech.co.za` as custom domains.
+3. **HTTPS and the no-www address:**
    - SSL/TLS > Edge Certificates: turn on **Always Use HTTPS**.
-   - Rules > Redirect Rules: send `bitbytetech.co.za/*` to `https://www.bitbytetech.co.za/${1}` (301).
+   - Rules > Redirect Rules: send `www.bitbytetech.co.za/*` to `https://bitbytetech.co.za/${1}` (301). The canonical tags, sitemap and schema all use the no-www address, so the redirect must point this way.
 4. **HSTS:** already sent by `_headers`.
-5. **Search Console:** after launch, add the site in Google Search Console, submit `https://www.bitbytetech.co.za/sitemap.xml`, and request indexing.
+5. **Search Console:** after launch, add the site in Google Search Console, submit `https://bitbytetech.co.za/sitemap.xml`, and request indexing.
 6. **Google Business Profile:** create or claim one with the same name, phone number and website. For a local business, it brings in more calls than the website alone.
 7. **Test the form:** send a test enquiry from the live site and confirm the Formspree activation email.
 

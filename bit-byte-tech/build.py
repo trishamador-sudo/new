@@ -6,10 +6,11 @@ posters in assets/references/. Contact details are shown as text and icons only:
 nothing links out. The contact form sends to Formspree (see main.js).
 """
 import json
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-DOMAIN = "https://www.bitbytetech.co.za"
+DOMAIN = "https://bitbytetech.co.za"
 PHONE = "076 803 0406"
 TEL = "tel:+27768030406"
 WA = "https://wa.me/27768030406?text=" + "Hi%20Bit%20Byte%20Tech%2C%20I%27d%20like%20a%20quote."
@@ -523,7 +524,7 @@ def main():
         html = head(p) + header(p["active"], p.get("prefix", "")) + p["body"] + footer(p.get("prefix", ""))
         assert html.count("<h1") == 1, p["file"]
         (ROOT / p["file"]).write_text(html, encoding="utf-8")
-    urls = "\n".join(f"  <url>\n    <loc>{DOMAIN}/{'' if p['file'] == 'index.html' else p['file']}</loc>\n    <lastmod>2026-11-09</lastmod>\n  </url>" for p in pages if not p.get("noindex"))
+    urls = "\n".join(f"  <url>\n    <loc>{DOMAIN}/{'' if p['file'] == 'index.html' else p['file']}</loc>\n    <lastmod>{date.today().isoformat()}</lastmod>\n  </url>" for p in pages if not p.get("noindex"))
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n', encoding="utf-8")
     print("Built:", ", ".join(p["file"] for p in pages))
 
