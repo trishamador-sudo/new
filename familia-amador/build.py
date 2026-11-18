@@ -513,7 +513,7 @@ def why_block(lang):
         <div class="why">{row}</div>
         <div class="why__wide">
           <article class="why__gold"><h3>{'Respondemos em poucas horas, com uma resposta honesta sobre se e quando podemos ajudar.' if pt else 'We reply within a few hours, with an honest answer about if and when we can help.'}</h3><a class="btn btn--dark" href="#" data-wa-open>{ic('wa')}{L[lang]['wa_talk']}</a></article>
-          <article class="why__img">{picture('bathroom-shower', ALT_TEXT[lang]['bathroom-shower'], sizes='(min-width: 900px) 50vw, 100vw')}<div><h3>{'Preço justo, ou um não honesto' if pt else 'A fair price, or an honest no'}</h3><p>{'Não prometemos o que não podemos cumprir.' if pt else "We never promise what we can't deliver."}</p></div></article>
+
         </div>
       </div>
     </section>
@@ -556,6 +556,7 @@ def home(lang):
       </div>
     </section>
 
+{form_section(p)}
     <section class="section" aria-label="{'Sobre nós' if pt else 'About us'}">
       <div class="container intro">
         <p class="intro__big">{'A Família Amador Construções é uma empresa familiar de obras e remodelações em Montemor-o-Novo, gerida por pai e filha: o Ricardo e a Trishta.' if pt else 'Família Amador Construções is a family renovation company in Montemor-o-Novo, run by a dad-and-daughter team: Ricardo and Trishta.'}</p>
@@ -601,8 +602,7 @@ def home(lang):
         </div>
       </div>
     </section>
-
-{form_section(p)}  </main>
+  </main>
 """
     p["body"] = body
     p["schema"] = [business_schema(), *people_schema(), website_schema(lang), faq_schema(HOME_FAQ[lang])]

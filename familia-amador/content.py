@@ -97,7 +97,7 @@ SERVICES = [
     },
     {
         "key": "kitchens", "pt_slug": "remodelacao-cozinhas", "en_slug": "kitchen-renovations",
-        "img": "hero", "icon": "kitchen",
+        "img": None, "icon": "kitchen",
         "pt": {
             "name": "Remodelação de cozinhas",
             "title": "Remodelação de Cozinhas em Montemor-o-Novo | Família Amador",

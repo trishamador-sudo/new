@@ -361,6 +361,37 @@
       </div>
     </section>
 
+    <section class="section section--dark cta" id="orcamento" aria-labelledby="form-title">
+      <div class="container cta__grid">
+        <div class="cta__intro">
+          <p class="eyebrow eyebrow--light">Orçamento grátis</p>
+          <h2 class="h2" id="form-title">Peça o seu orçamento grátis</h2>
+          <p>Conte-nos o que precisa. Respondemos em poucas horas, com uma resposta honesta sobre se e quando podemos ajudar.</p>
+          <ul class="cta__people">
+            <li><a href="https://wa.me/351969164772?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span><strong>Ricardo</strong> (PT / EN)<br>+351 969 164 772</span></a></li><li><a href="https://wa.me/351961909846?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span><strong>Trishta</strong> (EN)<br>+351 961 909 846</span></a></li>
+          </ul>
+        </div>
+        <form class="form" action="https://formspree.io/f/mrpqkrva" method="POST" data-quote data-thanks="/obrigado/" data-lang="pt">
+          <input type="hidden" name="_subject" value="Novo pedido de orçamento">
+          <input type="hidden" name="page" value="https://familiaamador.pt/">
+          <input type="hidden" name="language" value="Português">
+          <div class="hp" aria-hidden="true"><label>Não preencher / Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+          <div class="form__grid">
+            <div class="field"><label for="f-name">Nome *</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-phone">Telemóvel / WhatsApp *</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+            <div class="field field--full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="f-town">Localidade</label><select id="f-town" name="town"><option>Montemor-o-Novo</option><option>Arraiolos</option><option>Vendas Novas</option><option>Lavre</option><option>Santiago do Escoural</option><option>Cabrela</option><option>Ciborro</option><option>Viana do Alentejo</option><option>Évora</option><option>Lisboa</option><option>Outro</option></select></div>
+            <div class="field"><label for="f-service">Serviço</label><select id="f-service" name="service"><option value="Obras e remodelações">Obras e remodelações</option><option value="Remodelação de casas de banho">Remodelação de casas de banho</option><option value="Remodelação de cozinhas">Remodelação de cozinhas</option><option value="Pintor: pintura interior e exterior">Pintor: pintura interior e exterior</option><option value="Carpinteiro: roupeiros e armários por medida">Carpinteiro: roupeiros e armários por medida</option><option value="Canalizador">Canalizador</option><option value="Reparação de telhados">Reparação de telhados</option><option value="Infiltrações e humidade">Infiltrações e humidade</option><option value="Tetos falsos e pladur">Tetos falsos e pladur</option><option value="Pequenas reparações e manutenção">Pequenas reparações e manutenção</option><option>Outro</option></select></div>
+            <div class="field field--full"><label for="f-msg">Descreva o trabalho *</label><textarea id="f-msg" name="message" rows="4" required></textarea></div>
+            <div class="field field--full"><label for="f-lang">Idioma preferido</label><select id="f-lang" name="preferred_language"><option selected>Português</option><option>English</option></select></div>
+          </div>
+          <button class="btn btn--gold btn--lg btn--block" type="submit">Pedir orçamento grátis <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+          <p class="form__note">Respondemos em poucas horas. Pode também enviar fotos do trabalho por WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+
     <section class="section" aria-label="Sobre nós">
       <div class="container intro">
         <p class="intro__big">A Família Amador Construções é uma empresa familiar de obras e remodelações em Montemor-o-Novo, gerida por pai e filha: o Ricardo e a Trishta.</p>
@@ -397,8 +428,8 @@
               <span class="more" aria-hidden="true">Saiba mais <svg class="ic ic--sm" aria-hidden="true"><use href="#i-arrow"/></svg></span>
             </div>
           </article>
-          <article class="card">
-            <div class="card__media"><picture><source type="image/webp" srcset="/assets/img/hero-768.webp 768w, /assets/img/hero.webp 1376w" sizes="(min-width: 900px) 33vw, 100vw"><img class="" src="/assets/img/hero.jpg" srcset="/assets/img/hero-768.jpg 768w, /assets/img/hero.jpg 1376w" sizes="(min-width: 900px) 33vw, 100vw" width="1376" height="768" alt="Cozinha moderna com ilha em pedra, armários pretos e pavimento de madeira" loading="lazy" decoding="async"></picture></div>
+          <article class="card card--noimg">
+            <div class="card__icon"><svg class="ic" aria-hidden="true"><use href="#i-kitchen"/></svg></div>
             <div class="card__body">
               <h3><a href="/servicos/remodelacao-cozinhas/">Remodelação de cozinhas</a></h3>
               <p>Remodelação e montagem de cozinhas, do pavimento aos acabamentos.</p>
@@ -482,7 +513,7 @@
         <div class="why"><article class="why__card"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg><h3>Rápidos</h3><p>Respondemos em poucas horas. Não tem de esperar dias por uma resposta.</p></article><article class="why__card"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><h3>Fiáveis</h3><p>Fazemos o que combinamos, quando combinamos, e mantemos o contacto durante a obra.</p></article><article class="why__card"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><h3>Honestos</h3><p>Dizemos-lhe a verdade sobre preços, prazos e o que vale ou não a pena fazer.</p></article><article class="why__card"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><h3>Equipa familiar</h3><p>Pai e filha. O Ricardo fala português e inglês, a Trishta fala inglês.</p></article></div>
         <div class="why__wide">
           <article class="why__gold"><h3>Respondemos em poucas horas, com uma resposta honesta sobre se e quando podemos ajudar.</h3><a class="btn btn--dark" href="#" data-wa-open><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a></article>
-          <article class="why__img"><picture><source type="image/webp" srcset="/assets/img/bathroom-shower.webp"><img class="" src="/assets/img/bathroom-shower.jpg" width="700" height="1244" alt="Remodelação de casa de banho com microcimento e duche walk-in com resguardo de vidro" loading="lazy" decoding="async"></picture><div><h3>Preço justo, ou um não honesto</h3><p>Não prometemos o que não podemos cumprir.</p></div></article>
+
         </div>
       </div>
     </section>
@@ -560,37 +591,6 @@
         <div class="reviews">
           <!-- <figure class="review"><blockquote><p>Review text</p></blockquote><figcaption>Name, Town</figcaption></figure> -->
         </div>
-      </div>
-    </section>
-
-    <section class="section section--dark cta" id="orcamento" aria-labelledby="form-title">
-      <div class="container cta__grid">
-        <div class="cta__intro">
-          <p class="eyebrow eyebrow--light">Orçamento grátis</p>
-          <h2 class="h2" id="form-title">Peça o seu orçamento grátis</h2>
-          <p>Conte-nos o que precisa. Respondemos em poucas horas, com uma resposta honesta sobre se e quando podemos ajudar.</p>
-          <ul class="cta__people">
-            <li><a href="https://wa.me/351969164772?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span><strong>Ricardo</strong> (PT / EN)<br>+351 969 164 772</span></a></li><li><a href="https://wa.me/351961909846?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span><strong>Trishta</strong> (EN)<br>+351 961 909 846</span></a></li>
-          </ul>
-        </div>
-        <form class="form" action="https://formspree.io/f/mrpqkrva" method="POST" data-quote data-thanks="/obrigado/" data-lang="pt">
-          <input type="hidden" name="_subject" value="Novo pedido de orçamento">
-          <input type="hidden" name="page" value="https://familiaamador.pt/">
-          <input type="hidden" name="language" value="Português">
-          <div class="hp" aria-hidden="true"><label>Não preencher / Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-          <div class="form__grid">
-            <div class="field"><label for="f-name">Nome *</label><input id="f-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="f-phone">Telemóvel / WhatsApp *</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
-            <div class="field field--full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-            <div class="field"><label for="f-town">Localidade</label><select id="f-town" name="town"><option>Montemor-o-Novo</option><option>Arraiolos</option><option>Vendas Novas</option><option>Lavre</option><option>Santiago do Escoural</option><option>Cabrela</option><option>Ciborro</option><option>Viana do Alentejo</option><option>Évora</option><option>Lisboa</option><option>Outro</option></select></div>
-            <div class="field"><label for="f-service">Serviço</label><select id="f-service" name="service"><option value="Obras e remodelações">Obras e remodelações</option><option value="Remodelação de casas de banho">Remodelação de casas de banho</option><option value="Remodelação de cozinhas">Remodelação de cozinhas</option><option value="Pintor: pintura interior e exterior">Pintor: pintura interior e exterior</option><option value="Carpinteiro: roupeiros e armários por medida">Carpinteiro: roupeiros e armários por medida</option><option value="Canalizador">Canalizador</option><option value="Reparação de telhados">Reparação de telhados</option><option value="Infiltrações e humidade">Infiltrações e humidade</option><option value="Tetos falsos e pladur">Tetos falsos e pladur</option><option value="Pequenas reparações e manutenção">Pequenas reparações e manutenção</option><option>Outro</option></select></div>
-            <div class="field field--full"><label for="f-msg">Descreva o trabalho *</label><textarea id="f-msg" name="message" rows="4" required></textarea></div>
-            <div class="field field--full"><label for="f-lang">Idioma preferido</label><select id="f-lang" name="preferred_language"><option selected>Português</option><option>English</option></select></div>
-          </div>
-          <button class="btn btn--gold btn--lg btn--block" type="submit">Pedir orçamento grátis <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          <p class="form__status" role="status" aria-live="polite"></p>
-          <p class="form__note">Respondemos em poucas horas. Pode também enviar fotos do trabalho por WhatsApp.</p>
-        </form>
       </div>
     </section>
   </main>

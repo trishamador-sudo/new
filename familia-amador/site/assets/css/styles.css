@@ -169,10 +169,10 @@ a { color: inherit; }
 .why__card h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .why__card p { margin: 0; color: var(--muted-dark); font-size: .95rem; }
 .why__wide { display: grid; gap: 16px; margin-top: 16px; }
-@media (min-width: 900px) { .why__wide { grid-template-columns: 1fr 1fr; } }
 .why__gold { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding: clamp(26px, 3vw, 40px); border-radius: var(--r); background: var(--gold); color: var(--black); }
 .why__gold h3 { color: var(--black) !important; font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); }
 .why__gold .btn { align-self: flex-start; }
+@media (min-width: 900px) { .why__gold { flex-direction: row; align-items: center; } .why__gold h3 { max-width: 30ch; } .why__gold .btn { align-self: center; flex: none; } }
 .why__img { position: relative; min-height: 260px; overflow: hidden; border-radius: var(--r); display: flex; align-items: flex-end; }
 .why__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
 .why__img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10, 10, 10, .88), rgba(10, 10, 10, .1) 70%); }
