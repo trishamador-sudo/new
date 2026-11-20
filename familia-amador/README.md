@@ -21,14 +21,9 @@ A fast, bilingual static website (European Portuguese and English) for Família 
 
 **To change any text:** edit `content.py` or `build.py`, then run `python3 build.py`. Do not edit the HTML in `site/` by hand; it is overwritten on every build.
 
-## Change the domain
+## Domain
 
-The domain is not known yet. The site uses the placeholder **`https://familiaamador.pt`**.
-
-1. In `build.py`, change `DOMAIN = "https://familiaamador.pt"` to the real address (no slash at the end).
-2. Run `python3 build.py`.
-
-That one change updates every canonical tag, hreflang link, Open Graph URL, schema, `sitemap.xml` and `robots.txt`.
+The site uses **`https://familiaamador.com`** (no `www`). It is set once in `build.py` as `DOMAIN`. If it ever changes, edit that line and run `python3 build.py`. That updates every canonical tag, hreflang link, Open Graph URL, schema, `sitemap.xml` and `robots.txt`.
 
 ## Pages
 
@@ -76,16 +71,15 @@ The email is left out for now. Search `build.py` for `EMAIL:`. There are placeho
 ## Deploy to Cloudflare Pages
 
 1. **Upload:** Cloudflare → Workers & Pages → Create → Pages → upload the **`site`** folder. You can also connect the GitHub repo with build output directory `familia-amador/site` and no build command.
-2. **Custom domain:** add the domain, plus the `www` version if you use one.
+2. **Custom domain:** add `familiaamador.com` and `www.familiaamador.com`.
 3. **One version of the address:**
    - Turn on SSL/TLS → Edge Certificates → **Always Use HTTPS**.
-   - Add a 301 Redirect Rule so that only one version is used. For example, send `www.` to the bare domain if `DOMAIN` has no `www`.
+   - Add a 301 Redirect Rule so that only one version is used. Send `www.familiaamador.com` to `https://familiaamador.com` (301, keep the path and query string).
 4. **Extras included:** `_headers` adds HSTS, security headers and long caching for `/assets/`. `404.html` is the bilingual not-found page.
 
 ## After launch: checklist
 
-- [ ] Change `DOMAIN` in `build.py` to the real domain, rebuild and redeploy.
-- [ ] Google Search Console: add the site and submit `https://<domain>/sitemap.xml`.
+- [ ] Google Search Console: add the site and submit `https://familiaamador.com/sitemap.xml`.
 - [ ] Google Business Profile: create it in Montemor-o-Novo, with these service areas:
   - Montemor-o-Novo, Arraiolos, Vendas Novas, Lavre;
   - Santiago do Escoural, Cabrela, Ciborro;

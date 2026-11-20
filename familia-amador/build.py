@@ -15,7 +15,7 @@ from pathlib import Path
 from content import SERVICES, AREAS, VILLAGES, ALL_TOWNS, HOME_FAQ
 
 # ------------------------------------------------------------------ Config
-DOMAIN = "https://familiaamador.pt"          # <- change here when the domain is known
+DOMAIN = "https://familiaamador.com"
 FORMSPREE = "https://formspree.io/f/mrpqkrva"
 BRAND = "Família Amador Construções"
 PEOPLE = {

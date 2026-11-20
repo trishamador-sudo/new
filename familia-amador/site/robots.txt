@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://familiaamador.pt/sitemap.xml
+Sitemap: https://familiaamador.com/sitemap.xml
